@@ -41,38 +41,62 @@ export const useOrderStore = defineStore('order', {
             shipping: checkout.shipping_methods[0].methods[0],
             payment: checkout.payment_methods[0],
             promotions: {},
-            discounts: [checkout.applied_coupon],
+            // Empty until a coupon is applied, so the coupon field opens as a field.
+            discounts: [],
             comments: {},
         },
     }),
 
     getters: {
-        checkoutShippingCost: () => ORDER.shipping_amount,
+        // Reads the cost off the method the shopper picked. Not a calculation - the
+        // number is already on the selected object - but it has to be READ rather
+        // than frozen: choosing Free Shipping while $9.95 stays on screen makes the
+        // whole panel look broken.
+        checkoutShippingCost: (state) => +state.checkoutSelections.shipping?.cost || 0,
         // A real figure, not zero: it is the rate on the default shipping address
         // in customer.json. Kept non-zero on purpose so the Sales Tax row renders
         // and gets designed - it is hidden below zero, and a theme that never saw
         // it would ship the row unstyled.
         checkoutTaxAmount: () => checkout.totals.tax,
         /**
-         * The checkout reads a lot off this one object, and two of the keys are
-         * easy to get wrong: `shipping` and `billing` are ADDRESSES, while the
-         * chosen delivery option lives under `shippingmethod`. Naming the address
-         * keys after the order fixture's own `shipping_address` left both address
-         * cards rendering as a bare comma.
+         * The checkout reads a lot off this one object, and two keys are easy to
+         * get wrong: `shipping` and `billing` are ADDRESSES, while the chosen
+         * delivery option lives under `shippingmethod`.
+         *
+         * `total` is added up from the lines the summary already shows. It is the
+         * one sum in the kit, and it earns its place: a total that contradicts the
+         * rows above it reads as a bug in the theme's own template. Everything it
+         * adds is either fixed or a value the shopper just selected — no pricing
+         * rule is reproduced here.
          */
-        checkoutParams: () => ({
-            ...ORDER,
-            ...checkout.totals,
-            shipping: ADDRESSES[0],
-            billing: ADDRESSES[1],
-            shippingmethod: checkout.shipping_methods[0].methods[0],
-            paymentmethod: checkout.payment_methods[0],
-        }),
-
-        // Always true: the platform gates checkout on live stock, and judging a
-        // frozen fixture would return one verdict forever.
+        /**
+         * Always true. The platform gates checkout on live stock, and judging a
+         * frozen fixture would return one verdict forever.
+         *
+         * 🚨 Load-bearing. Checkout.vue reads it on mount and, when it is falsy,
+         * toasts `checkoutBlockedReason` and sends the shopper back to the cart —
+         * so dropping this getter does not surface as an error, it just makes
+         * /checkout silently bounce to /cart.
+         */
         readyToCheckout: () => true,
         checkoutBlockedReason: () => '',
+
+        checkoutParams(state) {
+            const discount = state.checkoutSelections.discounts
+                .reduce((sum, d) => sum + (+d?.details?.amount || 0), 0);
+
+            return {
+                ...ORDER,
+                ...checkout.totals,
+                discount,
+                shippingcost: this.checkoutShippingCost,
+                total: checkout.totals.subtotal + this.checkoutShippingCost + this.checkoutTaxAmount - discount,
+                shipping: ADDRESSES[0],
+                billing: ADDRESSES[1],
+                shippingmethod: state.checkoutSelections.shipping,
+                paymentmethod: state.checkoutSelections.payment,
+            };
+        },
     },
 
     actions: {

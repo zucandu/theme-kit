@@ -14,7 +14,7 @@
 @import 'tailwindcss' source(none);
 
 @source "../theme/storefront";
-@source "../theme/cores";
+@source "./cores";
 @source "../theme/Storefront.vue";
 
 @plugin "@tailwindcss/forms";

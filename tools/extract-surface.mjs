@@ -33,8 +33,8 @@ const add = (mod, member) => {
 
 const files = await walk(join(THEME, 'storefront'));
 
-// cores/ ships with the theme (alias @theme), so its call sites count too.
-try { (await walk(join(THEME, 'cores'))).forEach(f => files.push(f)); } catch { /* no cores dir */ }
+// cores/ is platform-owned and does not ship in a theme package, so there is
+// nothing of the developer's to scan there.
 
 // Storefront.vue sits at the ROOT of themes/<name>/, not inside storefront/, and it is the
 // single biggest consumer of the shim: it is the layout shell every page mounts inside, and it

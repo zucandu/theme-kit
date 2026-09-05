@@ -130,7 +130,6 @@ export function zucThemeKit({ themeDir, imageOrigins = [] }) {
             // beside admin/, rather than inside storefront/.
             return code
                 .replace('@source "../theme/storefront";', `@source "${base}/storefront";`)
-                .replace('@source "../theme/cores";', `@source "${base}/cores";`)
                 .replace('@source "../theme/Storefront.vue";', `@source "${base}/Storefront.vue";`);
         },
     };

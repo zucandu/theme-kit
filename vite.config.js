@@ -30,7 +30,7 @@ if (!existsSync(themeDir)) {
     );
 }
 
-for (const required of ['Storefront.vue', 'storefront', 'cores']) {
+for (const required of ['Storefront.vue', 'storefront']) {
     if (!existsSync(resolve(themeDir, required))) {
         throw new Error(`${themeDir} is not a theme folder — missing ${required}`);
     }
@@ -71,16 +71,65 @@ const IMAGE_ORIGINS = resolveImageOrigins();
 console.log(`[theme-kit] theme:  ${themeDir}`);
 console.log(`[theme-kit] images: ${IMAGE_ORIGINS.join(', ') || 'placeholders only (offline)'}`);
 
+/**
+ * Map every library the kit ships to the kit's own node_modules.
+ *
+ * 🚨 Without this, a theme kept OUTSIDE the kit folder cannot build at all. Node
+ * resolves a bare import by walking up from the importing FILE, and a theme
+ * package is just .vue files — no node_modules anywhere above it. Storefront.vue
+ * imports 'vue-i18n' on its first line and the build stops there. It only ever
+ * worked while testing against a theme that happened to sit inside a project
+ * with its own node_modules.
+ *
+ * It also enforces the platform's rule as a side effect: a theme may import the
+ * libraries the platform ships and nothing else. Reach for one that is not in
+ * package.json and the build fails here — which is the point, because on a real
+ * store it would fail on install.
+ */
+function dependencyAliases() {
+    const pkg = JSON.parse(readFileSync(fileURLToPath(new URL('./package.json', import.meta.url)), 'utf8'));
+    const nodeModules = fileURLToPath(new URL('./node_modules', import.meta.url));
+
+    // String `find` matches the bare name or a subpath ('@heroicons/vue/24/outline',
+    // 'vue-toastification/dist/index.css'), so one entry per package covers both.
+    return Object.keys(pkg.dependencies ?? {}).map((name) => ({
+        find: name,
+        replacement: resolve(nodeModules, name),
+    }));
+}
+
 export default defineConfig({
     root: fileURLToPath(new URL('.', import.meta.url)),
     resolve: {
-        alias: {
-            '@': fileURLToPath(new URL('./shim', import.meta.url)),
-            '@theme': themeDir,
-            '@storefront-plugins': fileURLToPath(new URL('./runtime/plugins-stub', import.meta.url)),
+        // An ARRAY, because order decides precedence and one rule has to win over
+        // another: '@theme/cores' must be tried before '@theme', or a theme file
+        // importing '@theme/cores/PriceDisplay.vue' resolves into the developer's
+        // folder — where, correctly, no cores/ exists.
+        alias: [
+            { find: '@theme/cores', replacement: fileURLToPath(new URL('./runtime/cores', import.meta.url)) },
+            { find: '@theme', replacement: themeDir },
+            { find: '@storefront-plugins', replacement: fileURLToPath(new URL('./runtime/plugins-stub', import.meta.url)) },
+            { find: '@', replacement: fileURLToPath(new URL('./shim', import.meta.url)) },
+            ...dependencyAliases(),
+        ],
+    },
+    server: {
+        port: 5180,
+        open: true,
+
+        // The theme normally sits OUTSIDE this folder, so the dev server has to be
+        // told it may read from there — Vite refuses paths outside its root by
+        // default, and the refusal surfaces as a 404 on the page component rather
+        // than as a permissions message.
+        //
+        // On Windows a theme on a different drive letter than the kit (C: vs D:)
+        // fails this way even with the path allowed, because the served URL loses
+        // the drive separator. Keep the kit and the theme on one drive; the
+        // production build has no such limit.
+        fs: {
+            allow: [fileURLToPath(new URL('.', import.meta.url)), themeDir],
         },
     },
-    server: { port: 5180, open: true },
     build: { outDir: 'dist' },
     plugins: [zucThemeKit({ themeDir, imageOrigins: IMAGE_ORIGINS }), vue()],
 });

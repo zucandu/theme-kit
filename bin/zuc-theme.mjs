@@ -6,8 +6,8 @@
  *   zuc-theme build <theme-dir>   production build, to prove the theme compiles
  *   zuc-theme check <theme-dir>   verify the folder is a theme this kit can run
  *
- * The theme directory is the folder holding Storefront.vue, storefront/ and
- * cores/ — the same folder a theme package unzips to. Two layouts work, and
+ * The theme directory is the folder holding Storefront.vue and storefront/ —
+ * the same folder a theme package unzips to. Two layouts work, and
  * neither is more correct than the other:
  *
  *   theme-kit/theme/          — drop it inside the kit, then just `zuc-theme dev`
@@ -24,7 +24,11 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const KIT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const REQUIRED = ['Storefront.vue', 'storefront', 'cores'];
+// A theme package is exactly these two. `cores/` is NOT one of them: it is
+// shared by every theme and replaced wholesale on every store update, so it is
+// not a theme developer's to edit and does not ship in their package. Requiring
+// it here rejected real theme packages. The kit supplies its own copies.
+const REQUIRED = ['Storefront.vue', 'storefront'];
 
 const [command = 'dev', themeArg] = process.argv.slice(2);
 
@@ -58,6 +62,41 @@ if (!existsSync(themeDir)) {
 const missing = REQUIRED.filter((entry) => !existsSync(resolve(themeDir, entry)));
 if (missing.length) {
     usage(`${themeDir}\n  is not a theme folder — missing: ${missing.join(', ')}`);
+}
+
+/**
+ * On Windows, refuse to start a DEV SERVER for a theme on a different drive from
+ * the kit.
+ *
+ * Vite serves a file outside its root through /@fs/, and the served URL loses the
+ * separator after the drive letter — the browser asks for "C:Users/..." and gets a
+ * 404 on the page component, with nothing saying why. Allowing the path does not
+ * help; the URL is already malformed by then.
+ *
+ * `build` is unaffected, so it is not blocked.
+ */
+if (process.platform === 'win32' && command === 'dev') {
+    const driveOf = (p) => (p.match(/^([A-Za-z]):/) || [])[1]?.toUpperCase();
+    const kitDrive = driveOf(KIT);
+    const themeDrive = driveOf(themeDir);
+
+    if (kitDrive && themeDrive && kitDrive !== themeDrive) {
+        console.error();
+        console.error('  The dev server cannot serve a theme from another drive.');
+        console.error();
+        console.error('    kit:   ' + KIT);
+        console.error('    theme: ' + themeDir);
+        console.error();
+        console.error('  Vite serves files outside its root through /@fs/, and on Windows that URL');
+        console.error('  loses the separator after the drive letter, so every page 404s.');
+        console.error();
+        console.error('  Move one of them so both sit on ' + kitDrive + ': — or copy the theme into');
+        console.error('  ' + KIT + String.fromCharCode(92) + 'theme and run: zuc-theme dev');
+        console.error();
+        console.error('  `zuc-theme build` works across drives and is not affected.');
+        console.error();
+        process.exit(1);
+    }
 }
 
 if (command === 'check') {

@@ -1,40 +1,59 @@
 /**
  * Checkout coupon field.
  *
- * Starts ALREADY APPLIED, on purpose. The applied block is the state a theme is
- * most likely to ship unstyled — it only appears after a successful redemption,
- * which is easy never to reach while designing. Opening on it means you see it
- * without hunting for it; the remove button gets you back to the empty field, so
- * both states are one click apart.
+ * Opens as an EMPTY FIELD, and applying any code succeeds. Both states matter and
+ * both are one click apart: type anything, apply, and the field is replaced by the
+ * applied row with a Remove button; remove, and the field is back.
  *
- * Any code is accepted and none is ever rejected. Whether a coupon is valid is a
- * store's decision, and there is no store here.
+ * Nothing is validated. Whether a coupon exists, has expired or meets its minimum
+ * is a store's decision, and there is no store here.
+ *
+ * The applied coupon is pushed into the order store's `checkoutSelections.discounts`
+ * as well as tracked here, because that array is what the order summary renders its
+ * discount row from. Setting one without the other would show an applied coupon
+ * with no discount line, or the reverse.
  *
  * `hasCouponModule` is true so the field always renders. On a live store it is
- * false until the merchant installs a discount module — do not assume the field
- * is always there.
+ * false until the merchant installs a discount module — do not assume the field is
+ * always there.
  */
 import { ref } from 'vue';
 import checkout from '../../fixtures/checkout.json';
+import { useOrderStore } from '@/stores/order';
 
 export function useCheckoutCoupon() {
+    const orderStore = useOrderStore();
+
     const couponCode = ref('');
-    const appliedCoupon = ref(checkout.applied_coupon);
+    const appliedCoupon = ref(null);
+    const couponError = ref('');
+    const couponLoading = ref(false);
+
+    const applyCoupon = async () => {
+        couponError.value = '';
+
+        const coupon = {
+            ...checkout.applied_coupon,
+            code: couponCode.value.trim() || checkout.applied_coupon.module,
+        };
+
+        appliedCoupon.value = coupon;
+        orderStore.checkoutSelections.discounts = [coupon];
+    };
+
+    const removeCoupon = async () => {
+        appliedCoupon.value = null;
+        couponCode.value = '';
+        orderStore.checkoutSelections.discounts = [];
+    };
 
     return {
         couponCode,
         appliedCoupon,
-        couponError: ref(''),
-        couponLoading: ref(false),
+        couponError,
+        couponLoading,
         hasCouponModule: ref(true),
-
-        applyCoupon: async () => {
-            appliedCoupon.value = checkout.applied_coupon;
-        },
-
-        removeCoupon: async () => {
-            appliedCoupon.value = null;
-            couponCode.value = '';
-        },
+        applyCoupon,
+        removeCoupon,
     };
 }

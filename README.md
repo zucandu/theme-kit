@@ -34,8 +34,9 @@ npx zuc-theme dev
 
 Open **http://localhost:5180**.
 
-The theme folder is the one containing `Storefront.vue`, `storefront/` and
-`cores/` — the same layout your theme package unzips to. Not sure? Ask first:
+The theme folder is the one containing **`Storefront.vue` and `storefront/`** —
+the same layout your theme package unzips to, and the only two things the
+platform's installer reads. Not sure? Ask first:
 
 ```bash
 npx zuc-theme check ../my-theme
@@ -44,6 +45,18 @@ npx zuc-theme check ../my-theme
 Option A is the usual one: a theme is its own project with its own history, and
 the kit is just a tool you run against it. Option B is simply less to type —
 `theme/` is gitignored here, so it never lands in the kit's repo.
+
+> **`cores/` is not yours.** Those shared components (`<LocalizedLink>`,
+> `<PriceDisplay>`, …) belong to the platform: they are replaced wholesale on every
+> store update, so an edit there survives until the next update and then vanishes.
+> They are not in your package and the kit does not expect them — it supplies its
+> own copies.
+
+> **Windows:** `zuc-theme dev` needs the kit and the theme on the **same drive**.
+> Vite serves files outside its root through `/@fs/`, and that URL loses the
+> separator after a drive letter, so every page 404s. The CLI stops with an
+> explanation rather than letting you find out that way. `zuc-theme build` is
+> unaffected.
 
 ---
 
