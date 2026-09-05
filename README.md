@@ -18,18 +18,32 @@ there.
 git clone https://github.com/zucandu/theme-kit.git
 cd theme-kit
 npm install
+```
 
-npx zuc-theme dev ./path/to/your-theme
+Then point the kit at your theme. **Your theme does not have to live inside this
+folder** — either layout works:
+
+```bash
+# A. theme somewhere else on disk (usually its own git repo)
+npx zuc-theme dev ../my-theme
+npx zuc-theme dev /Users/me/work/acme-theme
+
+# B. theme dropped inside the kit, at theme-kit/theme/
+npx zuc-theme dev
 ```
 
 Open **http://localhost:5180**.
 
-`./path/to/your-theme` is the folder containing `Storefront.vue`, `storefront/`
-and `cores/` — the same layout your theme package unzips to. Not sure? Ask first:
+The theme folder is the one containing `Storefront.vue`, `storefront/` and
+`cores/` — the same layout your theme package unzips to. Not sure? Ask first:
 
 ```bash
-npx zuc-theme check ./path/to/your-theme
+npx zuc-theme check ../my-theme
 ```
+
+Option A is the usual one: a theme is its own project with its own history, and
+the kit is just a tool you run against it. Option B is simply less to type —
+`theme/` is gitignored here, so it never lands in the kit's repo.
 
 ---
 
@@ -115,9 +129,13 @@ finished while being wrong.
    Give both an empty state, or your checkout is a blank panel on day one.
 2. **The tax row.** It is hidden below zero. Design the page with it *and* without
    it — set `totals.tax` to `0` in `fixtures/checkout.json` to see the other one.
-3. **Missing app hooks.** Hooks only exist where a merchant installed an app. A
-   layout that only looks right once a hook fills a gap is broken on every store
-   that has not installed it.
+3. **Missing app hooks.** Hooks only exist where a merchant installed an app, so
+   the slots are always empty here — a layout that only looks right once a hook
+   fills a gap is broken on every store that has not installed it. The reverse
+   costs more: a hook point your theme never renders shows **nothing**, with no
+   error in the admin and none in the app's logs, so the merchant reports it as a
+   broken app. See
+   [Adding app hook points to a theme](https://help.zucandu.com/article/adding-app-hook-points-to-a-theme).
 4. **The signed-out visitor.** A theme that only looks right signed in is broken
    for every first-time visitor.
 
@@ -128,6 +146,41 @@ Nothing here places an order, sends mail, or contacts a payment gateway.
 **Admin.** The kit is storefront-only by design — `adminApi` is deliberately
 absent, so a theme file reaching for it fails at import here rather than with a
 403 on a live store.
+
+---
+
+## JavaScript libraries
+
+**Do not add a `<script src>`, a `loadScript()` call, or any CDN URL.** A script
+from an unapproved host is refused on every store — the request is never sent, the
+page still renders, and the part it powered silently does nothing. Nothing on
+screen says why.
+
+The platform ships a set of libraries instead. Import them by name; there is
+nothing to download, bundle or declare:
+
+```js
+import EmblaCarousel from 'embla-carousel'
+```
+
+**This kit installs exactly that set**, so what builds here builds on a store:
+
+`@headlessui/vue` · `@heroicons/vue` · `lucide-vue-next` · `chart.js` ·
+`vue-chartjs` · `dompurify` · `qrcode` · `vuedraggable` · `vue-toastification` ·
+`dropzone` · `prismjs` · `vue-router` · `vue-i18n` · `pinia` ·
+`embla-carousel` · `embla-carousel-autoplay` · `@panzoom/panzoom`
+
+Need something else? Ask for it to be added to the platform — a library is
+requested once, ever, not once per theme. Locally you can install anything and
+build freely; the check happens when the theme is installed on a real store, so
+have it added before you submit.
+
+Full rules, including vendor SDKs and the separate allow-list for CSS imports:
+[JavaScript libraries you can use in a theme](https://help.zucandu.com/article/theme-javascript-libraries).
+
+> If you add a library here that the platform does not ship, the kit stops telling
+> you the truth: it builds locally and fails on the store. Keep this list and
+> `package.json` in step.
 
 ---
 
@@ -250,6 +303,12 @@ name and file.
 and the kit is not updated, a theme can look finished here and break once uploaded.
 Treat a kit version as paired with a platform version, and rebuild your theme
 against a fresh kit before you ship.
+
+## Further reading
+
+- [JavaScript libraries you can use in a theme](https://help.zucandu.com/article/theme-javascript-libraries)
+- [Adding app hook points to a theme](https://help.zucandu.com/article/adding-app-hook-points-to-a-theme)
+- [Adding a storefront page from an app](https://help.zucandu.com/article/adding-a-storefront-page-from-an-app)
 
 ## License
 

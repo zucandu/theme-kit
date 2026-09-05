@@ -7,9 +7,16 @@
  *   zuc-theme check <theme-dir>   verify the folder is a theme this kit can run
  *
  * The theme directory is the folder holding Storefront.vue, storefront/ and
- * cores/ — the same folder a store's theme package unzips to. It is passed to
- * Vite through ZUC_THEME_DIR rather than a config file so nothing inside the
- * kit has to be edited per theme.
+ * cores/ — the same folder a theme package unzips to. Two layouts work, and
+ * neither is more correct than the other:
+ *
+ *   theme-kit/theme/          — drop it inside the kit, then just `zuc-theme dev`
+ *   anywhere on disk          — `zuc-theme dev ../my-theme`
+ *
+ * The second exists because a theme is usually its own project with its own git
+ * history, and vendoring it inside the kit would tangle the two. The first is
+ * simply less to type. The path reaches Vite through ZUC_THEME_DIR, so nothing
+ * inside the kit is edited either way.
  */
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
@@ -24,23 +31,29 @@ const [command = 'dev', themeArg] = process.argv.slice(2);
 function usage(message) {
     if (message) console.error(`\n  ${message}`);
     console.error(`
-  zuc-theme <command> <theme-dir>
+  zuc-theme <command> [theme-dir]
 
     dev      start a dev server against the theme (hot reload)
     build    production build, to check the theme compiles
     check    verify the folder looks like a theme
 
-  <theme-dir> is the folder containing ${REQUIRED.join(', ')}
+  [theme-dir] is the folder containing ${REQUIRED.join(', ')}.
+  Omit it to use ./theme inside the kit.
 `);
     process.exit(message ? 1 : 0);
 }
 
 if (['-h', '--help', 'help'].includes(command)) usage();
-if (!themeArg) usage('No theme directory given.');
+const themeDir = themeArg ? resolve(themeArg) : resolve(KIT, 'theme');
 
-const themeDir = resolve(themeArg);
+if (!existsSync(themeDir)) {
+    usage(themeArg
+        ? `Theme directory does not exist: ${themeDir}`
+        : `No theme found at ${themeDir}
 
-if (!existsSync(themeDir)) usage(`Theme directory does not exist: ${themeDir}`);
+  Either put your theme there, or point at one:
+    zuc-theme ${command} ../my-theme`);
+}
 
 const missing = REQUIRED.filter((entry) => !existsSync(resolve(themeDir, entry)));
 if (missing.length) {
