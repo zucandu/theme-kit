@@ -1,0 +1,920 @@
+{
+  "paginator": {
+    "current_page": 1,
+    "data": [
+      {
+        "id": 9,
+        "type": "simple",
+        "sku": "Model9",
+        "gtin": null,
+        "mpn": null,
+        "price": "359.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "359.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 5,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "name": "Hood CDA EVCK4SS 40cm Cylinder",
+            "slug": "hood-cda-evck4ss-40cm-cylinder",
+            "locale": "en",
+            "description": "Integer convallis malesuada massa. Sed eget sapien a magna volutpat sollicitudin. Nullam sit amet dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque nulla. In ut lorem. Cras sit amet lectus. Proin at purus. Praesent accumsan volutpat ante. Etiam vitae nulla. Aliquam erat volutpat. Nullam quam.\n\nPraesent pellentesque gravida felis. Duis neque. Nunc id eros tincidunt neque consectetuer sollicitudin. Morbi rhoncus, mi quis sollicitudin laoreet, ipsum lacus ultricies urna, quis aliquet mi pede nec lectus. Morbi molestie, ante ut interdum aliquet, nibh ante volutpat diam, ac posuere magna justo ut ipsum. Donec lobortis justo eget felis. Ut urna. Cras laoreet. Vestibulum vel tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem orci, vulputate in, vestibulum vitae, facilisis at, sem. Phasellus mattis, lorem non eleifend lacinia, orci mi varius erat, at pharetra lectus sem ac felis."
+          }
+        ],
+        "manufacturer": {
+          "id": 3,
+          "translations": [
+            {
+              "name": "Example 3",
+              "slug": "example-3",
+              "locale": "en"
+            }
+          ]
+        },
+        "images": [
+          {
+            "src": "09.jpg?v=1788513520"
+          }
+        ],
+        "quantity_discounts": [],
+        "has_attributes": 0
+      },
+      {
+        "id": 10,
+        "type": "simple",
+        "sku": "Model1",
+        "gtin": null,
+        "mpn": null,
+        "price": "732.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "732.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 6,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 1,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "name": "Hood Faber Klima - black",
+            "slug": "hood-faber-klima-black",
+            "locale": "en",
+            "description": "Mauris semper velit nec risus. Nullam urna orci, dictum vel, rhoncus non, molestie sit amet, purus. Morbi pretium. Donec felis. Phasellus vitae libero eget nulla tincidunt tempus. Vivamus fringilla eleifend nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque venenatis vestibulum quam. Integer eu ligula egestas quam gravida adipiscing. Suspendisse lorem nunc, interdum nec, suscipit eu, euismod quis, nibh. Donec arcu. Nulla nibh. Fusce lobortis condimentum enim. Suspendisse vitae tellus et ipsum hendrerit vehicula.\n\nDonec a sem non tortor ornare mollis. Pellentesque iaculis, odio quis elementum tempor, magna pede eleifend tortor, eu dapibus sem mauris quis risus. Etiam at quam. Sed odio turpis, molestie a, rhoncus quis, malesuada quis, nisl. Etiam metus. Pellentesque vitae ipsum a mauris consectetuer consectetuer. Pellentesque pretium, magna ut vehicula suscipit, justo dolor sollicitudin lacus, non luctus erat lacus ut enim. Suspendisse potenti. Proin lobortis viverra magna. Donec sed nibh. Nam eget augue at tellus adipiscing vehicula. Vestibulum quam elit, commodo eget, tincidunt sit amet, consequat vel, mi."
+          }
+        ],
+        "manufacturer": {
+          "id": 1,
+          "translations": [
+            {
+              "name": "Example 1",
+              "slug": "example-1",
+              "locale": "en"
+            }
+          ]
+        },
+        "images": [
+          {
+            "src": "10.jpg?v=1788513520"
+          }
+        ],
+        "quantity_discounts": [],
+        "has_attributes": 0
+      },
+      {
+        "id": 11,
+        "type": "simple",
+        "sku": "Model2",
+        "gtin": null,
+        "mpn": null,
+        "price": "653.0000",
+        "sale_price": "522.4000",
+        "price_sorter": "653.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 3,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 2,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "name": "Hood Scholtes HSE 159 IX",
+            "slug": "hood-scholtes-hse-159-ix",
+            "locale": "en",
+            "description": "Curabitur ac dolor. Donec gravida, elit vel dignissim vestibulum, orci nibh tempor lacus, eget consequat nisl lorem ac leo. Quisque libero neque, ultrices eu, tempor et, interdum quis, justo. Nullam nisi. Nullam neque lacus, pellentesque at, convallis eu, tempus nec, dolor. In gravida urna ut pede sodales gravida. Integer orci massa, imperdiet non, ultricies vel, luctus sit amet, ante. Curabitur nec ligula eget mauris congue nonummy. Duis tempus diam sit amet urna. Praesent feugiat tortor id turpis. Suspendisse potenti. Sed tincidunt quam non sem. Aenean sodales semper ante. Phasellus felis nisi, eleifend in, egestas eget, vulputate ac, ante. Fusce ultricies posuere felis. Nunc pellentesque, dui nec molestie iaculis, mauris diam tincidunt odio, eget tincidunt lectus mauris id mauris.\n\nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nec lectus et sem eleifend luctus. Nullam vitae ligula id nibh sollicitudin vulputate. Morbi eu nisl. Aliquam erat volutpat. Sed metus metus, luctus id, fringilla laoreet, aliquam at, ligula. Aliquam dignissim, sapien at imperdiet malesuada, diam urna tincidunt diam, id placerat dui nunc sit amet elit. Duis convallis nisi et nibh. Praesent sodales pede in pede. Praesent tristique. Praesent turpis."
+          }
+        ],
+        "manufacturer": {
+          "id": 2,
+          "translations": [
+            {
+              "name": "Example 2",
+              "slug": "example-2",
+              "locale": "en"
+            }
+          ]
+        },
+        "images": [
+          {
+            "src": "11.jpg?v=1788513520"
+          }
+        ],
+        "quantity_discounts": [],
+        "has_attributes": 0
+      },
+      {
+        "id": 12,
+        "type": "simple",
+        "sku": "Model3",
+        "gtin": null,
+        "mpn": null,
+        "price": "124.0000",
+        "sale_price": "105.4000",
+        "price_sorter": "124.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 7,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "name": "Hood Whirpool AKR806IX",
+            "slug": "hood-whirpool-akr806ix",
+            "locale": "en",
+            "description": "In posuere, mauris nec luctus dignissim, augue nibh ullamcorper mi, id mattis leo velit a mi. Curabitur nunc nisi, consectetuer eget, auctor luctus, pellentesque sed, massa. Donec magna est, dignissim sit amet, hendrerit id, rutrum nec, ipsum. Nullam vitae nunc. Donec est tellus, semper non, pretium eget, placerat eget, odio. Pellentesque et tortor. Aliquam erat volutpat. Donec ullamcorper nunc. Fusce neque orci, sagittis ut, imperdiet eget, faucibus vel, tellus. Sed a nisl. Aenean interdum, erat vitae pharetra pellentesque, metus mauris faucibus sem, nec rhoncus pede lacus eget eros. In vel libero. Nulla condimentum enim in libero. Maecenas convallis eros.\n\nNam in dolor. Curabitur a velit vel purus aliquet tempus. Quisque urna neque, condimentum quis, nonummy a, lobortis et, orci. Curabitur auctor placerat massa. Vestibulum eleifend. Mauris ornare, enim a tempor egestas, enim orci iaculis nunc, vitae lobortis eros nibh a dolor. Pellentesque enim. Integer non urna. Aliquam augue. Fusce semper, ligula nec accumsan gravida, sapien arcu convallis metus, ac elementum sem ligula nec nisi. Nam a pede. Curabitur aliquam. Cras molestie eleifend sapien. Nunc nec augue. Vestibulum lorem justo, mattis a, aliquam eget, mattis nec, risus. Nulla laoreet ante et ante. Suspendisse vulputate, ipsum vitae varius condimentum, ligula erat euismod eros, a mollis nunc ipsum accumsan ligula. Cras malesuada dictum eros. Duis ut justo."
+          }
+        ],
+        "manufacturer": {
+          "id": 3,
+          "translations": [
+            {
+              "name": "Example 3",
+              "slug": "example-3",
+              "locale": "en"
+            }
+          ]
+        },
+        "images": [
+          {
+            "src": "12.jpg?v=1788513520"
+          }
+        ],
+        "quantity_discounts": [],
+        "has_attributes": 0
+      }
+    ],
+    "first_page_url": "https://demo-store.zucandu.com/api/v3/storefront/category/listing/appliances?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://demo-store.zucandu.com/api/v3/storefront/category/listing/appliances?page=1",
+    "links": [
+      {
+        "url": null,
+        "label": "&laquo; Previous",
+        "page": null,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/category/listing/appliances?page=1",
+        "label": "1",
+        "page": 1,
+        "active": true
+      },
+      {
+        "url": null,
+        "label": "Next &raquo;",
+        "page": null,
+        "active": false
+      }
+    ],
+    "next_page_url": null,
+    "path": "https://demo-store.zucandu.com/api/v3/storefront/category/listing/appliances",
+    "per_page": 20,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4
+  },
+  "filters": {
+    "base": {
+      "manufacturers": [
+        {
+          "id": "m:1",
+          "translations": [
+            {
+              "name": "Example 1",
+              "slug": "example-1",
+              "locale": "en"
+            }
+          ],
+          "count": 1,
+          "sort": 0,
+          "name": "Example 1"
+        },
+        {
+          "id": "m:2",
+          "translations": [
+            {
+              "name": "Example 2",
+              "slug": "example-2",
+              "locale": "en"
+            }
+          ],
+          "count": 1,
+          "sort": 0,
+          "name": "Example 2"
+        },
+        {
+          "id": "m:3",
+          "translations": [
+            {
+              "name": "Example 3",
+              "slug": "example-3",
+              "locale": "en"
+            }
+          ],
+          "count": 2,
+          "sort": 0,
+          "name": "Example 3"
+        }
+      ]
+    },
+    "attribute": [],
+    "price": {
+      "ranges": [
+        {
+          "id": "p:350-400",
+          "name": "350-400",
+          "count": 1
+        },
+        {
+          "id": "p:700-750",
+          "name": "700-750",
+          "count": 1
+        },
+        {
+          "id": "p:650-700",
+          "name": "650-700",
+          "count": 1
+        },
+        {
+          "id": "p:120-140",
+          "name": "120-140",
+          "count": 1
+        }
+      ]
+    },
+    "customize": [],
+    "features": {
+      "availability": [
+        {
+          "id": "q:instock",
+          "name": "In stock only",
+          "count": 4
+        }
+      ]
+    }
+  },
+  "object": {
+    "id": 3,
+    "image": "",
+    "parent_id": 0,
+    "type": "c",
+    "status": 1,
+    "hidden": 0,
+    "sort": null,
+    "meta": null,
+    "created_at": "2023-02-09T09:13:14.000000Z",
+    "updated_at": null,
+    "deleted_at": null,
+    "translations": [
+      {
+        "id": 3,
+        "category_id": 3,
+        "locale": "en",
+        "name": "Appliances",
+        "slug": "appliances",
+        "description": "Curabitur porta pretium lectus. Etiam consectetuer, erat in dictum ornare, massa turpis tempus lorem, sit amet gravida mauris lacus nec metus.",
+        "meta_title": "Appliances",
+        "meta_description": "Curabitur porta pretium lectus. Etiam consectetuer, erat in dictum ornare, massa turpis tempus lorem, sit amet gravida mauris lacus nec metus.",
+        "created_at": null,
+        "updated_at": null
+      }
+    ]
+  },
+  "ancestors": [],
+  "subcategories": [
+    {
+      "id": 3,
+      "translations": [
+        {
+          "category_id": 3,
+          "name": "Appliances",
+          "slug": "appliances",
+          "locale": "en"
+        }
+      ],
+      "image": "",
+      "meta": null
+    },
+    {
+      "id": 4,
+      "translations": [
+        {
+          "category_id": 4,
+          "name": "Electrics",
+          "slug": "electrics",
+          "locale": "en"
+        }
+      ],
+      "image": "",
+      "meta": null
+    },
+    {
+      "id": 5,
+      "translations": [
+        {
+          "category_id": 5,
+          "name": "Coffee and Tea",
+          "slug": "coffee-and-tea",
+          "locale": "en"
+        }
+      ],
+      "image": "",
+      "meta": null
+    },
+    {
+      "id": 6,
+      "translations": [
+        {
+          "category_id": 6,
+          "name": "Cutlery",
+          "slug": "cutlery",
+          "locale": "en"
+        }
+      ],
+      "image": "",
+      "meta": null
+    },
+    {
+      "id": 31,
+      "translations": [
+        {
+          "category_id": 31,
+          "name": "Eusmod tempor",
+          "slug": "eusmod-tempor",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1.jpg",
+      "meta": null
+    },
+    {
+      "id": 32,
+      "translations": [
+        {
+          "category_id": 32,
+          "name": "Labore et dolore magna",
+          "slug": "labore-et-dolore-magna",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2.jpg",
+      "meta": null
+    },
+    {
+      "id": 33,
+      "translations": [
+        {
+          "category_id": 33,
+          "name": "Ut enim ad mini",
+          "slug": "ut-enim-ad-mini",
+          "locale": "en"
+        }
+      ],
+      "image": "sub3.jpg",
+      "meta": null
+    },
+    {
+      "id": 34,
+      "translations": [
+        {
+          "category_id": 34,
+          "name": "AliquaUt enim",
+          "slug": "aliquaut-enim",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4.jpg",
+      "meta": null
+    },
+    {
+      "id": 51,
+      "translations": [
+        {
+          "category_id": 51,
+          "name": "Lorem ipsum dolor sit",
+          "slug": "lorem-ipsum-dolor-sit",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-1.jpg",
+      "meta": null
+    },
+    {
+      "id": 52,
+      "translations": [
+        {
+          "category_id": 52,
+          "name": "Amet conse ctetur adipisicing",
+          "slug": "amet-conse-ctetur-adipisicing",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-2.jpg",
+      "meta": null
+    },
+    {
+      "id": 53,
+      "translations": [
+        {
+          "category_id": 53,
+          "name": "Elit sed do eiusmod",
+          "slug": "elit-sed-do-eiusmod",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-3.jpg",
+      "meta": null
+    },
+    {
+      "id": 54,
+      "translations": [
+        {
+          "category_id": 54,
+          "name": "Tempor incididunt ut labore",
+          "slug": "tempor-incididunt-ut-labore",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-4.jpg",
+      "meta": null
+    },
+    {
+      "id": 55,
+      "translations": [
+        {
+          "category_id": 55,
+          "name": "Et dolore magna aliqua",
+          "slug": "et-dolore-magna-aliqua",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-5.jpg",
+      "meta": null
+    },
+    {
+      "id": 56,
+      "translations": [
+        {
+          "category_id": 56,
+          "name": "Ut enim ad minim veniam",
+          "slug": "ut-enim-ad-minim-veniam",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-6.jpg",
+      "meta": []
+    },
+    {
+      "id": 57,
+      "translations": [
+        {
+          "category_id": 57,
+          "name": "Quis nostrud",
+          "slug": "quis-nostrud",
+          "locale": "en"
+        }
+      ],
+      "image": "sub1-7.jpg",
+      "meta": null
+    },
+    {
+      "id": 61,
+      "translations": [
+        {
+          "category_id": 61,
+          "name": "Amet conse ctetur adipisicing",
+          "slug": "amet-conse-ctetur-adipisicing",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2-1.jpg",
+      "meta": null
+    },
+    {
+      "id": 62,
+      "translations": [
+        {
+          "category_id": 62,
+          "name": "Elit sed do eiusmod",
+          "slug": "elit-sed-do-eiusmod",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2-2.jpg",
+      "meta": null
+    },
+    {
+      "id": 63,
+      "translations": [
+        {
+          "category_id": 63,
+          "name": "Tempor incididunt ut labore",
+          "slug": "tempor-incididunt-ut-labore",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2-3.jpg",
+      "meta": null
+    },
+    {
+      "id": 64,
+      "translations": [
+        {
+          "category_id": 64,
+          "name": "Et dolore magna aliqua",
+          "slug": "et-dolore-magna-aliqua",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2-4.jpg",
+      "meta": null
+    },
+    {
+      "id": 65,
+      "translations": [
+        {
+          "category_id": 65,
+          "name": "Ut enim ad minim veniam",
+          "slug": "ut-enim-ad-minim-veniam",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2-5.jpg",
+      "meta": null
+    },
+    {
+      "id": 66,
+      "translations": [
+        {
+          "category_id": 66,
+          "name": "Quis nostrud",
+          "slug": "quis-nostrud",
+          "locale": "en"
+        }
+      ],
+      "image": "sub2-6.jpg",
+      "meta": null
+    },
+    {
+      "id": 71,
+      "translations": [
+        {
+          "category_id": 71,
+          "name": "Elit sed do eiusmod",
+          "slug": "elit-sed-do-eiusmod",
+          "locale": "en"
+        }
+      ],
+      "image": "sub3-1.jpg",
+      "meta": null
+    },
+    {
+      "id": 72,
+      "translations": [
+        {
+          "category_id": 72,
+          "name": "Tempor incididunt ut labore",
+          "slug": "tempor-incididunt-ut-labore",
+          "locale": "en"
+        }
+      ],
+      "image": "sub3-2.jpg",
+      "meta": null
+    },
+    {
+      "id": 73,
+      "translations": [
+        {
+          "category_id": 73,
+          "name": "Et dolore magna aliqua",
+          "slug": "et-dolore-magna-aliqua",
+          "locale": "en"
+        }
+      ],
+      "image": "sub3-3.jpg",
+      "meta": null
+    },
+    {
+      "id": 74,
+      "translations": [
+        {
+          "category_id": 74,
+          "name": "Ut enim ad minim veniam",
+          "slug": "ut-enim-ad-minim-veniam",
+          "locale": "en"
+        }
+      ],
+      "image": "sub3-4.jpg",
+      "meta": null
+    },
+    {
+      "id": 75,
+      "translations": [
+        {
+          "category_id": 75,
+          "name": "Quis nostrud",
+          "slug": "quis-nostrud",
+          "locale": "en"
+        }
+      ],
+      "image": "sub3-5.jpg",
+      "meta": null
+    },
+    {
+      "id": 81,
+      "translations": [
+        {
+          "category_id": 81,
+          "name": "Et dolore magna aliqua",
+          "slug": "et-dolore-magna-aliqua",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4-1.jpg",
+      "meta": null
+    },
+    {
+      "id": 82,
+      "translations": [
+        {
+          "category_id": 82,
+          "name": "Ut enim ad minim veniam",
+          "slug": "ut-enim-ad-minim-veniam",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4-2.jpg",
+      "meta": null
+    },
+    {
+      "id": 83,
+      "translations": [
+        {
+          "category_id": 83,
+          "name": "Quis nostrud",
+          "slug": "quis-nostrud",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4-3.jpg",
+      "meta": null
+    },
+    {
+      "id": 84,
+      "translations": [
+        {
+          "category_id": 84,
+          "name": "Amet conse ctetur adipisicing",
+          "slug": "amet-conse-ctetur-adipisicing",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4-4.jpg",
+      "meta": null
+    },
+    {
+      "id": 85,
+      "translations": [
+        {
+          "category_id": 85,
+          "name": "Elit sed do eiusmod",
+          "slug": "elit-sed-do-eiusmod",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4-5.jpg",
+      "meta": null
+    },
+    {
+      "id": 86,
+      "translations": [
+        {
+          "category_id": 86,
+          "name": "Tempor incididunt ut labore",
+          "slug": "tempor-incididunt-ut-labore",
+          "locale": "en"
+        }
+      ],
+      "image": "sub4-6.jpg",
+      "meta": null
+    },
+    {
+      "id": 135,
+      "translations": [
+        {
+          "category_id": 135,
+          "name": "Electronics",
+          "slug": "electronics",
+          "locale": "en"
+        }
+      ],
+      "image": null,
+      "meta": null
+    },
+    {
+      "id": 136,
+      "translations": [
+        {
+          "category_id": 136,
+          "name": "Phones",
+          "slug": "phones",
+          "locale": "en"
+        }
+      ],
+      "image": null,
+      "meta": null
+    },
+    {
+      "id": 137,
+      "translations": [
+        {
+          "category_id": 137,
+          "name": "Laptops",
+          "slug": "laptops",
+          "locale": "en"
+        }
+      ],
+      "image": null,
+      "meta": null
+    },
+    {
+      "id": 1,
+      "translations": [
+        {
+          "category_id": 1,
+          "name": "Cookware",
+          "slug": "cookware",
+          "locale": "en"
+        }
+      ],
+      "image": "",
+      "meta": null
+    },
+    {
+      "id": 2,
+      "translations": [
+        {
+          "category_id": 2,
+          "name": "Bakeware",
+          "slug": "bakeware",
+          "locale": "en"
+        }
+      ],
+      "image": "",
+      "meta": null
+    }
+  ]
+}

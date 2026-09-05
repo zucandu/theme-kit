@@ -1,0 +1,56 @@
+{
+  "_note": "Module payloads, copied in SHAPE from what a store's own modules return - Shipping/Flat::quotes() and Payment/MoneyOrder::selection(). Nothing here is captured: both endpoints are POSTs against a server-held checkout draft, and this package is public. MoneyOrder is used on purpose - it is the one payment module with no gateway, no API keys and no redirect, which makes it the honest default for a kit that never contacts anything.",
+  "shipping_methods": [
+    {
+      "code": "Flat",
+      "name": "Flat Rate",
+      "description": "A single delivery rate for every order.",
+      "methods": [
+        {
+          "id": "Flat",
+          "title": "Flat Rate",
+          "cost": 9.95
+        }
+      ]
+    },
+    {
+      "code": "Free",
+      "name": "Free Shipping",
+      "description": "Free delivery on qualifying orders.",
+      "methods": [
+        {
+          "id": "Free",
+          "title": "Free Shipping",
+          "cost": 0
+        }
+      ]
+    }
+  ],
+  "payment_methods": [
+    {
+      "id": "MoneyOrder",
+      "module": "Check/Money Order"
+    }
+  ],
+  "discount_modules": [
+    {
+      "id": "Coupon",
+      "module": "Coupon"
+    }
+  ],
+  "applied_coupon": {
+    "id": "Coupon",
+    "module": "Coupon",
+    "details": {
+      "amount": 10
+    }
+  },
+  "totals": {
+    "subtotal": 87.97,
+    "shipping": 9.95,
+    "tax": 8.25,
+    "discount": 10,
+    "total": 96.17
+  },
+  "_tax_note": "tax = 8.25 is 9.375% of the subtotal, the rate on the San Jose shipping address in customer.json. Set it to 0 to see the checkout a tax-free destination produces - the theme hides the Sales Tax row when it is not above zero, and that empty state needs designing too."
+}

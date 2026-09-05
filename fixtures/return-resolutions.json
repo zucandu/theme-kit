@@ -1,0 +1,34 @@
+{
+  "resolutions": [
+    {
+      "id": 1,
+      "name": "Refund",
+      "slug": "refund"
+    },
+    {
+      "id": 2,
+      "name": "Exchange",
+      "slug": "exchange"
+    },
+    {
+      "id": 5,
+      "name": "Warranty Replacement",
+      "slug": "warranty_replacement"
+    },
+    {
+      "id": 3,
+      "name": "Warranty Claim",
+      "slug": "warranty_claim"
+    },
+    {
+      "id": 6,
+      "name": "Replacement",
+      "slug": "replacement"
+    },
+    {
+      "id": 4,
+      "name": "Store Credit",
+      "slug": "store_credit"
+    }
+  ]
+}

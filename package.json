@@ -1,0 +1,43 @@
+{
+  "name": "@zucandu/theme-kit",
+  "version": "0.1.0",
+  "description": "Offline theme development kit for the Zucandu v3 storefront. Runs a theme against fixture data — no platform source code included.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zucandu/theme-kit"
+  },
+  "type": "module",
+  "bin": {
+    "zuc-theme": "./bin/zuc-theme.mjs"
+  },
+  "scripts": {
+    "dev": "node bin/zuc-theme.mjs dev",
+    "build": "node bin/zuc-theme.mjs build",
+    "capture": "node tools/capture-fixtures.mjs",
+    "surface": "node tools/extract-surface.mjs"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
+    "axios": "^1.18.0",
+    "dompurify": "^3.4.0",
+    "dropzone": "^6.0.0-beta.2",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.29",
+    "vue-i18n": "^11.1.14",
+    "vue-router": "^4.5.1",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "vite": "^8.2.2"
+  }
+}

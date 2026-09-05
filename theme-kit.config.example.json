@@ -1,0 +1,13 @@
+{
+  "locale": "en",
+  "fixtureOrigin": "https://demo-store.zucandu.com",
+  "zucConfig": {
+    "store_name": "My Store",
+    "default_currency": "USD",
+    "default_language": "en",
+    "number_of_items_per_block": 4,
+    "small_image_size": 60,
+    "medium_image_size": 280,
+    "large_image_size": 600
+  }
+}

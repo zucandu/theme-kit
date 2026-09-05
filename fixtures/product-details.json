@@ -1,0 +1,614 @@
+{
+  "product": {
+    "id": 238,
+    "type": "configurable",
+    "sku": "pl-27",
+    "gtin": null,
+    "mpn": null,
+    "price": "0.0000",
+    "sale_price": "0.0000",
+    "price_sorter": "0.0000",
+    "cost": "0.0000",
+    "quantity": 0,
+    "total_capacity": null,
+    "booking_granularity": null,
+    "booking_start_attribute_option_id": null,
+    "booking_end_attribute_option_id": null,
+    "booking_unit": "night",
+    "max_quantity": 0,
+    "weight": null,
+    "width": null,
+    "height": null,
+    "length": null,
+    "backorder": 0,
+    "restock_notify": 0,
+    "stock_on_request": 0,
+    "status": 1,
+    "is_digital": 0,
+    "popular": 0,
+    "featured": 0,
+    "total_reviews": 0,
+    "rating": 0,
+    "parent_id": 0,
+    "visibility": 1,
+    "sort": 0,
+    "default_variant": 0,
+    "manufacturer_id": null,
+    "tax_class_id": 1,
+    "meta": null,
+    "deleted_at": null,
+    "created_at": "2026-08-31 03:21:56",
+    "updated_at": null,
+    "availability_date": null,
+    "image_attribute_option_id": null,
+    "nestable": 0,
+    "nestable_group_code": null,
+    "nestable_percentage": null,
+    "quantity_discount_status": 0,
+    "returnable": 1,
+    "translations": [
+      {
+        "id": 238,
+        "product_id": 238,
+        "locale": "en",
+        "name": "PressLane Bands Samsung Case",
+        "slug": "presslane-bands-samsung-case",
+        "description": null,
+        "meta_title": "PressLane Bands Samsung Case",
+        "meta_description": null,
+        "created_at": "2026-08-31 03:21:56",
+        "updated_at": null
+      }
+    ],
+    "quantity_discounts": [],
+    "images": [
+      {
+        "id": 886,
+        "product_id": 238,
+        "src": "remote-8bd506aa1b308f8d169f1aecbc06e4e7f16d5cd5.jpg?v=1788146517",
+        "created_at": "2026-08-31 03:21:57",
+        "updated_at": "2026-08-31 03:21:57",
+        "sort": 0
+      },
+      {
+        "id": 887,
+        "product_id": 238,
+        "src": "remote-464359cc6aaaf801dc2fc3df7802faf44159abb6.jpg?v=1788146518",
+        "created_at": "2026-08-31 03:21:58",
+        "updated_at": "2026-08-31 03:21:58",
+        "sort": 1
+      },
+      {
+        "id": 888,
+        "product_id": 238,
+        "src": "remote-2ca1cd813328d95751fea03598f4d459fbdb75f8.jpg?v=1788146518",
+        "created_at": "2026-08-31 03:21:58",
+        "updated_at": "2026-08-31 03:21:58",
+        "sort": 2
+      },
+      {
+        "id": 889,
+        "product_id": 238,
+        "src": "remote-2413874d72c387ed8bd3ad0ab50cc5abf67fe28a.jpg?v=1788146519",
+        "created_at": "2026-08-31 03:21:59",
+        "updated_at": "2026-08-31 03:21:59",
+        "sort": 3
+      },
+      {
+        "id": 890,
+        "product_id": 238,
+        "src": "remote-ee076d9812b8e82ef7be5cf767fc67fef43be8fa.jpg?v=1788146519",
+        "created_at": "2026-08-31 03:21:59",
+        "updated_at": "2026-08-31 03:21:59",
+        "sort": 4
+      },
+      {
+        "id": 891,
+        "product_id": 238,
+        "src": "remote-226c89f4d50b45b116f82b969b0756946f890be3.jpg?v=1788146519",
+        "created_at": "2026-08-31 03:21:59",
+        "updated_at": "2026-08-31 03:21:59",
+        "sort": 5
+      }
+    ],
+    "embeds": [],
+    "attributes": [
+      {
+        "product_id": 238,
+        "attribute_option_id": 2,
+        "attribute_option_value_id": 95,
+        "attribute_default": 0,
+        "attribute_price": "0.0000",
+        "attribute_option": {
+          "id": 2,
+          "type": "select",
+          "filterable": 1,
+          "sort": 0,
+          "display_ov_image": 0,
+          "filter_only": 0,
+          "is_required": 0,
+          "translations": [
+            {
+              "attribute_option_id": 2,
+              "name": "Size",
+              "locale": "en"
+            }
+          ]
+        },
+        "sort": 0,
+        "attribute_option_value": {
+          "id": 95,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 95,
+              "name": "Samsung Galaxy S20 Plus",
+              "locale": "en"
+            }
+          ]
+        }
+      },
+      {
+        "product_id": 238,
+        "attribute_option_id": 2,
+        "attribute_option_value_id": 96,
+        "attribute_default": 0,
+        "attribute_price": "0.0000",
+        "attribute_option": {
+          "id": 2,
+          "type": "select",
+          "filterable": 1,
+          "sort": 0,
+          "display_ov_image": 0,
+          "filter_only": 0,
+          "is_required": 0,
+          "translations": [
+            {
+              "attribute_option_id": 2,
+              "name": "Size",
+              "locale": "en"
+            }
+          ]
+        },
+        "sort": 0,
+        "attribute_option_value": {
+          "id": 96,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 96,
+              "name": "Samsung Galaxy S20 Ultra",
+              "locale": "en"
+            }
+          ]
+        }
+      },
+      {
+        "product_id": 238,
+        "attribute_option_id": 2,
+        "attribute_option_value_id": 97,
+        "attribute_default": 0,
+        "attribute_price": "0.0000",
+        "attribute_option": {
+          "id": 2,
+          "type": "select",
+          "filterable": 1,
+          "sort": 0,
+          "display_ov_image": 0,
+          "filter_only": 0,
+          "is_required": 0,
+          "translations": [
+            {
+              "attribute_option_id": 2,
+              "name": "Size",
+              "locale": "en"
+            }
+          ]
+        },
+        "sort": 0,
+        "attribute_option_value": {
+          "id": 97,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 97,
+              "name": "Samsung Galaxy S20",
+              "locale": "en"
+            }
+          ]
+        }
+      }
+    ],
+    "bundle_groups": [],
+    "categories": [],
+    "children": [
+      {
+        "id": 239,
+        "type": "simple",
+        "sku": "pl-27-11348",
+        "gtin": null,
+        "mpn": null,
+        "price": "29.9900",
+        "sale_price": "0.0000",
+        "price_sorter": "18.9900",
+        "cost": "14.7500",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 238,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2026-08-31 03:22:00",
+        "updated_at": "2026-09-02 14:06:00",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 239,
+            "product_id": 239,
+            "locale": "en",
+            "name": "PressLane Bands Samsung Case — Samsung Galaxy S20 Plus",
+            "slug": "presslane-bands-samsung-case-samsung-galaxy-s20-plus",
+            "description": null,
+            "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20 Plus",
+            "meta_description": null,
+            "created_at": "2026-08-31 03:22:00",
+            "updated_at": null
+          }
+        ],
+        "images": [
+          {
+            "id": 892,
+            "product_id": 239,
+            "src": "remote-8bd506aa1b308f8d169f1aecbc06e4e7f16d5cd5.jpg?v=1788146517",
+            "created_at": "2026-08-31 03:22:00",
+            "updated_at": "2026-08-31 03:22:00",
+            "sort": 0
+          },
+          {
+            "id": 893,
+            "product_id": 239,
+            "src": "remote-464359cc6aaaf801dc2fc3df7802faf44159abb6.jpg?v=1788146518",
+            "created_at": "2026-08-31 03:22:00",
+            "updated_at": "2026-08-31 03:22:00",
+            "sort": 1
+          }
+        ],
+        "quantity_discounts": [],
+        "embeds": [],
+        "bundle_groups": [],
+        "attributes": [
+          {
+            "product_id": 239,
+            "attribute_option_id": 2,
+            "attribute_option_value_id": 95,
+            "attribute_default": 0,
+            "attribute_price": "0.0000",
+            "attribute_option": {
+              "id": 2,
+              "type": "select",
+              "filterable": 1,
+              "sort": 0,
+              "display_ov_image": 0,
+              "filter_only": 0,
+              "is_required": 0,
+              "translations": [
+                {
+                  "attribute_option_id": 2,
+                  "name": "Size",
+                  "locale": "en"
+                }
+              ]
+            },
+            "sort": 0,
+            "attribute_option_value": {
+              "id": 95,
+              "attribute_option_id": 2,
+              "filterable": 1,
+              "sort": 0,
+              "image": null,
+              "filter_only": 0,
+              "translations": [
+                {
+                  "attribute_option_value_id": 95,
+                  "name": "Samsung Galaxy S20 Plus",
+                  "locale": "en"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 240,
+        "type": "simple",
+        "sku": "pl-27-11349",
+        "gtin": null,
+        "mpn": null,
+        "price": "29.9900",
+        "sale_price": "0.0000",
+        "price_sorter": "18.9900",
+        "cost": "14.7500",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 238,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2026-08-31 03:22:00",
+        "updated_at": "2026-09-02 14:06:00",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 240,
+            "product_id": 240,
+            "locale": "en",
+            "name": "PressLane Bands Samsung Case — Samsung Galaxy S20 Ultra",
+            "slug": "presslane-bands-samsung-case-samsung-galaxy-s20-ultra",
+            "description": null,
+            "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20 Ultra",
+            "meta_description": null,
+            "created_at": "2026-08-31 03:22:00",
+            "updated_at": null
+          }
+        ],
+        "images": [
+          {
+            "id": 894,
+            "product_id": 240,
+            "src": "remote-2ca1cd813328d95751fea03598f4d459fbdb75f8.jpg?v=1788146518",
+            "created_at": "2026-08-31 03:22:01",
+            "updated_at": "2026-08-31 03:22:01",
+            "sort": 0
+          },
+          {
+            "id": 895,
+            "product_id": 240,
+            "src": "remote-2413874d72c387ed8bd3ad0ab50cc5abf67fe28a.jpg?v=1788146519",
+            "created_at": "2026-08-31 03:22:01",
+            "updated_at": "2026-08-31 03:22:01",
+            "sort": 1
+          }
+        ],
+        "quantity_discounts": [],
+        "embeds": [],
+        "bundle_groups": [],
+        "attributes": [
+          {
+            "product_id": 240,
+            "attribute_option_id": 2,
+            "attribute_option_value_id": 96,
+            "attribute_default": 0,
+            "attribute_price": "0.0000",
+            "attribute_option": {
+              "id": 2,
+              "type": "select",
+              "filterable": 1,
+              "sort": 0,
+              "display_ov_image": 0,
+              "filter_only": 0,
+              "is_required": 0,
+              "translations": [
+                {
+                  "attribute_option_id": 2,
+                  "name": "Size",
+                  "locale": "en"
+                }
+              ]
+            },
+            "sort": 0,
+            "attribute_option_value": {
+              "id": 96,
+              "attribute_option_id": 2,
+              "filterable": 1,
+              "sort": 0,
+              "image": null,
+              "filter_only": 0,
+              "translations": [
+                {
+                  "attribute_option_value_id": 96,
+                  "name": "Samsung Galaxy S20 Ultra",
+                  "locale": "en"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 241,
+        "type": "simple",
+        "sku": "pl-27-11347",
+        "gtin": null,
+        "mpn": null,
+        "price": "29.9900",
+        "sale_price": "0.0000",
+        "price_sorter": "18.9900",
+        "cost": "14.7500",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 238,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2026-08-31 03:22:01",
+        "updated_at": "2026-09-02 14:06:00",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 241,
+            "product_id": 241,
+            "locale": "en",
+            "name": "PressLane Bands Samsung Case — Samsung Galaxy S20",
+            "slug": "presslane-bands-samsung-case-samsung-galaxy-s20",
+            "description": null,
+            "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20",
+            "meta_description": null,
+            "created_at": "2026-08-31 03:22:01",
+            "updated_at": null
+          }
+        ],
+        "images": [
+          {
+            "id": 896,
+            "product_id": 241,
+            "src": "remote-ee076d9812b8e82ef7be5cf767fc67fef43be8fa.jpg?v=1788146519",
+            "created_at": "2026-08-31 03:22:03",
+            "updated_at": "2026-08-31 03:22:03",
+            "sort": 0
+          },
+          {
+            "id": 897,
+            "product_id": 241,
+            "src": "remote-226c89f4d50b45b116f82b969b0756946f890be3.jpg?v=1788146519",
+            "created_at": "2026-08-31 03:22:03",
+            "updated_at": "2026-08-31 03:22:03",
+            "sort": 1
+          }
+        ],
+        "quantity_discounts": [],
+        "embeds": [],
+        "bundle_groups": [],
+        "attributes": [
+          {
+            "product_id": 241,
+            "attribute_option_id": 2,
+            "attribute_option_value_id": 97,
+            "attribute_default": 0,
+            "attribute_price": "0.0000",
+            "attribute_option": {
+              "id": 2,
+              "type": "select",
+              "filterable": 1,
+              "sort": 0,
+              "display_ov_image": 0,
+              "filter_only": 0,
+              "is_required": 0,
+              "translations": [
+                {
+                  "attribute_option_id": 2,
+                  "name": "Size",
+                  "locale": "en"
+                }
+              ]
+            },
+            "sort": 0,
+            "attribute_option_value": {
+              "id": 97,
+              "attribute_option_id": 2,
+              "filterable": 1,
+              "sort": 0,
+              "image": null,
+              "filter_only": 0,
+              "translations": [
+                {
+                  "attribute_option_value_id": 97,
+                  "name": "Samsung Galaxy S20",
+                  "locale": "en"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "default_attributes": {
+      "2": 95
+    }
+  }
+}

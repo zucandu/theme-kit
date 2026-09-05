@@ -1,0 +1,1205 @@
+{
+  "new": [
+    {
+      "id": 221,
+      "type": "simple",
+      "sku": "pl-22-4622",
+      "gtin": null,
+      "mpn": null,
+      "price": 34.99,
+      "sale_price": 0,
+      "price_sorter": "35.9900",
+      "cost": "17.2500",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 220,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:21:29.000000Z",
+      "updated_at": "2026-09-02T14:05:26.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 221,
+          "name": "PressLane Bands Cap — Black / One size",
+          "slug": "presslane-bands-cap-black-one-size",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Cap — Black / One size",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 221,
+          "src": "remote-367a74ac3d1f0ec39e3c0eff11945ab732ae5389.jpg?v=1788146483"
+        },
+        {
+          "product_id": 221,
+          "src": "remote-fa6fcfb244e678bede7bbc96b888ae1afdf41d34.jpg?v=1788146483"
+        },
+        {
+          "product_id": 221,
+          "src": "remote-104b562e981b631c5b65cd663f6c94c9b4243a6f.jpg?v=1788146484"
+        },
+        {
+          "product_id": 221,
+          "src": "remote-859fe0cead7bb12f04360b50d94dc7adc028f0bd.jpg?v=1788146484"
+        },
+        {
+          "product_id": 221,
+          "src": "remote-94d4a286f9811681f89fcab6f7b4cb7e9a69ef80.jpg?v=1788146485"
+        },
+        {
+          "product_id": 221,
+          "src": "remote-87d754e722af84f3eb19faba636e7f95f9e40064.jpg?v=1788146485"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": []
+    },
+    {
+      "id": 240,
+      "type": "simple",
+      "sku": "pl-27-11349",
+      "gtin": null,
+      "mpn": null,
+      "price": 29.99,
+      "sale_price": 0,
+      "price_sorter": "18.9900",
+      "cost": "14.7500",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 238,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:22:00.000000Z",
+      "updated_at": "2026-09-02T14:06:00.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 1,
+      "translations": [
+        {
+          "product_id": 240,
+          "name": "PressLane Bands Samsung Case — Samsung Galaxy S20 Ultra",
+          "slug": "presslane-bands-samsung-case-samsung-galaxy-s20-ultra",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20 Ultra",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 240,
+          "src": "remote-2ca1cd813328d95751fea03598f4d459fbdb75f8.jpg?v=1788146518"
+        },
+        {
+          "product_id": 240,
+          "src": "remote-2413874d72c387ed8bd3ad0ab50cc5abf67fe28a.jpg?v=1788146519"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": []
+    },
+    {
+      "id": 70,
+      "type": "simple",
+      "sku": "CJYD305022001AZ",
+      "gtin": null,
+      "mpn": null,
+      "price": 9.35,
+      "sale_price": 0,
+      "price_sorter": "9.3500",
+      "cost": "1.7900",
+      "quantity": 8170,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 390,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 69,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-11T06:41:49.000000Z",
+      "updated_at": null,
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 70,
+          "name": "Cute Cartoon Ceramic Pet Bowl — Black Cat On A Red Background",
+          "slug": "cute-cartoon-ceramic-pet-bowl-black-cat-on-a-red-background",
+          "locale": "en",
+          "description": "<p><b>Product information:</b><br />Specifications: Rice Bowl, Red Base with Small Black Cat; Rice Bowl, Red Base with Small White Cat; Rice Bowl, Black Base with Small Black Cat; Rice Bowl, Black Base with Small White Cat<br /> Material: Ceramic<br /> Suitable For: Cats<br /> Category: Pet Feeding Utensils</p>\n<br />\n<b>Packing list: </b>\n<br />Pet Bowl* 1\n<br />\n<p></p>\n<b>Product Image:</b>\n<br />\n<img src=\"https://oss-cf.cjdropshipping.com/product/2026/08/10/23/0ded4931-8321-4c3f-9344-d13f3aeddaae_trans.jpeg\" alt=\"0ded4931-8321-4c3f-9344-d13f3aeddaae_trans.jpeg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/c3d0d4b3-5df5-4638-83fc-a4ec486db04a.jpg\" alt=\"c3d0d4b3-5df5-4638-83fc-a4ec486db04a.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/84d8a989-5c02-416e-92f5-b2b73a2be315.jpg\" alt=\"84d8a989-5c02-416e-92f5-b2b73a2be315.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/481719c8-80b0-4b31-8bf0-b571d6f965b9.jpg\" alt=\"481719c8-80b0-4b31-8bf0-b571d6f965b9.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/aa7ed26f-f098-421a-a41e-e17527325bf9.jpg\" alt=\"aa7ed26f-f098-421a-a41e-e17527325bf9.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/53a6fa19-b5d6-4a0e-bd73-2ab64384c4d9.jpg\" alt=\"53a6fa19-b5d6-4a0e-bd73-2ab64384c4d9.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/6d509bbc-72be-4248-9508-aeef5e015915.jpg\" alt=\"6d509bbc-72be-4248-9508-aeef5e015915.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/6a638ab3-5241-4c6d-9947-4e6c7221e793.jpg\" alt=\"6a638ab3-5241-4c6d-9947-4e6c7221e793.jpg\" />",
+          "meta_title": "Cute Cartoon Ceramic Pet Bowl — Black Cat On A Red Background",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 70,
+          "src": "remote-8c14c5aa8a370e48c16e825dd034b55a3c0314b2.jpg?v=1786430506"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": []
+    },
+    {
+      "id": 222,
+      "type": "simple",
+      "sku": "pl-22-4623",
+      "gtin": null,
+      "mpn": null,
+      "price": 34.99,
+      "sale_price": 0,
+      "price_sorter": "35.9900",
+      "cost": "17.2500",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 220,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:21:29.000000Z",
+      "updated_at": "2026-09-02T14:05:26.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 222,
+          "name": "PressLane Bands Cap — Green Tiger Camo / One size",
+          "slug": "presslane-bands-cap-green-tiger-camo-one-size",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Cap — Green Tiger Camo / One size",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 222,
+          "src": "remote-4b62fb47e25c2dae6f86c9f6e3027afb9a5c23be.jpg?v=1788146486"
+        },
+        {
+          "product_id": 222,
+          "src": "remote-334506e94605e0e849b55ccb9af0858467e9ddb0.jpg?v=1788146486"
+        },
+        {
+          "product_id": 222,
+          "src": "remote-78b30e44054e78dfc7b66293036f17f0cc55eecd.jpg?v=1788146487"
+        },
+        {
+          "product_id": 222,
+          "src": "remote-0f3283103ff46bcb642ed29d185c9b9fcc4b21e7.jpg?v=1788146487"
+        },
+        {
+          "product_id": 222,
+          "src": "remote-c0f362ea939259bf58d0573cc330dc1af3c8d322.jpg?v=1788146488"
+        },
+        {
+          "product_id": 222,
+          "src": "remote-dd51a2709a75ca2b33529397654b83ef096a40ac.jpg?v=1788146488"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": []
+    },
+    {
+      "id": 37,
+      "type": "simple",
+      "sku": "Model1",
+      "gtin": null,
+      "mpn": null,
+      "price": 353,
+      "sale_price": 0,
+      "price_sorter": "353.0000",
+      "cost": "0.0000",
+      "quantity": 993,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 7,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 6,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 0,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:26.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [
+        {
+          "category_id": 55
+        },
+        {
+          "category_id": 56
+        },
+        {
+          "category_id": 72
+        }
+      ],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 37,
+          "name": "Umbra Saddle Sink Caddy",
+          "slug": "umbra-saddle-sink-caddy",
+          "locale": "en",
+          "description": "Donec dolor dolor, porta a, viverra quis, congue in, quam. Sed et quam. Pellentesque ut urna in augue interdum pharetra. Pellentesque quis orci. Nulla sed lacus eget tortor cursus laoreet. Quisque pellentesque arcu vitae quam adipiscing ornare. Integer et mi nec magna pulvinar elementum. Quisque feugiat, mi vulputate consectetuer aliquam, sapien pede hendrerit felis, vulputate tempus ipsum purus ut metus. Pellentesque a tellus eget dui condimentum blandit. Etiam posuere molestie lorem. In sed dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ac felis eu odio ullamcorper lacinia. Maecenas feugiat pellentesque orci. Cras auctor. Aliquam turpis. Nullam porttitor elementum turpis.\n\nVivamus dui nunc, vestibulum non, rutrum ut, scelerisque eget, diam. Integer leo velit, facilisis sed, luctus a, aliquam sed, orci. Proin ac augue. Maecenas turpis metus, tempus at, sagittis vitae, gravida in, nulla. Donec consectetuer. Morbi adipiscing sem in neque. In turpis magna, hendrerit ac, egestas nec, suscipit vel, orci. Suspendisse potenti. In eu tellus. Mauris in neque sed augue ultrices ultrices. Nam pellentesque. Nunc sagittis mauris. Maecenas sed felis. Curabitur mattis blandit enim. In ac elit et nisl fermentum tristique. Fusce malesuada ornare odio. Integer sem.",
+          "meta_title": "Umbra Saddle Sink Caddy",
+          "meta_description": "Donec dolor dolor, porta a, viverra quis, congue in, quam. Sed et quam. Pellentesque ut urna in augue interdum pharetra. Pellentesque quis orci. Nulla sed lacus eget tortor cursus laoreet. Quisque pellentesque arcu vitae quam adipiscing ornare. Integer et mi nec magna pulvinar elementum. Quisque feugiat, mi vulputate consectetuer aliquam, sapien pede hendrerit felis, vulputate tempus ipsum purus ut metus. Pellentesque a tellus eget dui condimentum blandit. Etiam posuere molestie lorem. In sed dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ac felis eu odio ullamcorper lacinia. Maecenas feugiat pellentesque orci. Cras auctor. Aliquam turpis. Nullam porttitor elementum turpis.\r\n\r\nVivamus dui nunc, vestibulum non, rutrum ut, scelerisque eget, diam. Integer leo velit, facilisis sed, luctus a, aliquam sed, orci. Proin ac augue. Maecenas turpis metus, tempus at, sagittis vitae, gravida in, nulla. Donec consectetuer. Morbi adipiscing sem in neque. In turpis magna, hendrerit ac, egestas nec, suscipit vel, orci. Suspendisse potenti. In eu tellus. Mauris in neque sed augue ultrices ultrices. Nam pellentesque. Nunc sagittis mauris. Maecenas sed felis. Curabitur mattis blandit enim. In ac elit et nisl fermentum tristique. Fusce malesuada ornare odio. Integer sem."
+        }
+      ],
+      "images": [
+        {
+          "product_id": 37,
+          "src": "37.jpg?v=1788513521"
+        }
+      ],
+      "categories": [
+        {
+          "id": 55,
+          "pivot": {
+            "product_id": 37,
+            "category_id": 55
+          }
+        },
+        {
+          "id": 56,
+          "pivot": {
+            "product_id": 37,
+            "category_id": 56
+          }
+        },
+        {
+          "id": 72,
+          "pivot": {
+            "product_id": 37,
+            "category_id": 72
+          }
+        }
+      ],
+      "manufacturer": null,
+      "quantity_discounts": []
+    },
+    {
+      "id": 13,
+      "type": "simple",
+      "sku": "Model4",
+      "gtin": null,
+      "mpn": null,
+      "price": 605,
+      "sale_price": 514.25,
+      "price_sorter": "605.0000",
+      "cost": "0.0000",
+      "quantity": 996,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 9,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 2,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 1,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [
+        {
+          "category_id": 4
+        },
+        {
+          "category_id": 62
+        },
+        {
+          "category_id": 81
+        }
+      ],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 13,
+          "name": "John Lewis Ceramic Utensil Pot",
+          "slug": "john-lewis-ceramic-utensil-pot",
+          "locale": "en",
+          "description": "Mauris venenatis congue odio. Nulla id justo vitae velit accumsan gravida. Etiam placerat, est non suscipit tristique, mauris ligula pretium ligula, id condimentum nulla quam vel lorem. Vestibulum ipsum. Nullam sed purus ac arcu pellentesque lobortis. Proin eu dolor. Pellentesque sem purus, porta quis, rutrum vitae, imperdiet quis, tellus. Cras at neque vel eros sollicitudin faucibus. Nullam consectetuer volutpat enim. Sed at tortor non mauris dictum vulputate. Proin ornare erat sed nisl. Curabitur sagittis mattis ipsum. Vestibulum eleifend vehicula dui. Sed metus tortor, molestie eget, blandit vitae, fermentum ut, est. Integer eget enim at lacus auctor adipiscing.\n\nIn nisl massa, dignissim nec, suscipit ut, consequat vitae, risus. Nulla feugiat massa ac nisi. Proin imperdiet mi id mi. Morbi vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras tempus semper tortor. Morbi erat tortor, accumsan sed, convallis sed, placerat a, nisl. Phasellus quis dui. Sed mi arcu, nonummy et, placerat interdum, laoreet a, urna. Mauris metus. Integer tellus leo, ornare eget, dapibus ut, suscipit sed, purus. Etiam scelerisque. Ut eros sapien, fermentum quis, iaculis vitae, varius vitae, velit. Morbi sem. Maecenas eget libero sed nulla euismod sagittis.",
+          "meta_title": "John Lewis Ceramic Utensil Pot",
+          "meta_description": "Mauris venenatis congue odio. Nulla id justo vitae velit accumsan gravida. Etiam placerat, est non suscipit tristique, mauris ligula pretium ligula, id condimentum nulla quam vel lorem. Vestibulum ipsum. Nullam sed purus ac arcu pellentesque lobortis. Proin eu dolor. Pellentesque sem purus, porta quis, rutrum vitae, imperdiet quis, tellus. Cras at neque vel eros sollicitudin faucibus. Nullam consectetuer volutpat enim. Sed at tortor non mauris dictum vulputate. Proin ornare erat sed nisl. Curabitur sagittis mattis ipsum. Vestibulum eleifend vehicula dui. Sed metus tortor, molestie eget, blandit vitae, fermentum ut, est. Integer eget enim at lacus auctor adipiscing.\r\n\r\nIn nisl massa, dignissim nec, suscipit ut, consequat vitae, risus. Nulla feugiat massa ac nisi. Proin imperdiet mi id mi. Morbi vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras tempus semper tortor. Morbi erat tortor, accumsan sed, convallis sed, placerat a, nisl. Phasellus quis dui. Sed mi arcu, nonummy et, placerat interdum, laoreet a, urna. Mauris metus. Integer tellus leo, ornare eget, dapibus ut, suscipit sed, purus. Etiam scelerisque. Ut eros sapien, fermentum quis, iaculis vitae, varius vitae, velit. Morbi sem. Maecenas eget libero sed nulla euismod sagittis."
+        }
+      ],
+      "images": [
+        {
+          "product_id": 13,
+          "src": "13.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 4,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 4
+          }
+        },
+        {
+          "id": 62,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 62
+          }
+        },
+        {
+          "id": 81,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 81
+          }
+        }
+      ],
+      "manufacturer": {
+        "id": 1,
+        "translations": [
+          {
+            "manufacturer_id": 1,
+            "name": "Example 1",
+            "slug": "example-1",
+            "locale": "en"
+          }
+        ]
+      },
+      "quantity_discounts": []
+    },
+    {
+      "id": 188,
+      "type": "simple",
+      "sku": "pl-16-482",
+      "gtin": null,
+      "mpn": null,
+      "price": 14.99,
+      "sale_price": 0,
+      "price_sorter": "18.9900",
+      "cost": "7.5000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 158,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:20:37.000000Z",
+      "updated_at": "2026-09-02T14:06:53.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 188,
+          "name": "PressLane Bands Softstyle Tee — Dark Chocolate / S",
+          "slug": "presslane-bands-softstyle-tee-dark-chocolate-s",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Softstyle Tee — Dark Chocolate / S",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 188,
+          "src": "remote-85e460ebaadde8b4ffd0275650f497ccf571c5be.jpg?v=1788146399"
+        },
+        {
+          "product_id": 188,
+          "src": "remote-17032c1ddb9d6a7d40b468ebf2034eeebfc09d52.jpg?v=1788146399"
+        },
+        {
+          "product_id": 188,
+          "src": "remote-2e3fbf40294797601846f21b03b5f3be78326a0d.jpg?v=1788146400"
+        },
+        {
+          "product_id": 188,
+          "src": "remote-c2caf8959cc9c530e36599808fcff908add78415.jpg?v=1788146400"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": []
+    },
+    {
+      "id": 199,
+      "type": "configurable",
+      "sku": "pl-17",
+      "gtin": null,
+      "mpn": null,
+      "price": 0,
+      "sale_price": 0,
+      "price_sorter": "0.0000",
+      "cost": "0.0000",
+      "quantity": 0,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:20:46.000000Z",
+      "updated_at": null,
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 5,
+      "translations": [
+        {
+          "product_id": 199,
+          "name": "PressLane Bands Long Sleeve",
+          "slug": "presslane-bands-long-sleeve",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Long Sleeve",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 199,
+          "src": "remote-05e83ff41f81b8895962befe482fa5e51ac7119b.jpg?v=1788146448"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-3d289f7441eace2ebebc390e821db6b05df21b41.jpg?v=1788146448"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-d0ad8a672f6a4e5758a0528fe287e2c1163fb091.jpg?v=1788146449"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-9db3d8c6f2c42526b5f19f2e9112ae33e5b83190.jpg?v=1788146449"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-cf423dd782df18f116a245ae3cb35c04dd44f6a7.jpg?v=1788146450"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-5f0c99a60dfa60cd1a85a24e9d9b3963b12a2c8e.jpg?v=1788146450"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-58cf2bcf8feb13e905bee9da1e50d171305567fc.jpg?v=1788146451"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-22018faf7ae5216ba6f1654f373567c66b43897d.jpg?v=1788146451"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-3f8d260ac81ff2a7112859c4605480f935951ffb.jpg?v=1788146451"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-7844c2e6f8a48a6adaa42e6850aa820f600755d5.jpg?v=1788146452"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-be0faf647845c3b55beeddda1c5009e286c50f4e.jpg?v=1788146453"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-98c44fc223da73c10158b82d158760621781b493.jpg?v=1788146453"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-f9d34d36544a2131a7b0766ded84550e4d13cde3.jpg?v=1788146454"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-96803685c1a03bc282188aedd7a0afc0edaba6e5.jpg?v=1788146454"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-7c0b2d3d52c88f82940f7fd7dc13fdd9b79f2719.jpg?v=1788146455"
+        },
+        {
+          "product_id": 199,
+          "src": "remote-13834aa1f0bfefcd2fdf63138c8cc312291729f6.jpg?v=1788146455"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": []
+    }
+  ],
+  "sale": [
+    {
+      "id": 12,
+      "type": "simple",
+      "sku": "Model3",
+      "gtin": null,
+      "mpn": null,
+      "price": 124,
+      "sale_price": 105.4,
+      "price_sorter": "124.0000",
+      "cost": "0.0000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 7,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 3,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [
+        {
+          "category_id": 3
+        },
+        {
+          "category_id": 61
+        },
+        {
+          "category_id": 75
+        }
+      ],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 12,
+          "name": "Hood Whirpool AKR806IX",
+          "slug": "hood-whirpool-akr806ix",
+          "locale": "en",
+          "description": "In posuere, mauris nec luctus dignissim, augue nibh ullamcorper mi, id mattis leo velit a mi. Curabitur nunc nisi, consectetuer eget, auctor luctus, pellentesque sed, massa. Donec magna est, dignissim sit amet, hendrerit id, rutrum nec, ipsum. Nullam vitae nunc. Donec est tellus, semper non, pretium eget, placerat eget, odio. Pellentesque et tortor. Aliquam erat volutpat. Donec ullamcorper nunc. Fusce neque orci, sagittis ut, imperdiet eget, faucibus vel, tellus. Sed a nisl. Aenean interdum, erat vitae pharetra pellentesque, metus mauris faucibus sem, nec rhoncus pede lacus eget eros. In vel libero. Nulla condimentum enim in libero. Maecenas convallis eros.\n\nNam in dolor. Curabitur a velit vel purus aliquet tempus. Quisque urna neque, condimentum quis, nonummy a, lobortis et, orci. Curabitur auctor placerat massa. Vestibulum eleifend. Mauris ornare, enim a tempor egestas, enim orci iaculis nunc, vitae lobortis eros nibh a dolor. Pellentesque enim. Integer non urna. Aliquam augue. Fusce semper, ligula nec accumsan gravida, sapien arcu convallis metus, ac elementum sem ligula nec nisi. Nam a pede. Curabitur aliquam. Cras molestie eleifend sapien. Nunc nec augue. Vestibulum lorem justo, mattis a, aliquam eget, mattis nec, risus. Nulla laoreet ante et ante. Suspendisse vulputate, ipsum vitae varius condimentum, ligula erat euismod eros, a mollis nunc ipsum accumsan ligula. Cras malesuada dictum eros. Duis ut justo.",
+          "meta_title": "Hood Whirpool AKR806IX",
+          "meta_description": "In posuere, mauris nec luctus dignissim, augue nibh ullamcorper mi, id mattis leo velit a mi. Curabitur nunc nisi, consectetuer eget, auctor luctus, pellentesque sed, massa. Donec magna est, dignissim sit amet, hendrerit id, rutrum nec, ipsum. Nullam vitae nunc. Donec est tellus, semper non, pretium eget, placerat eget, odio. Pellentesque et tortor. Aliquam erat volutpat. Donec ullamcorper nunc. Fusce neque orci, sagittis ut, imperdiet eget, faucibus vel, tellus. Sed a nisl. Aenean interdum, erat vitae pharetra pellentesque, metus mauris faucibus sem, nec rhoncus pede lacus eget eros. In vel libero. Nulla condimentum enim in libero. Maecenas convallis eros.\r\n\r\nNam in dolor. Curabitur a velit vel purus aliquet tempus. Quisque urna neque, condimentum quis, nonummy a, lobortis et, orci. Curabitur auctor placerat massa. Vestibulum eleifend. Mauris ornare, enim a tempor egestas, enim orci iaculis nunc, vitae lobortis eros nibh a dolor. Pellentesque enim. Integer non urna. Aliquam augue. Fusce semper, ligula nec accumsan gravida, sapien arcu convallis metus, ac elementum sem ligula nec nisi. Nam a pede. Curabitur aliquam. Cras molestie eleifend sapien. Nunc nec augue. Vestibulum lorem justo, mattis a, aliquam eget, mattis nec, risus. Nulla laoreet ante et ante. Suspendisse vulputate, ipsum vitae varius condimentum, ligula erat euismod eros, a mollis nunc ipsum accumsan ligula. Cras malesuada dictum eros. Duis ut justo."
+        }
+      ],
+      "images": [
+        {
+          "product_id": 12,
+          "src": "12.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 3,
+          "pivot": {
+            "product_id": 12,
+            "category_id": 3
+          }
+        },
+        {
+          "id": 61,
+          "pivot": {
+            "product_id": 12,
+            "category_id": 61
+          }
+        },
+        {
+          "id": 75,
+          "pivot": {
+            "product_id": 12,
+            "category_id": 75
+          }
+        }
+      ],
+      "manufacturer": {
+        "id": 3,
+        "translations": [
+          {
+            "manufacturer_id": 3,
+            "name": "Example 3",
+            "slug": "example-3",
+            "locale": "en"
+          }
+        ]
+      },
+      "quantity_discounts": []
+    },
+    {
+      "id": 14,
+      "type": "simple",
+      "sku": "Model5",
+      "gtin": null,
+      "mpn": null,
+      "price": 991,
+      "sale_price": 743.25,
+      "price_sorter": "991.0000",
+      "cost": "0.0000",
+      "quantity": 998,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 6,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 1,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 2,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [
+        {
+          "category_id": 4
+        },
+        {
+          "category_id": 62
+        },
+        {
+          "category_id": 81
+        }
+      ],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 14,
+          "name": "John Lewis Classic II Universal",
+          "slug": "john-lewis-classic-ii-universal",
+          "locale": "en",
+          "description": "Cras nunc nulla, volutpat a, dapibus ut, ultricies ac, arcu. Sed nunc. Sed in enim. Duis ut ipsum. Phasellus et nisl at pede tincidunt venenatis. Sed elementum ullamcorper dolor. Mauris a sem ac eros vehicula feugiat. Fusce vel diam. Suspendisse sollicitudin gravida turpis. Cras lacinia. Morbi rutrum erat quis massa. Phasellus iaculis tincidunt massa. Aliquam quis dui. Integer diam magna, rutrum ut, volutpat id, volutpat sed, nibh. Donec metus nisl, fringilla ut, feugiat ac, porta at, pede.\n\nSed blandit, lectus at vestibulum lacinia, est massa suscipit odio, eu suscipit nisl dui vel magna. Nam dictum aliquet metus. Suspendisse mollis nibh in tortor. Ut sagittis. Fusce venenatis tristique quam. Ut venenatis tristique libero. Proin tincidunt massa sit amet neque. Aenean egestas feugiat lorem. Pellentesque metus ante, varius non, consectetuer ac, tempor non, diam. Sed quam mi, varius ut, scelerisque et, ornare at, leo. Quisque euismod sapien quis felis. Maecenas et libero id nisi consectetuer aliquam. Sed libero.",
+          "meta_title": "John Lewis Classic II Universal",
+          "meta_description": "Cras nunc nulla, volutpat a, dapibus ut, ultricies ac, arcu. Sed nunc. Sed in enim. Duis ut ipsum. Phasellus et nisl at pede tincidunt venenatis. Sed elementum ullamcorper dolor. Mauris a sem ac eros vehicula feugiat. Fusce vel diam. Suspendisse sollicitudin gravida turpis. Cras lacinia. Morbi rutrum erat quis massa. Phasellus iaculis tincidunt massa. Aliquam quis dui. Integer diam magna, rutrum ut, volutpat id, volutpat sed, nibh. Donec metus nisl, fringilla ut, feugiat ac, porta at, pede.\r\n\r\nSed blandit, lectus at vestibulum lacinia, est massa suscipit odio, eu suscipit nisl dui vel magna. Nam dictum aliquet metus. Suspendisse mollis nibh in tortor. Ut sagittis. Fusce venenatis tristique quam. Ut venenatis tristique libero. Proin tincidunt massa sit amet neque. Aenean egestas feugiat lorem. Pellentesque metus ante, varius non, consectetuer ac, tempor non, diam. Sed quam mi, varius ut, scelerisque et, ornare at, leo. Quisque euismod sapien quis felis. Maecenas et libero id nisi consectetuer aliquam. Sed libero."
+        }
+      ],
+      "images": [
+        {
+          "product_id": 14,
+          "src": "14.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 4,
+          "pivot": {
+            "product_id": 14,
+            "category_id": 4
+          }
+        },
+        {
+          "id": 62,
+          "pivot": {
+            "product_id": 14,
+            "category_id": 62
+          }
+        },
+        {
+          "id": 81,
+          "pivot": {
+            "product_id": 14,
+            "category_id": 81
+          }
+        }
+      ],
+      "manufacturer": {
+        "id": 2,
+        "translations": [
+          {
+            "manufacturer_id": 2,
+            "name": "Example 2",
+            "slug": "example-2",
+            "locale": "en"
+          }
+        ]
+      },
+      "quantity_discounts": []
+    },
+    {
+      "id": 13,
+      "type": "simple",
+      "sku": "Model4",
+      "gtin": null,
+      "mpn": null,
+      "price": 605,
+      "sale_price": 514.25,
+      "price_sorter": "605.0000",
+      "cost": "0.0000",
+      "quantity": 996,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 9,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 2,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 1,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [
+        {
+          "category_id": 4
+        },
+        {
+          "category_id": 62
+        },
+        {
+          "category_id": 81
+        }
+      ],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 13,
+          "name": "John Lewis Ceramic Utensil Pot",
+          "slug": "john-lewis-ceramic-utensil-pot",
+          "locale": "en",
+          "description": "Mauris venenatis congue odio. Nulla id justo vitae velit accumsan gravida. Etiam placerat, est non suscipit tristique, mauris ligula pretium ligula, id condimentum nulla quam vel lorem. Vestibulum ipsum. Nullam sed purus ac arcu pellentesque lobortis. Proin eu dolor. Pellentesque sem purus, porta quis, rutrum vitae, imperdiet quis, tellus. Cras at neque vel eros sollicitudin faucibus. Nullam consectetuer volutpat enim. Sed at tortor non mauris dictum vulputate. Proin ornare erat sed nisl. Curabitur sagittis mattis ipsum. Vestibulum eleifend vehicula dui. Sed metus tortor, molestie eget, blandit vitae, fermentum ut, est. Integer eget enim at lacus auctor adipiscing.\n\nIn nisl massa, dignissim nec, suscipit ut, consequat vitae, risus. Nulla feugiat massa ac nisi. Proin imperdiet mi id mi. Morbi vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras tempus semper tortor. Morbi erat tortor, accumsan sed, convallis sed, placerat a, nisl. Phasellus quis dui. Sed mi arcu, nonummy et, placerat interdum, laoreet a, urna. Mauris metus. Integer tellus leo, ornare eget, dapibus ut, suscipit sed, purus. Etiam scelerisque. Ut eros sapien, fermentum quis, iaculis vitae, varius vitae, velit. Morbi sem. Maecenas eget libero sed nulla euismod sagittis.",
+          "meta_title": "John Lewis Ceramic Utensil Pot",
+          "meta_description": "Mauris venenatis congue odio. Nulla id justo vitae velit accumsan gravida. Etiam placerat, est non suscipit tristique, mauris ligula pretium ligula, id condimentum nulla quam vel lorem. Vestibulum ipsum. Nullam sed purus ac arcu pellentesque lobortis. Proin eu dolor. Pellentesque sem purus, porta quis, rutrum vitae, imperdiet quis, tellus. Cras at neque vel eros sollicitudin faucibus. Nullam consectetuer volutpat enim. Sed at tortor non mauris dictum vulputate. Proin ornare erat sed nisl. Curabitur sagittis mattis ipsum. Vestibulum eleifend vehicula dui. Sed metus tortor, molestie eget, blandit vitae, fermentum ut, est. Integer eget enim at lacus auctor adipiscing.\r\n\r\nIn nisl massa, dignissim nec, suscipit ut, consequat vitae, risus. Nulla feugiat massa ac nisi. Proin imperdiet mi id mi. Morbi vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras tempus semper tortor. Morbi erat tortor, accumsan sed, convallis sed, placerat a, nisl. Phasellus quis dui. Sed mi arcu, nonummy et, placerat interdum, laoreet a, urna. Mauris metus. Integer tellus leo, ornare eget, dapibus ut, suscipit sed, purus. Etiam scelerisque. Ut eros sapien, fermentum quis, iaculis vitae, varius vitae, velit. Morbi sem. Maecenas eget libero sed nulla euismod sagittis."
+        }
+      ],
+      "images": [
+        {
+          "product_id": 13,
+          "src": "13.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 4,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 4
+          }
+        },
+        {
+          "id": 62,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 62
+          }
+        },
+        {
+          "id": 81,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 81
+          }
+        }
+      ],
+      "manufacturer": {
+        "id": 1,
+        "translations": [
+          {
+            "manufacturer_id": 1,
+            "name": "Example 1",
+            "slug": "example-1",
+            "locale": "en"
+          }
+        ]
+      },
+      "quantity_discounts": []
+    },
+    {
+      "id": 11,
+      "type": "simple",
+      "sku": "Model2",
+      "gtin": null,
+      "mpn": null,
+      "price": 653,
+      "sale_price": 522.4,
+      "price_sorter": "653.0000",
+      "cost": "0.0000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 3,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 2,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [
+        {
+          "category_id": 3
+        },
+        {
+          "category_id": 61
+        },
+        {
+          "category_id": 75
+        }
+      ],
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 11,
+          "name": "Hood Scholtes HSE 159 IX",
+          "slug": "hood-scholtes-hse-159-ix",
+          "locale": "en",
+          "description": "Curabitur ac dolor. Donec gravida, elit vel dignissim vestibulum, orci nibh tempor lacus, eget consequat nisl lorem ac leo. Quisque libero neque, ultrices eu, tempor et, interdum quis, justo. Nullam nisi. Nullam neque lacus, pellentesque at, convallis eu, tempus nec, dolor. In gravida urna ut pede sodales gravida. Integer orci massa, imperdiet non, ultricies vel, luctus sit amet, ante. Curabitur nec ligula eget mauris congue nonummy. Duis tempus diam sit amet urna. Praesent feugiat tortor id turpis. Suspendisse potenti. Sed tincidunt quam non sem. Aenean sodales semper ante. Phasellus felis nisi, eleifend in, egestas eget, vulputate ac, ante. Fusce ultricies posuere felis. Nunc pellentesque, dui nec molestie iaculis, mauris diam tincidunt odio, eget tincidunt lectus mauris id mauris.\n\nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nec lectus et sem eleifend luctus. Nullam vitae ligula id nibh sollicitudin vulputate. Morbi eu nisl. Aliquam erat volutpat. Sed metus metus, luctus id, fringilla laoreet, aliquam at, ligula. Aliquam dignissim, sapien at imperdiet malesuada, diam urna tincidunt diam, id placerat dui nunc sit amet elit. Duis convallis nisi et nibh. Praesent sodales pede in pede. Praesent tristique. Praesent turpis.",
+          "meta_title": "Hood Scholtes HSE 159 IX",
+          "meta_description": "Curabitur ac dolor. Donec gravida, elit vel dignissim vestibulum, orci nibh tempor lacus, eget consequat nisl lorem ac leo. Quisque libero neque, ultrices eu, tempor et, interdum quis, justo. Nullam nisi. Nullam neque lacus, pellentesque at, convallis eu, tempus nec, dolor. In gravida urna ut pede sodales gravida. Integer orci massa, imperdiet non, ultricies vel, luctus sit amet, ante. Curabitur nec ligula eget mauris congue nonummy. Duis tempus diam sit amet urna. Praesent feugiat tortor id turpis. Suspendisse potenti. Sed tincidunt quam non sem. Aenean sodales semper ante. Phasellus felis nisi, eleifend in, egestas eget, vulputate ac, ante. Fusce ultricies posuere felis. Nunc pellentesque, dui nec molestie iaculis, mauris diam tincidunt odio, eget tincidunt lectus mauris id mauris.\r\n\r\nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec nec lectus et sem eleifend luctus. Nullam vitae ligula id nibh sollicitudin vulputate. Morbi eu nisl. Aliquam erat volutpat. Sed metus metus, luctus id, fringilla laoreet, aliquam at, ligula. Aliquam dignissim, sapien at imperdiet malesuada, diam urna tincidunt diam, id placerat dui nunc sit amet elit. Duis convallis nisi et nibh. Praesent sodales pede in pede. Praesent tristique. Praesent turpis."
+        }
+      ],
+      "images": [
+        {
+          "product_id": 11,
+          "src": "11.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 3,
+          "pivot": {
+            "product_id": 11,
+            "category_id": 3
+          }
+        },
+        {
+          "id": 61,
+          "pivot": {
+            "product_id": 11,
+            "category_id": 61
+          }
+        },
+        {
+          "id": 75,
+          "pivot": {
+            "product_id": 11,
+            "category_id": 75
+          }
+        }
+      ],
+      "manufacturer": {
+        "id": 2,
+        "translations": [
+          {
+            "manufacturer_id": 2,
+            "name": "Example 2",
+            "slug": "example-2",
+            "locale": "en"
+          }
+        ]
+      },
+      "quantity_discounts": []
+    }
+  ],
+  "featured": []
+}

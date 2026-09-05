@@ -1,0 +1,100 @@
+{
+  "_note": "Synthetic. An order response is scoped to its owner, so none can be captured anonymously — and this package is public, so no real order may ship in it. The FIELD NAMES are not invented: they were read off the theme's own templates (AccountOrderList, AccountOrderDetails, CheckoutSuccess, Invoice), which is why they are order_total / order_tax / status_text rather than the shorter names one would guess.",
+  "order": {
+    "id": 1001,
+    "reference": "TK-1001-DEMO",
+    "status_text": "Processing",
+    "currency": "USD",
+    "purchased_at": "2026-09-01 10:24:00",
+    "subtotal": 87.97,
+    "shipping_amount": 9.95,
+    "order_tax": 8.25,
+    "order_total": 96.17,
+    "payment_method": "Cash on Delivery",
+    "shipping_method": "Flat Rate",
+    "comments": [],
+    "discounts": [],
+    "returns": [],
+    "items": [
+      {
+        "id": 1,
+        "product_id": 136,
+        "name": "PressLane Bands Long Sleeve — Black / 3XL",
+        "sku": "pl-17-3481",
+        "qty": 1,
+        "price": 37.99,
+        "total": 37.99,
+        "images": [
+          {
+            "src": "remote-57416e708c527d352665dae18124f97acb170675.jpg"
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": 2,
+        "product_id": 137,
+        "name": "PressLane Bands Tee — Army / S",
+        "sku": "pl-9-8440",
+        "qty": 2,
+        "price": 24.99,
+        "total": 49.98,
+        "images": [
+          {
+            "src": "remote-85ee18c1402a6320568044cff7d3799a607ea517.jpg"
+          }
+        ],
+        "meta": {}
+      }
+    ],
+    "histories": [
+      {
+        "id": 1,
+        "status_text": "Pending",
+        "comment": "Order placed",
+        "date_added": "2026-09-01 10:24:00"
+      },
+      {
+        "id": 2,
+        "status_text": "Processing",
+        "comment": "Payment confirmed",
+        "date_added": "2026-09-01 11:02:00"
+      }
+    ],
+    "discount_amount": 10,
+    "addresses": [
+      {
+        "id": 1,
+        "name": "Tester Tester",
+        "company": "Test Company",
+        "address_line_1": "7250 Bollinger Rd",
+        "address_line_2": "",
+        "city": "San Jose",
+        "postcode": "95129",
+        "zone_id": 12,
+        "zone_code": "CA",
+        "zone_name": "California",
+        "country_id": 223,
+        "country_name": "United States",
+        "phone": "(408) 873-7384",
+        "address_type": "shipping"
+      },
+      {
+        "id": 2,
+        "name": "Tester Tester",
+        "company": "",
+        "address_line_1": "40 N. 36th St.",
+        "address_line_2": "",
+        "city": "Camp Hill",
+        "postcode": "17011",
+        "zone_id": 51,
+        "zone_code": "PA",
+        "zone_name": "Pennsylvania",
+        "country_id": 223,
+        "country_name": "United States",
+        "phone": "(717) 836-1224",
+        "address_type": "billing"
+      }
+    ]
+  }
+}

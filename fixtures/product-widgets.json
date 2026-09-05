@@ -1,0 +1,973 @@
+{
+  "new": [
+    {
+      "id": 131,
+      "type": "simple",
+      "sku": "pl-9-4022",
+      "gtin": null,
+      "mpn": null,
+      "price": 24.99,
+      "sale_price": 0,
+      "price_sorter": "23.9900",
+      "cost": "12.2500",
+      "quantity": 997,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 2,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 129,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T02:27:20.000000Z",
+      "updated_at": "2026-09-02T14:02:52.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 131,
+          "name": "PressLane Bands Tee — Aqua / M",
+          "slug": "presslane-bands-tee-aqua-m",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 131,
+          "src": "remote-1b3018bda8827493034bbd3e77edbe8f0255bf91.jpg?v=1788143237"
+        },
+        {
+          "product_id": 131,
+          "src": "remote-23e7fa084538201a9704f11f7a22de4f3dfadfea.jpg?v=1788143237"
+        },
+        {
+          "product_id": 131,
+          "src": "remote-cd71c08b8834a7ccac6c9e78be8eab65d7030748.jpg?v=1788143238"
+        },
+        {
+          "product_id": 131,
+          "src": "remote-71ff02155a67cdd01a7845ed49b7990d072062d3.jpg?v=1788143238"
+        },
+        {
+          "product_id": 131,
+          "src": "remote-899f376d6eda46a059a656c0692f425b287f57e1.jpg?v=1788143239"
+        },
+        {
+          "product_id": 131,
+          "src": "remote-41ba53d1a4b22e444f9a6b1afbc53de62b66f799.jpg?v=1788143239"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "id": 149,
+      "type": "simple",
+      "sku": "pl-12-4464",
+      "gtin": null,
+      "mpn": null,
+      "price": 16.99,
+      "sale_price": 0,
+      "price_sorter": "17.9900",
+      "cost": "8.2500",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 147,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T02:58:55.000000Z",
+      "updated_at": "2026-09-02T14:03:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 1,
+      "translations": [
+        {
+          "product_id": 149,
+          "name": "PressLane Bands Poster — 12″×12″",
+          "slug": "presslane-bands-poster-1212",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 149,
+          "src": "remote-dc6267a00d2ab22a595cf50fa46567674896a120.jpg?v=1788145133"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "id": 167,
+      "type": "simple",
+      "sku": "pl-16-510",
+      "gtin": null,
+      "mpn": null,
+      "price": 14.99,
+      "sale_price": 0,
+      "price_sorter": "18.9900",
+      "cost": "7.5000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 158,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:20:20.000000Z",
+      "updated_at": "2026-09-02T14:06:54.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 167,
+          "name": "PressLane Bands Softstyle Tee — Charcoal / M",
+          "slug": "presslane-bands-softstyle-tee-charcoal-m",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 167,
+          "src": "remote-827cbffb4ea37bd3b503afa0cf6bee958d56f30b.jpg?v=1788146406"
+        },
+        {
+          "product_id": 167,
+          "src": "remote-80d9edd16881ac3d08f165fbf3e1c11fb46a587d.jpg?v=1788146406"
+        },
+        {
+          "product_id": 167,
+          "src": "remote-1ac10a6e85f047361bdf1366dc9de1686e3e5248.jpg?v=1788146406"
+        },
+        {
+          "product_id": 167,
+          "src": "remote-dcfc5d552bb389541553029c442fb2f305028d66.jpg?v=1788146407"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "id": 191,
+      "type": "simple",
+      "sku": "pl-16-545",
+      "gtin": null,
+      "mpn": null,
+      "price": 14.99,
+      "sale_price": 0,
+      "price_sorter": "18.9900",
+      "cost": "7.5000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 158,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:20:39.000000Z",
+      "updated_at": "2026-09-02T14:06:56.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 191,
+          "name": "PressLane Bands Softstyle Tee — Dark Heather / L",
+          "slug": "presslane-bands-softstyle-tee-dark-heather-l",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 191,
+          "src": "remote-4bf4eb07b09345f1987dd8fd8bde7d2401857db1.jpg?v=1788146401"
+        },
+        {
+          "product_id": 191,
+          "src": "remote-722fbc11f0513a7a06c271024af4eb7c7aa52c7c.jpg?v=1788146401"
+        },
+        {
+          "product_id": 191,
+          "src": "remote-82975678e99dca6ec4bea6fcc40354c43c42b142.jpg?v=1788146403"
+        },
+        {
+          "product_id": 191,
+          "src": "remote-9438e1cd582dd79321d8abd284fafa9c75f493da.jpg?v=1788146403"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "id": 211,
+      "type": "simple",
+      "sku": "pl-18-5439",
+      "gtin": null,
+      "mpn": null,
+      "price": 40.99,
+      "sale_price": 0,
+      "price_sorter": "45.9900",
+      "cost": "20.2500",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 206,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:21:09.000000Z",
+      "updated_at": "2026-09-02T14:05:05.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 211,
+          "name": "PressLane Bands Sweatshirt — Black / 3XL",
+          "slug": "presslane-bands-sweatshirt-black-3xl",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 211,
+          "src": "remote-3df1b619273f3dcf34ee5d9172affe148e181b00.jpg?v=1788146463"
+        },
+        {
+          "product_id": 211,
+          "src": "remote-3b210d05fd5244da80a39fa100d159b1d0fecc67.jpg?v=1788146463"
+        },
+        {
+          "product_id": 211,
+          "src": "remote-63537e318a51361776172f6f2677d7367b9a618b.jpg?v=1788146463"
+        },
+        {
+          "product_id": 211,
+          "src": "remote-b7fbf05ee3cb313222a19fee30b39672c255567e.jpg?v=1788146464"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "id": 28,
+      "type": "simple",
+      "sku": "Model1",
+      "gtin": null,
+      "mpn": null,
+      "price": 104,
+      "sale_price": 0,
+      "price_sorter": "104.0000",
+      "cost": "0.0000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 5,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 0,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:25.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 28,
+          "name": "Modern fridge freezer Fagor FFA-8865",
+          "slug": "modern-fridge-freezer-fagor-ffa-8865",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 28,
+          "src": "28.jpg?v=1788513521"
+        }
+      ],
+      "categories": [
+        {
+          "id": 52,
+          "pivot": {
+            "product_id": 28,
+            "category_id": 52
+          }
+        },
+        {
+          "id": 65,
+          "pivot": {
+            "product_id": 28,
+            "category_id": 65
+          }
+        },
+        {
+          "id": 84,
+          "pivot": {
+            "product_id": 28,
+            "category_id": 84
+          }
+        }
+      ]
+    },
+    {
+      "id": 245,
+      "type": "configurable",
+      "sku": "pl-14",
+      "gtin": null,
+      "mpn": null,
+      "price": 0,
+      "sale_price": 0,
+      "price_sorter": "0.0000",
+      "cost": "0.0000",
+      "quantity": 0,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:22:10.000000Z",
+      "updated_at": null,
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 4,
+      "translations": [
+        {
+          "product_id": 245,
+          "name": "PressLane Mug After Fix",
+          "slug": "presslane-mug-after-fix",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 245,
+          "src": "remote-bbfc15ef51e5f75a91ed25f9c8a7e9b96fc69ce9.jpg?v=1788146532"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-132ce177a053c08a9fc131daef27a0e36f1aa17a.jpg?v=1788146532"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-571bd5f3b99f8d578afa6db927d7207e5e9970f0.jpg?v=1788146533"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-a63dc22861a0c4ec3fca0ad03136cfe87dcf6dfe.jpg?v=1788146533"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-fb355db688f56aa1b45c59d71b9cc76211bbe3a9.jpg?v=1788146534"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-f540f06c1744d7f8b898951426335fdf28762039.jpg?v=1788146534"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-0eb4e0fb1ac6c602d808c65e32001bc7d3ee293d.jpg?v=1788146534"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-aad202a348b5023c29287d3dd6ca600df5db2dd1.jpg?v=1788146535"
+        },
+        {
+          "product_id": 245,
+          "src": "remote-706b1ff58c2d1c39a279785243481cf3dec9ec05.jpg?v=1788146535"
+        }
+      ],
+      "categories": []
+    },
+    {
+      "id": 97,
+      "type": "simple",
+      "sku": "CJQB30544640013",
+      "gtin": null,
+      "mpn": null,
+      "price": 26.26,
+      "sale_price": 0,
+      "price_sorter": "26.2600",
+      "cost": "3.9900",
+      "quantity": 6,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 350,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 84,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2026-08-12T03:57:40.000000Z",
+      "updated_at": "2026-09-05T05:58:02.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 97,
+          "name": "80s Retro Fluorescent Lip Print Off-Shoulder T-Shirt, Off-Shoulder Top, Halloween Women's Wear — Magenta Green-L",
+          "slug": "80s-retro-fluorescent-lip-print-off-shoulder-t-shirt-off-shoulder-top-halloween-womens-wear-magenta-green-l",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 97,
+          "src": "remote-c695b4611a28b7ff1d17034410f6cfdc4f366f16.jpg?v=1786507050"
+        }
+      ],
+      "categories": []
+    }
+  ],
+  "sale": [
+    {
+      "id": 12,
+      "type": "simple",
+      "sku": "Model3",
+      "gtin": null,
+      "mpn": null,
+      "price": 124,
+      "sale_price": 105.4,
+      "price_sorter": "124.0000",
+      "cost": "0.0000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 7,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 3,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 12,
+          "name": "Hood Whirpool AKR806IX",
+          "slug": "hood-whirpool-akr806ix",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 12,
+          "src": "12.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 3,
+          "pivot": {
+            "product_id": 12,
+            "category_id": 3
+          }
+        },
+        {
+          "id": 61,
+          "pivot": {
+            "product_id": 12,
+            "category_id": 61
+          }
+        },
+        {
+          "id": 75,
+          "pivot": {
+            "product_id": 12,
+            "category_id": 75
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "type": "simple",
+      "sku": "Model5",
+      "gtin": null,
+      "mpn": null,
+      "price": 991,
+      "sale_price": 743.25,
+      "price_sorter": "991.0000",
+      "cost": "0.0000",
+      "quantity": 998,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 6,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 1,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 2,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 14,
+          "name": "John Lewis Classic II Universal",
+          "slug": "john-lewis-classic-ii-universal",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 14,
+          "src": "14.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 4,
+          "pivot": {
+            "product_id": 14,
+            "category_id": 4
+          }
+        },
+        {
+          "id": 62,
+          "pivot": {
+            "product_id": 14,
+            "category_id": 62
+          }
+        },
+        {
+          "id": 81,
+          "pivot": {
+            "product_id": 14,
+            "category_id": 81
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "type": "simple",
+      "sku": "Model4",
+      "gtin": null,
+      "mpn": null,
+      "price": 605,
+      "sale_price": 514.25,
+      "price_sorter": "605.0000",
+      "cost": "0.0000",
+      "quantity": 996,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 9,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 2,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 1,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 13,
+          "name": "John Lewis Ceramic Utensil Pot",
+          "slug": "john-lewis-ceramic-utensil-pot",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 13,
+          "src": "13.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 4,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 4
+          }
+        },
+        {
+          "id": 62,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 62
+          }
+        },
+        {
+          "id": 81,
+          "pivot": {
+            "product_id": 13,
+            "category_id": 81
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "simple",
+      "sku": "Model2",
+      "gtin": null,
+      "mpn": null,
+      "price": 653,
+      "sale_price": 522.4,
+      "price_sorter": "653.0000",
+      "cost": "0.0000",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": 3,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 0,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": 2,
+      "tax_class_id": 1,
+      "meta": null,
+      "deleted_at": null,
+      "created_at": "2023-02-09T09:17:34.000000Z",
+      "updated_at": "2026-06-19T06:10:23.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "has_attributes": 0,
+      "translations": [
+        {
+          "product_id": 11,
+          "name": "Hood Scholtes HSE 159 IX",
+          "slug": "hood-scholtes-hse-159-ix",
+          "locale": "en"
+        }
+      ],
+      "images": [
+        {
+          "product_id": 11,
+          "src": "11.jpg?v=1788513520"
+        }
+      ],
+      "categories": [
+        {
+          "id": 3,
+          "pivot": {
+            "product_id": 11,
+            "category_id": 3
+          }
+        },
+        {
+          "id": 61,
+          "pivot": {
+            "product_id": 11,
+            "category_id": 61
+          }
+        },
+        {
+          "id": 75,
+          "pivot": {
+            "product_id": 11,
+            "category_id": 75
+          }
+        }
+      ]
+    }
+  ],
+  "featured": []
+}

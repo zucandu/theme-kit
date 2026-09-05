@@ -1,0 +1,195 @@
+{
+  "_note": "Precomputed attribute maps, derived once from product-details.json so the shim can return them as-is. `variants` feeds the picker, `readonly` the spec table, `child` is what every selection resolves to.",
+  "_source_product_id": 238,
+  "_source_slug": "presslane-bands-samsung-case",
+  "variants": [
+    {
+      "id": 2,
+      "display_ov_image": 0,
+      "filter_only": 0,
+      "translations": [
+        {
+          "attribute_option_id": 2,
+          "name": "Size",
+          "locale": "en"
+        }
+      ],
+      "sort": 0,
+      "values": [
+        {
+          "id": 95,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 95,
+              "name": "Samsung Galaxy S20 Plus",
+              "locale": "en"
+            }
+          ],
+          "vid": 95
+        },
+        {
+          "id": 96,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 96,
+              "name": "Samsung Galaxy S20 Ultra",
+              "locale": "en"
+            }
+          ],
+          "vid": 96
+        },
+        {
+          "id": 97,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 97,
+              "name": "Samsung Galaxy S20",
+              "locale": "en"
+            }
+          ],
+          "vid": 97
+        }
+      ]
+    }
+  ],
+  "readonly": [],
+  "child": {
+    "id": 239,
+    "type": "simple",
+    "sku": "pl-27-11348",
+    "gtin": null,
+    "mpn": null,
+    "price": "29.9900",
+    "sale_price": "0.0000",
+    "price_sorter": "18.9900",
+    "cost": "14.7500",
+    "quantity": 999,
+    "total_capacity": null,
+    "booking_granularity": null,
+    "booking_start_attribute_option_id": null,
+    "booking_end_attribute_option_id": null,
+    "booking_unit": "night",
+    "max_quantity": 0,
+    "weight": null,
+    "width": null,
+    "height": null,
+    "length": null,
+    "backorder": 0,
+    "restock_notify": 0,
+    "stock_on_request": 0,
+    "status": 1,
+    "is_digital": 0,
+    "popular": 0,
+    "featured": 0,
+    "total_reviews": 0,
+    "rating": 0,
+    "parent_id": 238,
+    "visibility": 1,
+    "sort": 0,
+    "default_variant": 0,
+    "manufacturer_id": null,
+    "tax_class_id": 1,
+    "meta": null,
+    "deleted_at": null,
+    "created_at": "2026-08-31 03:22:00",
+    "updated_at": "2026-09-02 14:06:00",
+    "availability_date": null,
+    "image_attribute_option_id": null,
+    "nestable": 0,
+    "nestable_group_code": null,
+    "nestable_percentage": null,
+    "quantity_discount_status": 0,
+    "returnable": 1,
+    "translations": [
+      {
+        "id": 239,
+        "product_id": 239,
+        "locale": "en",
+        "name": "PressLane Bands Samsung Case — Samsung Galaxy S20 Plus",
+        "slug": "presslane-bands-samsung-case-samsung-galaxy-s20-plus",
+        "description": null,
+        "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20 Plus",
+        "meta_description": null,
+        "created_at": "2026-08-31 03:22:00",
+        "updated_at": null
+      }
+    ],
+    "images": [
+      {
+        "id": 892,
+        "product_id": 239,
+        "src": "remote-8bd506aa1b308f8d169f1aecbc06e4e7f16d5cd5.jpg?v=1788146517",
+        "created_at": "2026-08-31 03:22:00",
+        "updated_at": "2026-08-31 03:22:00",
+        "sort": 0
+      },
+      {
+        "id": 893,
+        "product_id": 239,
+        "src": "remote-464359cc6aaaf801dc2fc3df7802faf44159abb6.jpg?v=1788146518",
+        "created_at": "2026-08-31 03:22:00",
+        "updated_at": "2026-08-31 03:22:00",
+        "sort": 1
+      }
+    ],
+    "quantity_discounts": [],
+    "embeds": [],
+    "bundle_groups": [],
+    "attributes": [
+      {
+        "product_id": 239,
+        "attribute_option_id": 2,
+        "attribute_option_value_id": 95,
+        "attribute_default": 0,
+        "attribute_price": "0.0000",
+        "attribute_option": {
+          "id": 2,
+          "type": "select",
+          "filterable": 1,
+          "sort": 0,
+          "display_ov_image": 0,
+          "filter_only": 0,
+          "is_required": 0,
+          "translations": [
+            {
+              "attribute_option_id": 2,
+              "name": "Size",
+              "locale": "en"
+            }
+          ]
+        },
+        "sort": 0,
+        "attribute_option_value": {
+          "id": 95,
+          "attribute_option_id": 2,
+          "filterable": 1,
+          "sort": 0,
+          "image": null,
+          "filter_only": 0,
+          "translations": [
+            {
+              "attribute_option_value_id": 95,
+              "name": "Samsung Galaxy S20 Plus",
+              "locale": "en"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

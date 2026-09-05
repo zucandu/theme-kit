@@ -1,0 +1,21 @@
+/*
+ * Tailwind entry for the kit.
+ *
+ * `source(none)` plus explicit `@source` mirrors how the platform builds the
+ * storefront bundle: Tailwind scans only what is named here. The path is
+ * rewritten by bin/zuc-theme.mjs to point at the developer's theme folder, so a
+ * class used in their files is generated and one used only in the platform's
+ * admin never is — the same 45% smaller stylesheet the storefront ships.
+ *
+ * A class that exists in a file NOT covered by @source is dropped silently: no
+ * error, just an unstyled element. Suspect this first when something looks
+ * wrong after moving files around.
+ */
+@import 'tailwindcss' source(none);
+
+@source "../theme/storefront";
+@source "../theme/cores";
+@source "../theme/Storefront.vue";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/aspect-ratio";

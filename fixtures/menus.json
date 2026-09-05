@@ -1,0 +1,483 @@
+{
+  "primary": {
+    "id": 1,
+    "type": "bar",
+    "orientation": "horizontal",
+    "items": [
+      {
+        "id": 1,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 1,
+        "translations": [
+          {
+            "title": "Home",
+            "locale": "en",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "dropdown",
+        "sort": 22,
+        "translations": [
+          {
+            "title": "All Categories",
+            "locale": "en",
+            "url": "/"
+          }
+        ],
+        "blocks": [
+          {
+            "id": 6,
+            "block_width": "12",
+            "sort": 0,
+            "elements": [
+              {
+                "id": 5,
+                "menu_block_id": 6,
+                "block_type": "link",
+                "link": "category",
+                "resource_id": 3,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 11,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "title": "Appliances",
+                    "locale": "en",
+                    "url": "appliances",
+                    "content": "Curabitur porta pretium lectus. Etiam consectetuer, erat in dictum ornare, massa turpis tempus lorem, sit amet gravida mauris lacus nec metus."
+                  }
+                ],
+                "extra_data": {
+                  "image": ""
+                },
+                "children": []
+              },
+              {
+                "id": 6,
+                "menu_block_id": 6,
+                "block_type": "link",
+                "link": "category",
+                "resource_id": 1,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 22,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "title": "Cookware",
+                    "locale": "en",
+                    "url": "cookware",
+                    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam mattis, augue a pharetra aliquet, turpis magna sagittis odio, non lobortis dolor nulla a massa."
+                  }
+                ],
+                "extra_data": {
+                  "image": ""
+                },
+                "children": []
+              },
+              {
+                "id": 7,
+                "menu_block_id": 6,
+                "block_type": "link",
+                "link": "category",
+                "resource_id": 6,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 33,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "title": "Cutlery",
+                    "locale": "en",
+                    "url": "cutlery",
+                    "content": "Proin dapibus lectus vitae nibh. Fusce leo massa, sagittis sed, aliquet in, lacinia sed, justo. Duis varius est. Nunc dapibus, libero sit amet."
+                  }
+                ],
+                "extra_data": {
+                  "image": ""
+                },
+                "children": []
+              },
+              {
+                "id": 8,
+                "menu_block_id": 6,
+                "block_type": "link",
+                "link": "category",
+                "resource_id": 4,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 44,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "title": "Electrics",
+                    "locale": "en",
+                    "url": "electrics",
+                    "content": "Integer id libero id orci porttitor tempus. Aliquam mollis, nulla sed nonummy venenatis, eros est elementum est, nec egestas mi dui eu sapien."
+                  }
+                ],
+                "extra_data": {
+                  "image": ""
+                },
+                "children": []
+              },
+              {
+                "id": 9,
+                "menu_block_id": 6,
+                "block_type": "link",
+                "link": "category",
+                "resource_id": 5,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 55,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "title": "Coffee and Tea",
+                    "locale": "en",
+                    "url": "coffee-and-tea",
+                    "content": "Fusce fringilla. Suspendisse venenatis. Maecenas justo. Aenean nunc eros, pharetra facilisis, eleifend vel, eleifend vel, nulla."
+                  }
+                ],
+                "extra_data": {
+                  "image": ""
+                },
+                "children": []
+              },
+              {
+                "id": 10,
+                "menu_block_id": 6,
+                "block_type": "link",
+                "link": "category",
+                "resource_id": 2,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 66,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "title": "Bakeware",
+                    "locale": "en",
+                    "url": "bakeware",
+                    "content": "Mauris quis neque vitae velit fringilla tristique. Fusce eu massa ut lacus tincidunt venenatis. Duis facilisis tellus vel velit lacinia."
+                  }
+                ],
+                "extra_data": {
+                  "image": ""
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 888,
+        "translations": [
+          {
+            "title": "Blog",
+            "locale": "en",
+            "url": "blog/posts"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 900,
+        "translations": [
+          {
+            "title": "Track Order",
+            "locale": "en",
+            "url": "track-order/form"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 906,
+        "translations": [
+          {
+            "title": "Returns & Exchanges",
+            "locale": "en",
+            "url": "return-exchange/form"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 999,
+        "translations": [
+          {
+            "title": "Contact Us",
+            "locale": "en",
+            "url": "contact-us"
+          }
+        ]
+      }
+    ]
+  },
+  "tertiary": null,
+  "home-top": null,
+  "footer-middle": {
+    "id": 3,
+    "type": "bar",
+    "orientation": "horizontal",
+    "items": [
+      {
+        "id": 9,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 1,
+        "translations": [
+          {
+            "title": "Home",
+            "locale": "en",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 32,
+        "translations": [
+          {
+            "title": "My Account",
+            "locale": "en",
+            "url": "account/orders/list"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 224,
+        "translations": [
+          {
+            "title": "Track Order",
+            "locale": "en",
+            "url": "track-order/form"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 442,
+        "translations": [
+          {
+            "title": "Contact Us",
+            "locale": "en",
+            "url": "contact-us"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "link": "article",
+        "resource_id": 5,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 19210,
+        "translations": [
+          {
+            "title": "Privacy Notice",
+            "locale": "en",
+            "url": "privacy-notice"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "link": "article",
+        "resource_id": 6,
+        "icon": null,
+        "submenu": "nosub",
+        "sort": 19210,
+        "translations": [
+          {
+            "title": "Conditions of Use",
+            "locale": "en",
+            "url": "conditions-of-use"
+          }
+        ]
+      }
+    ]
+  },
+  "footer-bottom": null,
+  "account": {
+    "id": 90,
+    "key": "account",
+    "type": "bar",
+    "orientation": "vertical",
+    "items": [
+      {
+        "id": 900,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-orders.svg",
+        "submenu": "nosub",
+        "sort": 10,
+        "translations": [
+          {
+            "title": "Orders",
+            "locale": "en",
+            "url": "account/order/list"
+          }
+        ]
+      },
+      {
+        "id": 901,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-reorder.svg",
+        "submenu": "nosub",
+        "sort": 20,
+        "translations": [
+          {
+            "title": "Quick Reorder",
+            "locale": "en",
+            "url": "account/quick-reorder"
+          }
+        ]
+      },
+      {
+        "id": 902,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-profile.svg",
+        "submenu": "nosub",
+        "sort": 30,
+        "translations": [
+          {
+            "title": "Profile",
+            "locale": "en",
+            "url": "account/profile"
+          }
+        ]
+      },
+      {
+        "id": 903,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-address.svg",
+        "submenu": "nosub",
+        "sort": 40,
+        "translations": [
+          {
+            "title": "Address Book",
+            "locale": "en",
+            "url": "account/address-book"
+          }
+        ]
+      },
+      {
+        "id": 904,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-wishlist.svg",
+        "submenu": "nosub",
+        "sort": 50,
+        "translations": [
+          {
+            "title": "Wishlist",
+            "locale": "en",
+            "url": "account/wishlist"
+          }
+        ]
+      },
+      {
+        "id": 905,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-back-in-stock.svg",
+        "submenu": "nosub",
+        "sort": 60,
+        "translations": [
+          {
+            "title": "Back in stock",
+            "locale": "en",
+            "url": "account/back-in-stock"
+          }
+        ]
+      },
+      {
+        "id": 906,
+        "link": "page",
+        "resource_id": null,
+        "icon": "account-password.svg",
+        "submenu": "nosub",
+        "sort": 70,
+        "translations": [
+          {
+            "title": "Update Password",
+            "locale": "en",
+            "url": "account/password"
+          }
+        ]
+      }
+    ]
+  }
+}

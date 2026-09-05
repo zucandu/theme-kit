@@ -1,0 +1,2981 @@
+{
+  "paginator": {
+    "current_page": 1,
+    "data": [
+      {
+        "id": 1,
+        "type": "simple",
+        "sku": "Model1",
+        "gtin": null,
+        "mpn": null,
+        "price": "521.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "521.0000",
+        "cost": "0.0000",
+        "quantity": 8,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 2,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 1,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 1,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-08-30 05:47:02",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 1,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 1,
+            "product_id": 1,
+            "locale": "en",
+            "name": "Applica FP1600B B&D 7 Cup Food Processor",
+            "slug": "applica-fp1600b-bampd-7-cup-food-processor",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mattis. Nulla sagittis tincidunt nibh. Ut non dui vitae enim tempor cursus. Nunc iaculis rutrum elit. Curabitur ligula. Proin sed turpis in metus blandit venenatis. Vivamus ultrices. Aenean at eros. Aliquam quis urna. Proin neque. Morbi pharetra erat. Sed ipsum velit, scelerisque et, iaculis eu, gravida quis, nulla. Mauris mi neque, bibendum eget, ullamcorper vel, pellentesque vel, lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse lacus.\n\nMorbi non libero sit amet nisi pretium fringilla. Nunc tempus dolor gravida tortor. Sed suscipit ullamcorper nibh. Duis feugiat augue. Donec rutrum diam in augue. Donec ornare, erat vel porta condimentum, justo lacus sodales mauris, sed ullamcorper orci leo eget lectus. Vestibulum vitae orci. Aenean tincidunt ullamcorper est. Aenean nec nulla. Suspendisse tortor nisi, consectetuer nec, rhoncus nec, faucibus eu, nisi. Aenean sed ligula.",
+            "meta_title": "Applica FP1600B B&D 7 Cup Food Processor",
+            "meta_description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mattis. Nulla sagittis tincidunt nibh. Ut non dui vitae enim tempor cursus. Nunc iaculis rutrum elit. Curabitur ligula. Proin sed turpis in metus blandit venenatis. Vivamus ultrices. Aenean at eros. Aliquam quis urna. Proin neque. Morbi pharetra erat. Sed ipsum velit, scelerisque et, iaculis eu, gravida quis, nulla. Mauris mi neque, bibendum eget, ullamcorper vel, pellentesque vel, lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse lacus.\r\n\r\nMorbi non libero sit amet nisi pretium fringilla. Nunc tempus dolor gravida tortor. Sed suscipit ullamcorper nibh. Duis feugiat augue. Donec rutrum diam in augue. Donec ornare, erat vel porta condimentum, justo lacus sodales mauris, sed ullamcorper orci leo eget lectus. Vestibulum vitae orci. Aenean tincidunt ullamcorper est. Aenean nec nulla. Suspendisse tortor nisi, consectetuer nec, rhoncus nec, faucibus eu, nisi. Aenean sed ligula.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:22"
+          }
+        ],
+        "images": [
+          {
+            "id": 1,
+            "product_id": 1,
+            "src": "01.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "type": "simple",
+        "sku": "Model3Orange",
+        "gtin": null,
+        "mpn": null,
+        "price": "211.7800",
+        "sale_price": "0.0000",
+        "price_sorter": "211.7800",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 4,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 3,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": [],
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:26",
+        "availability_date": null,
+        "image_attribute_option_id": 1,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 42,
+            "product_id": 42,
+            "locale": "en",
+            "name": "Coffee Machine Bugatti Diva Orange",
+            "slug": "coffee-machine-bugatti-diva-orange",
+            "description": "Quisque feugiat. Vestibulum eu lacus in orci bibendum vehicula. Mauris in arcu quis erat ultrices venenatis. Suspendisse lacus urna, sodales ac, hendrerit vel, laoreet eget, orci. Duis nisi. Duis nunc turpis, vehicula at, posuere quis, varius non, dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec non turpis. Nam suscipit, urna sit amet nonummy porta, nibh purus sagittis ante, a mollis purus lorem sed arcu. Maecenas vitae urna. Nam ultricies mi in elit. In hac habitasse platea dictumst. Proin ullamcorper elit sed ipsum. Sed nec nulla.\n\nCurabitur nec lacus quis mi ullamcorper tempus. Morbi magna purus, cursus a, pharetra ac, vestibulum ac, tellus. Fusce ut magna ac pede laoreet ornare. Sed sed erat vel magna feugiat posuere. Quisque et dui non dui varius fermentum. Integer at sapien venenatis augue scelerisque interdum. Sed in elit. Curabitur eu elit. Pellentesque id ligula sed felis volutpat suscipit. Fusce ullamcorper, odio id tincidunt hendrerit, enim ipsum pretium ligula, sed pulvinar justo justo a justo. Aenean a lacus. Cras egestas lacus ut nulla. Cras nonummy, lorem non eleifend volutpat, tortor nisi rutrum quam, eu blandit est nunc in ante. Duis eleifend.",
+            "meta_title": "Coffee Machine Bugatti Diva Orange",
+            "meta_description": "Quisque feugiat. Vestibulum eu lacus in orci bibendum vehicula. Mauris in arcu quis erat ultrices venenatis. Suspendisse lacus urna, sodales ac, hendrerit vel, laoreet eget, orci. Duis nisi. Duis nunc turpis, vehicula at, posuere quis, varius non, dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec non turpis. Nam suscipit, urna sit amet nonummy porta, nibh purus sagittis ante, a mollis purus lorem sed arcu. Maecenas vitae urna. Nam ultricies mi in elit. In hac habitasse platea dictumst. Proin ullamcorper elit sed ipsum. Sed nec nulla.\r\n\r\nCurabitur nec lacus quis mi ullamcorper tempus. Morbi magna purus, cursus a, pharetra ac, vestibulum ac, tellus. Fusce ut magna ac pede laoreet ornare. Sed sed erat vel magna feugiat posuere. Quisque et dui non dui varius fermentum. Integer at sapien venenatis augue scelerisque interdum. Sed in elit. Curabitur eu elit. Pellentesque id ligula sed felis volutpat suscipit. Fusce ullamcorper, odio id tincidunt hendrerit, enim ipsum pretium ligula, sed pulvinar justo justo a justo. Aenean a lacus. Cras egestas lacus ut nulla. Cras nonummy, lorem non eleifend volutpat, tortor nisi rutrum quam, eu blandit est nunc in ante. Duis eleifend.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:26"
+          }
+        ],
+        "images": [
+          {
+            "id": 46,
+            "product_id": 42,
+            "src": "03-1.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "type": "simple",
+        "sku": "CJYD305022001AZ",
+        "gtin": null,
+        "mpn": null,
+        "price": "9.3500",
+        "sale_price": "0.0000",
+        "price_sorter": "9.3500",
+        "cost": "1.7900",
+        "quantity": 8170,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 390,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 69,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2026-08-11 06:41:49",
+        "updated_at": null,
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 70,
+            "product_id": 70,
+            "locale": "en",
+            "name": "Cute Cartoon Ceramic Pet Bowl — Black Cat On A Red Background",
+            "slug": "cute-cartoon-ceramic-pet-bowl-black-cat-on-a-red-background",
+            "description": "<p><b>Product information:</b><br />Specifications: Rice Bowl, Red Base with Small Black Cat; Rice Bowl, Red Base with Small White Cat; Rice Bowl, Black Base with Small Black Cat; Rice Bowl, Black Base with Small White Cat<br /> Material: Ceramic<br /> Suitable For: Cats<br /> Category: Pet Feeding Utensils</p>\n<br />\n<b>Packing list: </b>\n<br />Pet Bowl* 1\n<br />\n<p></p>\n<b>Product Image:</b>\n<br />\n<img src=\"https://oss-cf.cjdropshipping.com/product/2026/08/10/23/0ded4931-8321-4c3f-9344-d13f3aeddaae_trans.jpeg\" alt=\"0ded4931-8321-4c3f-9344-d13f3aeddaae_trans.jpeg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/c3d0d4b3-5df5-4638-83fc-a4ec486db04a.jpg\" alt=\"c3d0d4b3-5df5-4638-83fc-a4ec486db04a.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/84d8a989-5c02-416e-92f5-b2b73a2be315.jpg\" alt=\"84d8a989-5c02-416e-92f5-b2b73a2be315.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/481719c8-80b0-4b31-8bf0-b571d6f965b9.jpg\" alt=\"481719c8-80b0-4b31-8bf0-b571d6f965b9.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/aa7ed26f-f098-421a-a41e-e17527325bf9.jpg\" alt=\"aa7ed26f-f098-421a-a41e-e17527325bf9.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/53a6fa19-b5d6-4a0e-bd73-2ab64384c4d9.jpg\" alt=\"53a6fa19-b5d6-4a0e-bd73-2ab64384c4d9.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/6d509bbc-72be-4248-9508-aeef5e015915.jpg\" alt=\"6d509bbc-72be-4248-9508-aeef5e015915.jpg\" />\n<img src=\"https://cf.cjdropshipping.com/quick/product/6a638ab3-5241-4c6d-9947-4e6c7221e793.jpg\" alt=\"6a638ab3-5241-4c6d-9947-4e6c7221e793.jpg\" />",
+            "meta_title": "Cute Cartoon Ceramic Pet Bowl — Black Cat On A Red Background",
+            "meta_description": null,
+            "created_at": "2026-08-11 06:41:49",
+            "updated_at": null
+          }
+        ],
+        "images": [
+          {
+            "id": 200,
+            "product_id": 70,
+            "src": "remote-8c14c5aa8a370e48c16e825dd034b55a3c0314b2.jpg?v=1786430506",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "type": "configurable",
+        "sku": "TEE-CLASSIC",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 100,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": [],
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 77,
+            "product_id": 77,
+            "locale": "en",
+            "name": "Classic Cotton Tee",
+            "slug": "classic-cotton-tee",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "type": "simple",
+        "sku": "TEE-CLASSIC-BLK-S",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 99,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 1,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 77,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 1,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": "[]",
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 78,
+            "product_id": 78,
+            "locale": "en",
+            "name": "Classic Cotton Tee Black S",
+            "slug": "classic-cotton-tee-black-s-78",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee - Black S",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "type": "simple",
+        "sku": "TEE-CLASSIC-BLK-M",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 100,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 77,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": "[]",
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 79,
+            "product_id": 79,
+            "locale": "en",
+            "name": "Classic Cotton Tee Black M",
+            "slug": "classic-cotton-tee-black-m-79",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee - Black M",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "type": "simple",
+        "sku": "TEE-CLASSIC-BLK-L",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 100,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 77,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": "[]",
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 80,
+            "product_id": 80,
+            "locale": "en",
+            "name": "Classic Cotton Tee Black L",
+            "slug": "classic-cotton-tee-black-l-80",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee - Black L",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "type": "simple",
+        "sku": "TEE-CLASSIC-WHT-S",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 100,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 77,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": "[]",
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 81,
+            "product_id": 81,
+            "locale": "en",
+            "name": "Classic Cotton Tee White S",
+            "slug": "classic-cotton-tee-white-s-81",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee - White S",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "type": "simple",
+        "sku": "TEE-CLASSIC-WHT-M",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 100,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 77,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": "[]",
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 82,
+            "product_id": 82,
+            "locale": "en",
+            "name": "Classic Cotton Tee White M",
+            "slug": "classic-cotton-tee-white-m-82",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee - White M",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "type": "simple",
+        "sku": "TEE-CLASSIC-WHT-L",
+        "gtin": null,
+        "mpn": null,
+        "price": "24.0000",
+        "sale_price": null,
+        "price_sorter": "24.0000",
+        "cost": null,
+        "quantity": 100,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": null,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 77,
+        "visibility": 0,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": null,
+        "tax_class_id": 1,
+        "meta": "[]",
+        "deleted_at": null,
+        "created_at": "2026-08-12 03:46:33",
+        "updated_at": "2026-08-12 03:46:33",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 83,
+            "product_id": 83,
+            "locale": "en",
+            "name": "Classic Cotton Tee White L",
+            "slug": "classic-cotton-tee-white-l-83",
+            "description": "<p>A soft mid-weight cotton tee. Available in Black and White, sizes S to L.</p>",
+            "meta_title": "Classic Cotton Tee - White L",
+            "meta_description": "A soft mid-weight cotton tee. Available in Black and White, sizes S to L.",
+            "created_at": "2026-08-12 03:46:33",
+            "updated_at": "2026-08-12 03:46:33"
+          }
+        ],
+        "images": [
+          {
+            "src": "no-image.png"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "simple",
+        "sku": "Model2",
+        "gtin": null,
+        "mpn": null,
+        "price": "160.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "160.0000",
+        "cost": "0.0000",
+        "quantity": 998,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 3,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 3,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 2,
+        "tax_class_id": 1,
+        "meta": [],
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:22",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 2,
+            "product_id": 2,
+            "locale": "en",
+            "name": "Bugatti Uma Electronic Kitchen Scale and Timer",
+            "slug": "bugatti-uma-electronic-kitchen-scale-and-timer",
+            "description": "Praesent risus orci, pretium semper, sagittis sit amet, scelerisque ac, velit. Quisque viverra tortor non lacus. Pellentesque quis ligula. In laoreet arcu ut velit. Sed magna. Nullam feugiat mi at arcu. Morbi et tortor. Donec eu lectus at massa tincidunt posuere. Sed interdum mattis risus. Integer nonummy, sem sed ullamcorper egestas, mauris metus aliquam metus, ut varius magna diam id justo. Donec ipsum sapien, imperdiet laoreet, feugiat quis, posuere in, ante. Sed ultrices. Etiam scelerisque rhoncus mi. Sed vitae tellus. Donec quam lacus, rhoncus eget, varius suscipit, placerat a, mi. Ut faucibus. Aenean dignissim nibh at purus.\n\nEtiam ac augue a justo sagittis suscipit. Aenean laoreet tincidunt lacus. Sed bibendum nulla et justo. Praesent blandit malesuada augue. Cras sed orci. Donec molestie mauris a dolor. Sed purus. Ut purus leo, pellentesque in, nonummy sed, dignissim vitae, mauris. Morbi egestas nisi non nibh. Vivamus purus nulla, ultricies nec, iaculis vel, mollis ut, quam. Nulla facilisi. Donec scelerisque, erat vitae varius rhoncus, velit lectus mollis tellus, et blandit ligula pede vel dolor. Vivamus magna leo, lacinia sed, ullamcorper et, tristique consectetuer, orci. Ut molestie lectus at velit.",
+            "meta_title": "Bugatti Uma Electronic Kitchen Scale and Timer",
+            "meta_description": "Praesent risus orci, pretium semper, sagittis sit amet, scelerisque ac, velit. Quisque viverra tortor non lacus. Pellentesque quis ligula. In laoreet arcu ut velit. Sed magna. Nullam feugiat mi at arcu. Morbi et tortor. Donec eu lectus at massa tincidunt posuere. Sed interdum mattis risus. Integer nonummy, sem sed ullamcorper egestas, mauris metus aliquam metus, ut varius magna diam id justo. Donec ipsum sapien, imperdiet laoreet, feugiat quis, posuere in, ante. Sed ultrices. Etiam scelerisque rhoncus mi. Sed vitae tellus. Donec quam lacus, rhoncus eget, varius suscipit, placerat a, mi. Ut faucibus. Aenean dignissim nibh at purus.\r\n\r\nEtiam ac augue a justo sagittis suscipit. Aenean laoreet tincidunt lacus. Sed bibendum nulla et justo. Praesent blandit malesuada augue. Cras sed orci. Donec molestie mauris a dolor. Sed purus. Ut purus leo, pellentesque in, nonummy sed, dignissim vitae, mauris. Morbi egestas nisi non nibh. Vivamus purus nulla, ultricies nec, iaculis vel, mollis ut, quam. Nulla facilisi. Donec scelerisque, erat vitae varius rhoncus, velit lectus mollis tellus, et blandit ligula pede vel dolor. Vivamus magna leo, lacinia sed, ullamcorper et, tristique consectetuer, orci. Ut molestie lectus at velit.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:22"
+          }
+        ],
+        "images": [
+          {
+            "id": 2,
+            "product_id": 2,
+            "src": "02.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          },
+          {
+            "id": 41,
+            "product_id": 2,
+            "src": "02-1.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          },
+          {
+            "id": 42,
+            "product_id": 2,
+            "src": "02-2.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "configurable",
+        "sku": "Model3",
+        "gtin": null,
+        "mpn": null,
+        "price": "241.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "241.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 4,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": [],
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:22",
+        "availability_date": null,
+        "image_attribute_option_id": 1,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 3,
+            "product_id": 3,
+            "locale": "en",
+            "name": "Coffee Machine Bugatti Diva",
+            "slug": "coffee-machine-bugatti-diva",
+            "description": "Quisque feugiat. Vestibulum eu lacus in orci bibendum vehicula. Mauris in arcu quis erat ultrices venenatis. Suspendisse lacus urna, sodales ac, hendrerit vel, laoreet eget, orci. Duis nisi. Duis nunc turpis, vehicula at, posuere quis, varius non, dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec non turpis. Nam suscipit, urna sit amet nonummy porta, nibh purus sagittis ante, a mollis purus lorem sed arcu. Maecenas vitae urna. Nam ultricies mi in elit. In hac habitasse platea dictumst. Proin ullamcorper elit sed ipsum. Sed nec nulla.\n\nCurabitur nec lacus quis mi ullamcorper tempus. Morbi magna purus, cursus a, pharetra ac, vestibulum ac, tellus. Fusce ut magna ac pede laoreet ornare. Sed sed erat vel magna feugiat posuere. Quisque et dui non dui varius fermentum. Integer at sapien venenatis augue scelerisque interdum. Sed in elit. Curabitur eu elit. Pellentesque id ligula sed felis volutpat suscipit. Fusce ullamcorper, odio id tincidunt hendrerit, enim ipsum pretium ligula, sed pulvinar justo justo a justo. Aenean a lacus. Cras egestas lacus ut nulla. Cras nonummy, lorem non eleifend volutpat, tortor nisi rutrum quam, eu blandit est nunc in ante. Duis eleifend.",
+            "meta_title": "Coffee Machine Bugatti Diva",
+            "meta_description": "Quisque feugiat. Vestibulum eu lacus in orci bibendum vehicula. Mauris in arcu quis erat ultrices venenatis. Suspendisse lacus urna, sodales ac, hendrerit vel, laoreet eget, orci. Duis nisi. Duis nunc turpis, vehicula at, posuere quis, varius non, dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Donec non turpis. Nam suscipit, urna sit amet nonummy porta, nibh purus sagittis ante, a mollis purus lorem sed arcu. Maecenas vitae urna. Nam ultricies mi in elit. In hac habitasse platea dictumst. Proin ullamcorper elit sed ipsum. Sed nec nulla.\r\n\r\nCurabitur nec lacus quis mi ullamcorper tempus. Morbi magna purus, cursus a, pharetra ac, vestibulum ac, tellus. Fusce ut magna ac pede laoreet ornare. Sed sed erat vel magna feugiat posuere. Quisque et dui non dui varius fermentum. Integer at sapien venenatis augue scelerisque interdum. Sed in elit. Curabitur eu elit. Pellentesque id ligula sed felis volutpat suscipit. Fusce ullamcorper, odio id tincidunt hendrerit, enim ipsum pretium ligula, sed pulvinar justo justo a justo. Aenean a lacus. Cras egestas lacus ut nulla. Cras nonummy, lorem non eleifend volutpat, tortor nisi rutrum quam, eu blandit est nunc in ante. Duis eleifend.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:22"
+          }
+        ],
+        "images": [
+          {
+            "id": 3,
+            "product_id": 3,
+            "src": "03.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "simple",
+        "sku": "Model4",
+        "gtin": null,
+        "mpn": null,
+        "price": "651.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "651.0000",
+        "cost": "0.0000",
+        "quantity": 995,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 5,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 7,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 1,
+        "tax_class_id": 1,
+        "meta": [],
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-08-22 07:46:51",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 4,
+            "product_id": 4,
+            "locale": "en",
+            "name": "Coffee Machine Kalorik Aztec",
+            "slug": "coffee-machine-kalorik-aztec",
+            "description": "Duis tortor quam, lobortis eget, pharetra commodo, euismod sed, tellus. Praesent viverra cursus est. Praesent eu quam ut velit adipiscing interdum. Praesent dictum, metus id luctus vulputate, nisl eros hendrerit libero, sit amet venenatis pede ante id metus. Fusce quis lacus. Phasellus molestie libero quis tortor. Sed dignissim luctus quam. Quisque adipiscing consequat ante. Proin pede. Ut tristique nisi et orci. Nulla in purus quis lacus imperdiet laoreet. Sed quis eros. In volutpat augue non lectus. Nullam at mauris varius arcu condimentum scelerisque. Fusce et turpis vel tellus vestibulum sodales. Mauris dui. Nullam eros purus, scelerisque ac, commodo vitae, faucibus sed, nisl.\n\nSed leo velit, iaculis ut, sodales et, mollis vitae, felis. Morbi tortor dolor, pharetra ac, ultricies id, accumsan sed, diam. Vivamus lacus. Nulla metus eros, faucibus quis, vulputate in, fringilla ut, felis. Fusce a erat. Cras congue mollis dui. Nulla non nulla. Quisque massa. Duis velit magna, placerat sed, convallis non, condimentum eget, leo. Mauris sed nunc et nunc sodales lobortis. Nunc at dui ut felis nonummy aliquet.",
+            "meta_title": "Coffee Machine Kalorik Aztec",
+            "meta_description": "Duis tortor quam, lobortis eget, pharetra commodo, euismod sed, tellus. Praesent viverra cursus est. Praesent eu quam ut velit adipiscing interdum. Praesent dictum, metus id luctus vulputate, nisl eros hendrerit libero, sit amet venenatis pede ante id metus. Fusce quis lacus. Phasellus molestie libero quis tortor. Sed dignissim luctus quam. Quisque adipiscing consequat ante. Proin pede. Ut tristique nisi et orci. Nulla in purus quis lacus imperdiet laoreet. Sed quis eros. In volutpat augue non lectus. Nullam at mauris varius arcu condimentum scelerisque. Fusce et turpis vel tellus vestibulum sodales. Mauris dui. Nullam eros purus, scelerisque ac, commodo vitae, faucibus sed, nisl.\r\n\r\nSed leo velit, iaculis ut, sodales et, mollis vitae, felis. Morbi tortor dolor, pharetra ac, ultricies id, accumsan sed, diam. Vivamus lacus. Nulla metus eros, faucibus quis, vulputate in, fringilla ut, felis. Fusce a erat. Cras congue mollis dui. Nulla non nulla. Quisque massa. Duis velit magna, placerat sed, convallis non, condimentum eget, leo. Mauris sed nunc et nunc sodales lobortis. Nunc at dui ut felis nonummy aliquet.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:22"
+          }
+        ],
+        "images": [
+          {
+            "id": 234,
+            "product_id": 4,
+            "src": "04.jpg?v=1788513520",
+            "created_at": "2026-08-22 07:46:51",
+            "updated_at": "2026-08-22 07:46:51",
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": "simple",
+        "sku": "Model5",
+        "gtin": null,
+        "mpn": null,
+        "price": "211.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "211.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 2,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 2,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:22",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 5,
+            "product_id": 5,
+            "locale": "en",
+            "name": "Coffee Machine Malongo Espresso-gold",
+            "slug": "coffee-machine-malongo-espresso-gold",
+            "description": "Duis vel lacus ut ante lobortis tincidunt. Ut scelerisque imperdiet elit. Quisque facilisis feugiat est. Duis eget nulla. Aenean nisl lacus, tempus id, convallis in, vulputate vulputate, metus. Quisque condimentum aliquet nulla. Nullam dignissim dictum purus. Curabitur ullamcorper. Curabitur a dolor. Morbi tincidunt pede eu ante. Aliquam rhoncus, urna vitae semper pellentesque, lacus lorem tempus elit, sed scelerisque metus metus vel nisi. Aliquam fringilla ligula sed sapien. Phasellus imperdiet, tellus ac vulputate dictum, erat sapien gravida velit, non euismod odio tortor eget mauris. In hac habitasse platea dictumst. Sed urna tellus, mollis sit amet, ultrices et, adipiscing eget, nulla.\n\nCras accumsan lorem vitae lectus. Aliquam pretium ultricies neque. Cras sodales suscipit erat. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam aliquam lectus a nunc. Nam mattis condimentum enim. Donec mi. Pellentesque eget magna id est pulvinar ullamcorper. Vestibulum ullamcorper eros vitae pede. Phasellus accumsan consequat metus. Quisque mauris lorem, luctus volutpat, dignissim mollis, convallis sed, odio. Proin pharetra orci in sapien. Fusce tempus tristique lectus. Integer quis neque. Etiam id velit vel tellus ultrices tincidunt. Etiam non quam.",
+            "meta_title": "Coffee Machine Malongo Espresso-gold",
+            "meta_description": "Duis vel lacus ut ante lobortis tincidunt. Ut scelerisque imperdiet elit. Quisque facilisis feugiat est. Duis eget nulla. Aenean nisl lacus, tempus id, convallis in, vulputate vulputate, metus. Quisque condimentum aliquet nulla. Nullam dignissim dictum purus. Curabitur ullamcorper. Curabitur a dolor. Morbi tincidunt pede eu ante. Aliquam rhoncus, urna vitae semper pellentesque, lacus lorem tempus elit, sed scelerisque metus metus vel nisi. Aliquam fringilla ligula sed sapien. Phasellus imperdiet, tellus ac vulputate dictum, erat sapien gravida velit, non euismod odio tortor eget mauris. In hac habitasse platea dictumst. Sed urna tellus, mollis sit amet, ultrices et, adipiscing eget, nulla.\r\n\r\nCras accumsan lorem vitae lectus. Aliquam pretium ultricies neque. Cras sodales suscipit erat. In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam aliquam lectus a nunc. Nam mattis condimentum enim. Donec mi. Pellentesque eget magna id est pulvinar ullamcorper. Vestibulum ullamcorper eros vitae pede. Phasellus accumsan consequat metus. Quisque mauris lorem, luctus volutpat, dignissim mollis, convallis sed, odio. Proin pharetra orci in sapien. Fusce tempus tristique lectus. Integer quis neque. Etiam id velit vel tellus ultrices tincidunt. Etiam non quam.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:22"
+          }
+        ],
+        "images": [
+          {
+            "id": 5,
+            "product_id": 5,
+            "src": "05.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "simple",
+        "sku": "Model6",
+        "gtin": null,
+        "mpn": null,
+        "price": "83.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "83.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 2,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 6,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:22",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 6,
+            "product_id": 6,
+            "locale": "en",
+            "name": "Coffee Maker Bosch Assimo",
+            "slug": "coffee-maker-bosch-assimo",
+            "description": "Morbi facilisis sodales mauris. Quisque elementum nulla at ante. Vestibulum adipiscing sodales lorem. Praesent ultricies. Sed vehicula, ante nec vestibulum condimentum, est lacus fermentum lacus, euismod hendrerit quam massa non nunc. Vestibulum egestas. Nullam a erat. Etiam rhoncus velit ac neque. Maecenas ullamcorper feugiat enim. Nam mattis. Vestibulum vestibulum urna sed felis pretium tincidunt. Proin nisl massa, posuere sit amet, pulvinar nec, ultricies at, nisl.\n\nNullam nec urna. Vestibulum commodo sapien sed augue. Sed ut mauris. Donec eget pede. In eget elit. Sed sit amet metus. Aenean vehicula tempus velit. Quisque pharetra. Vestibulum eros. Etiam eget ligula. Cras at lacus. Nulla metus nunc, iaculis ac, tristique sit amet, pellentesque vitae, nisl. Donec malesuada eros ac magna. In dictum, justo sed consectetuer pretium, mauris erat ultrices enim, et placerat libero nulla eget orci. Proin quis dolor at massa dictum malesuada. Donec nec augue. Fusce posuere. Proin lorem dolor, interdum ac, vehicula vel, malesuada sit amet, sem. Proin lobortis dui at ipsum condimentum fringilla.",
+            "meta_title": "Coffee Maker Bosch Assimo",
+            "meta_description": "Morbi facilisis sodales mauris. Quisque elementum nulla at ante. Vestibulum adipiscing sodales lorem. Praesent ultricies. Sed vehicula, ante nec vestibulum condimentum, est lacus fermentum lacus, euismod hendrerit quam massa non nunc. Vestibulum egestas. Nullam a erat. Etiam rhoncus velit ac neque. Maecenas ullamcorper feugiat enim. Nam mattis. Vestibulum vestibulum urna sed felis pretium tincidunt. Proin nisl massa, posuere sit amet, pulvinar nec, ultricies at, nisl.\r\n\r\nNullam nec urna. Vestibulum commodo sapien sed augue. Sed ut mauris. Donec eget pede. In eget elit. Sed sit amet metus. Aenean vehicula tempus velit. Quisque pharetra. Vestibulum eros. Etiam eget ligula. Cras at lacus. Nulla metus nunc, iaculis ac, tristique sit amet, pellentesque vitae, nisl. Donec malesuada eros ac magna. In dictum, justo sed consectetuer pretium, mauris erat ultrices enim, et placerat libero nulla eget orci. Proin quis dolor at massa dictum malesuada. Donec nec augue. Fusce posuere. Proin lorem dolor, interdum ac, vehicula vel, malesuada sit amet, sem. Proin lobortis dui at ipsum condimentum fringilla.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:22"
+          }
+        ],
+        "images": [
+          {
+            "id": 6,
+            "product_id": 6,
+            "src": "06.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "type": "simple",
+        "sku": "Model8",
+        "gtin": null,
+        "mpn": null,
+        "price": "104.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "104.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 4,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 2,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 8,
+            "product_id": 8,
+            "locale": "en",
+            "name": "Hamilton Beach 72703 Ensemble 3 Cup Chopper",
+            "slug": "hamilton-beach-72703-ensemble-3-cup-chopper",
+            "description": "Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Pellentesque laoreet, nisi ut porttitor commodo, purus sapien porttitor sapien, ac viverra mauris mauris eu quam. Morbi metus neque, pulvinar nec, auctor non, suscipit ut, tellus. Sed ut urna. Proin imperdiet molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi nulla. Etiam purus arcu, blandit a, adipiscing a, vestibulum non, eros. Proin tristique. Aenean nulla eros, rhoncus sed, accumsan id, dapibus sit amet, lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec ac erat ut elit elementum facilisis. Donec fermentum quam. Curabitur aliquam, nisl ut lobortis adipiscing, lectus leo elementum odio, et hendrerit nunc pede nec diam. Mauris semper, mauris non eleifend aliquam, massa libero malesuada nulla, nec faucibus neque quam sodales urna. Donec ac turpis a massa rhoncus imperdiet. Cras vitae lorem. Curabitur nec nibh. Nulla facilisi.\n\nCurabitur risus nulla, ornare et, pretium ullamcorper, interdum nec, tellus. Vivamus quis massa in metus eleifend fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus nisi. In congue mattis justo. Aenean sit amet urna ullamcorper dolor lobortis pulvinar. Cras rutrum, nulla a ornare rhoncus, metus justo commodo orci, eu accumsan nisl tellus quis erat. Quisque venenatis rhoncus turpis. Morbi ut dolor. Quisque vulputate. Quisque mi ligula, tempor vitae, ultricies eget, volutpat a, purus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum magna massa, feugiat quis, varius at, tempor non, nisl. Sed sed arcu nec turpis commodo pharetra. Praesent tellus lacus, tempus rutrum, porttitor pharetra, pretium vel, magna. Etiam tristique ultricies diam. Pellentesque pellentesque luctus mi. Suspendisse potenti. Sed in nibh. Maecenas a nunc a sem tincidunt blandit.",
+            "meta_title": "Hamilton Beach 72703 Ensemble 3 Cup Chopper",
+            "meta_description": "Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Pellentesque laoreet, nisi ut porttitor commodo, purus sapien porttitor sapien, ac viverra mauris mauris eu quam. Morbi metus neque, pulvinar nec, auctor non, suscipit ut, tellus. Sed ut urna. Proin imperdiet molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi nulla. Etiam purus arcu, blandit a, adipiscing a, vestibulum non, eros. Proin tristique. Aenean nulla eros, rhoncus sed, accumsan id, dapibus sit amet, lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec ac erat ut elit elementum facilisis. Donec fermentum quam. Curabitur aliquam, nisl ut lobortis adipiscing, lectus leo elementum odio, et hendrerit nunc pede nec diam. Mauris semper, mauris non eleifend aliquam, massa libero malesuada nulla, nec faucibus neque quam sodales urna. Donec ac turpis a massa rhoncus imperdiet. Cras vitae lorem. Curabitur nec nibh. Nulla facilisi.\r\n\r\nCurabitur risus nulla, ornare et, pretium ullamcorper, interdum nec, tellus. Vivamus quis massa in metus eleifend fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus nisi. In congue mattis justo. Aenean sit amet urna ullamcorper dolor lobortis pulvinar. Cras rutrum, nulla a ornare rhoncus, metus justo commodo orci, eu accumsan nisl tellus quis erat. Quisque venenatis rhoncus turpis. Morbi ut dolor. Quisque vulputate. Quisque mi ligula, tempor vitae, ultricies eget, volutpat a, purus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vestibulum magna massa, feugiat quis, varius at, tempor non, nisl. Sed sed arcu nec turpis commodo pharetra. Praesent tellus lacus, tempus rutrum, porttitor pharetra, pretium vel, magna. Etiam tristique ultricies diam. Pellentesque pellentesque luctus mi. Suspendisse potenti. Sed in nibh. Maecenas a nunc a sem tincidunt blandit.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:23"
+          }
+        ],
+        "images": [
+          {
+            "id": 8,
+            "product_id": 8,
+            "src": "08.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "type": "simple",
+        "sku": "Model9",
+        "gtin": null,
+        "mpn": null,
+        "price": "359.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "359.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 5,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 9,
+            "product_id": 9,
+            "locale": "en",
+            "name": "Hood CDA EVCK4SS 40cm Cylinder",
+            "slug": "hood-cda-evck4ss-40cm-cylinder",
+            "description": "Integer convallis malesuada massa. Sed eget sapien a magna volutpat sollicitudin. Nullam sit amet dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque nulla. In ut lorem. Cras sit amet lectus. Proin at purus. Praesent accumsan volutpat ante. Etiam vitae nulla. Aliquam erat volutpat. Nullam quam.\n\nPraesent pellentesque gravida felis. Duis neque. Nunc id eros tincidunt neque consectetuer sollicitudin. Morbi rhoncus, mi quis sollicitudin laoreet, ipsum lacus ultricies urna, quis aliquet mi pede nec lectus. Morbi molestie, ante ut interdum aliquet, nibh ante volutpat diam, ac posuere magna justo ut ipsum. Donec lobortis justo eget felis. Ut urna. Cras laoreet. Vestibulum vel tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem orci, vulputate in, vestibulum vitae, facilisis at, sem. Phasellus mattis, lorem non eleifend lacinia, orci mi varius erat, at pharetra lectus sem ac felis.",
+            "meta_title": "Hood CDA EVCK4SS 40cm Cylinder",
+            "meta_description": "Integer convallis malesuada massa. Sed eget sapien a magna volutpat sollicitudin. Nullam sit amet dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque nulla. In ut lorem. Cras sit amet lectus. Proin at purus. Praesent accumsan volutpat ante. Etiam vitae nulla. Aliquam erat volutpat. Nullam quam.\r\n\r\nPraesent pellentesque gravida felis. Duis neque. Nunc id eros tincidunt neque consectetuer sollicitudin. Morbi rhoncus, mi quis sollicitudin laoreet, ipsum lacus ultricies urna, quis aliquet mi pede nec lectus. Morbi molestie, ante ut interdum aliquet, nibh ante volutpat diam, ac posuere magna justo ut ipsum. Donec lobortis justo eget felis. Ut urna. Cras laoreet. Vestibulum vel tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent sem orci, vulputate in, vestibulum vitae, facilisis at, sem. Phasellus mattis, lorem non eleifend lacinia, orci mi varius erat, at pharetra lectus sem ac felis.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:23"
+          }
+        ],
+        "images": [
+          {
+            "id": 9,
+            "product_id": 9,
+            "src": "09.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "type": "simple",
+        "sku": "Model1",
+        "gtin": null,
+        "mpn": null,
+        "price": "732.0000",
+        "sale_price": "0.0000",
+        "price_sorter": "732.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 6,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 1,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 10,
+            "product_id": 10,
+            "locale": "en",
+            "name": "Hood Faber Klima - black",
+            "slug": "hood-faber-klima-black",
+            "description": "Mauris semper velit nec risus. Nullam urna orci, dictum vel, rhoncus non, molestie sit amet, purus. Morbi pretium. Donec felis. Phasellus vitae libero eget nulla tincidunt tempus. Vivamus fringilla eleifend nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque venenatis vestibulum quam. Integer eu ligula egestas quam gravida adipiscing. Suspendisse lorem nunc, interdum nec, suscipit eu, euismod quis, nibh. Donec arcu. Nulla nibh. Fusce lobortis condimentum enim. Suspendisse vitae tellus et ipsum hendrerit vehicula.\n\nDonec a sem non tortor ornare mollis. Pellentesque iaculis, odio quis elementum tempor, magna pede eleifend tortor, eu dapibus sem mauris quis risus. Etiam at quam. Sed odio turpis, molestie a, rhoncus quis, malesuada quis, nisl. Etiam metus. Pellentesque vitae ipsum a mauris consectetuer consectetuer. Pellentesque pretium, magna ut vehicula suscipit, justo dolor sollicitudin lacus, non luctus erat lacus ut enim. Suspendisse potenti. Proin lobortis viverra magna. Donec sed nibh. Nam eget augue at tellus adipiscing vehicula. Vestibulum quam elit, commodo eget, tincidunt sit amet, consequat vel, mi.",
+            "meta_title": "Hood Faber Klima - black",
+            "meta_description": "Mauris semper velit nec risus. Nullam urna orci, dictum vel, rhoncus non, molestie sit amet, purus. Morbi pretium. Donec felis. Phasellus vitae libero eget nulla tincidunt tempus. Vivamus fringilla eleifend nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque venenatis vestibulum quam. Integer eu ligula egestas quam gravida adipiscing. Suspendisse lorem nunc, interdum nec, suscipit eu, euismod quis, nibh. Donec arcu. Nulla nibh. Fusce lobortis condimentum enim. Suspendisse vitae tellus et ipsum hendrerit vehicula.\r\n\r\nDonec a sem non tortor ornare mollis. Pellentesque iaculis, odio quis elementum tempor, magna pede eleifend tortor, eu dapibus sem mauris quis risus. Etiam at quam. Sed odio turpis, molestie a, rhoncus quis, malesuada quis, nisl. Etiam metus. Pellentesque vitae ipsum a mauris consectetuer consectetuer. Pellentesque pretium, magna ut vehicula suscipit, justo dolor sollicitudin lacus, non luctus erat lacus ut enim. Suspendisse potenti. Proin lobortis viverra magna. Donec sed nibh. Nam eget augue at tellus adipiscing vehicula. Vestibulum quam elit, commodo eget, tincidunt sit amet, consequat vel, mi.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:23"
+          }
+        ],
+        "images": [
+          {
+            "id": 10,
+            "product_id": 10,
+            "src": "10.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "type": "simple",
+        "sku": "Model3",
+        "gtin": null,
+        "mpn": null,
+        "price": "124.0000",
+        "sale_price": "105.4000",
+        "price_sorter": "124.0000",
+        "cost": "0.0000",
+        "quantity": 999,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 7,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 0,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 3,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 12,
+            "product_id": 12,
+            "locale": "en",
+            "name": "Hood Whirpool AKR806IX",
+            "slug": "hood-whirpool-akr806ix",
+            "description": "In posuere, mauris nec luctus dignissim, augue nibh ullamcorper mi, id mattis leo velit a mi. Curabitur nunc nisi, consectetuer eget, auctor luctus, pellentesque sed, massa. Donec magna est, dignissim sit amet, hendrerit id, rutrum nec, ipsum. Nullam vitae nunc. Donec est tellus, semper non, pretium eget, placerat eget, odio. Pellentesque et tortor. Aliquam erat volutpat. Donec ullamcorper nunc. Fusce neque orci, sagittis ut, imperdiet eget, faucibus vel, tellus. Sed a nisl. Aenean interdum, erat vitae pharetra pellentesque, metus mauris faucibus sem, nec rhoncus pede lacus eget eros. In vel libero. Nulla condimentum enim in libero. Maecenas convallis eros.\n\nNam in dolor. Curabitur a velit vel purus aliquet tempus. Quisque urna neque, condimentum quis, nonummy a, lobortis et, orci. Curabitur auctor placerat massa. Vestibulum eleifend. Mauris ornare, enim a tempor egestas, enim orci iaculis nunc, vitae lobortis eros nibh a dolor. Pellentesque enim. Integer non urna. Aliquam augue. Fusce semper, ligula nec accumsan gravida, sapien arcu convallis metus, ac elementum sem ligula nec nisi. Nam a pede. Curabitur aliquam. Cras molestie eleifend sapien. Nunc nec augue. Vestibulum lorem justo, mattis a, aliquam eget, mattis nec, risus. Nulla laoreet ante et ante. Suspendisse vulputate, ipsum vitae varius condimentum, ligula erat euismod eros, a mollis nunc ipsum accumsan ligula. Cras malesuada dictum eros. Duis ut justo.",
+            "meta_title": "Hood Whirpool AKR806IX",
+            "meta_description": "In posuere, mauris nec luctus dignissim, augue nibh ullamcorper mi, id mattis leo velit a mi. Curabitur nunc nisi, consectetuer eget, auctor luctus, pellentesque sed, massa. Donec magna est, dignissim sit amet, hendrerit id, rutrum nec, ipsum. Nullam vitae nunc. Donec est tellus, semper non, pretium eget, placerat eget, odio. Pellentesque et tortor. Aliquam erat volutpat. Donec ullamcorper nunc. Fusce neque orci, sagittis ut, imperdiet eget, faucibus vel, tellus. Sed a nisl. Aenean interdum, erat vitae pharetra pellentesque, metus mauris faucibus sem, nec rhoncus pede lacus eget eros. In vel libero. Nulla condimentum enim in libero. Maecenas convallis eros.\r\n\r\nNam in dolor. Curabitur a velit vel purus aliquet tempus. Quisque urna neque, condimentum quis, nonummy a, lobortis et, orci. Curabitur auctor placerat massa. Vestibulum eleifend. Mauris ornare, enim a tempor egestas, enim orci iaculis nunc, vitae lobortis eros nibh a dolor. Pellentesque enim. Integer non urna. Aliquam augue. Fusce semper, ligula nec accumsan gravida, sapien arcu convallis metus, ac elementum sem ligula nec nisi. Nam a pede. Curabitur aliquam. Cras molestie eleifend sapien. Nunc nec augue. Vestibulum lorem justo, mattis a, aliquam eget, mattis nec, risus. Nulla laoreet ante et ante. Suspendisse vulputate, ipsum vitae varius condimentum, ligula erat euismod eros, a mollis nunc ipsum accumsan ligula. Cras malesuada dictum eros. Duis ut justo.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:23"
+          }
+        ],
+        "images": [
+          {
+            "id": 12,
+            "product_id": 12,
+            "src": "12.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "type": "simple",
+        "sku": "Model4",
+        "gtin": null,
+        "mpn": null,
+        "price": "605.0000",
+        "sale_price": "514.2500",
+        "price_sorter": "605.0000",
+        "cost": "0.0000",
+        "quantity": 996,
+        "total_capacity": null,
+        "booking_granularity": null,
+        "booking_start_attribute_option_id": null,
+        "booking_end_attribute_option_id": null,
+        "booking_unit": "night",
+        "max_quantity": 0,
+        "weight": 9,
+        "width": null,
+        "height": null,
+        "length": null,
+        "backorder": 0,
+        "restock_notify": 0,
+        "stock_on_request": 0,
+        "status": 1,
+        "is_digital": 0,
+        "popular": 2,
+        "featured": 0,
+        "total_reviews": 0,
+        "rating": 0,
+        "parent_id": 0,
+        "visibility": 1,
+        "sort": 0,
+        "default_variant": 0,
+        "manufacturer_id": 1,
+        "tax_class_id": 1,
+        "meta": null,
+        "deleted_at": null,
+        "created_at": "2023-02-09 09:17:34",
+        "updated_at": "2026-06-19 06:10:23",
+        "availability_date": null,
+        "image_attribute_option_id": null,
+        "nestable": 0,
+        "nestable_group_code": null,
+        "nestable_percentage": null,
+        "quantity_discount_status": 0,
+        "returnable": 1,
+        "translations": [
+          {
+            "id": 13,
+            "product_id": 13,
+            "locale": "en",
+            "name": "John Lewis Ceramic Utensil Pot",
+            "slug": "john-lewis-ceramic-utensil-pot",
+            "description": "Mauris venenatis congue odio. Nulla id justo vitae velit accumsan gravida. Etiam placerat, est non suscipit tristique, mauris ligula pretium ligula, id condimentum nulla quam vel lorem. Vestibulum ipsum. Nullam sed purus ac arcu pellentesque lobortis. Proin eu dolor. Pellentesque sem purus, porta quis, rutrum vitae, imperdiet quis, tellus. Cras at neque vel eros sollicitudin faucibus. Nullam consectetuer volutpat enim. Sed at tortor non mauris dictum vulputate. Proin ornare erat sed nisl. Curabitur sagittis mattis ipsum. Vestibulum eleifend vehicula dui. Sed metus tortor, molestie eget, blandit vitae, fermentum ut, est. Integer eget enim at lacus auctor adipiscing.\n\nIn nisl massa, dignissim nec, suscipit ut, consequat vitae, risus. Nulla feugiat massa ac nisi. Proin imperdiet mi id mi. Morbi vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras tempus semper tortor. Morbi erat tortor, accumsan sed, convallis sed, placerat a, nisl. Phasellus quis dui. Sed mi arcu, nonummy et, placerat interdum, laoreet a, urna. Mauris metus. Integer tellus leo, ornare eget, dapibus ut, suscipit sed, purus. Etiam scelerisque. Ut eros sapien, fermentum quis, iaculis vitae, varius vitae, velit. Morbi sem. Maecenas eget libero sed nulla euismod sagittis.",
+            "meta_title": "John Lewis Ceramic Utensil Pot",
+            "meta_description": "Mauris venenatis congue odio. Nulla id justo vitae velit accumsan gravida. Etiam placerat, est non suscipit tristique, mauris ligula pretium ligula, id condimentum nulla quam vel lorem. Vestibulum ipsum. Nullam sed purus ac arcu pellentesque lobortis. Proin eu dolor. Pellentesque sem purus, porta quis, rutrum vitae, imperdiet quis, tellus. Cras at neque vel eros sollicitudin faucibus. Nullam consectetuer volutpat enim. Sed at tortor non mauris dictum vulputate. Proin ornare erat sed nisl. Curabitur sagittis mattis ipsum. Vestibulum eleifend vehicula dui. Sed metus tortor, molestie eget, blandit vitae, fermentum ut, est. Integer eget enim at lacus auctor adipiscing.\r\n\r\nIn nisl massa, dignissim nec, suscipit ut, consequat vitae, risus. Nulla feugiat massa ac nisi. Proin imperdiet mi id mi. Morbi vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras tempus semper tortor. Morbi erat tortor, accumsan sed, convallis sed, placerat a, nisl. Phasellus quis dui. Sed mi arcu, nonummy et, placerat interdum, laoreet a, urna. Mauris metus. Integer tellus leo, ornare eget, dapibus ut, suscipit sed, purus. Etiam scelerisque. Ut eros sapien, fermentum quis, iaculis vitae, varius vitae, velit. Morbi sem. Maecenas eget libero sed nulla euismod sagittis.",
+            "created_at": null,
+            "updated_at": "2026-06-19 06:10:23"
+          }
+        ],
+        "images": [
+          {
+            "id": 13,
+            "product_id": 13,
+            "src": "13.jpg?v=1788513520",
+            "created_at": null,
+            "updated_at": null,
+            "sort": 0
+          }
+        ]
+      }
+    ],
+    "first_page_url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=1",
+    "from": 1,
+    "last_page": 10,
+    "last_page_url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=10",
+    "links": [
+      {
+        "url": null,
+        "label": "&laquo; Previous",
+        "page": null,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=1",
+        "label": "1",
+        "page": 1,
+        "active": true
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=2",
+        "label": "2",
+        "page": 2,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=3",
+        "label": "3",
+        "page": 3,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=4",
+        "label": "4",
+        "page": 4,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=5",
+        "label": "5",
+        "page": 5,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=6",
+        "label": "6",
+        "page": 6,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=7",
+        "label": "7",
+        "page": 7,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=8",
+        "label": "8",
+        "page": 8,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=9",
+        "label": "9",
+        "page": 9,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=10",
+        "label": "10",
+        "page": 10,
+        "active": false
+      },
+      {
+        "url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=2",
+        "label": "Next &raquo;",
+        "page": 2,
+        "active": false
+      }
+    ],
+    "next_page_url": "https://demo-store.zucandu.com/api/v3/storefront/search/result?page=2",
+    "path": "https://demo-store.zucandu.com/api/v3/storefront/search/result",
+    "per_page": 20,
+    "prev_page_url": null,
+    "to": 20,
+    "total": 199
+  },
+  "filters": {
+    "base": {
+      "categories": [
+        {
+          "id": "c:52",
+          "translations": [
+            {
+              "category_id": 52,
+              "name": "Amet conse ctetur adipisicing",
+              "slug": "amet-conse-ctetur-adipisicing",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Amet conse ctetur adipisicing"
+        },
+        {
+          "id": "c:61",
+          "translations": [
+            {
+              "category_id": 61,
+              "name": "Amet conse ctetur adipisicing",
+              "slug": "amet-conse-ctetur-adipisicing",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Amet conse ctetur adipisicing"
+        },
+        {
+          "id": "c:84",
+          "translations": [
+            {
+              "category_id": 84,
+              "name": "Amet conse ctetur adipisicing",
+              "slug": "amet-conse-ctetur-adipisicing",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Amet conse ctetur adipisicing"
+        },
+        {
+          "id": "c:3",
+          "translations": [
+            {
+              "category_id": 3,
+              "name": "Appliances",
+              "slug": "appliances",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Appliances"
+        },
+        {
+          "id": "c:5",
+          "translations": [
+            {
+              "category_id": 5,
+              "name": "Coffee and Tea",
+              "slug": "coffee-and-tea",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Coffee and Tea"
+        },
+        {
+          "id": "c:6",
+          "translations": [
+            {
+              "category_id": 6,
+              "name": "Cutlery",
+              "slug": "cutlery",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Cutlery"
+        },
+        {
+          "id": "c:4",
+          "translations": [
+            {
+              "category_id": 4,
+              "name": "Electrics",
+              "slug": "electrics",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Electrics"
+        },
+        {
+          "id": "c:53",
+          "translations": [
+            {
+              "category_id": 53,
+              "name": "Elit sed do eiusmod",
+              "slug": "elit-sed-do-eiusmod",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Elit sed do eiusmod"
+        },
+        {
+          "id": "c:62",
+          "translations": [
+            {
+              "category_id": 62,
+              "name": "Elit sed do eiusmod",
+              "slug": "elit-sed-do-eiusmod",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Elit sed do eiusmod"
+        },
+        {
+          "id": "c:71",
+          "translations": [
+            {
+              "category_id": 71,
+              "name": "Elit sed do eiusmod",
+              "slug": "elit-sed-do-eiusmod",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Elit sed do eiusmod"
+        },
+        {
+          "id": "c:85",
+          "translations": [
+            {
+              "category_id": 85,
+              "name": "Elit sed do eiusmod",
+              "slug": "elit-sed-do-eiusmod",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Elit sed do eiusmod"
+        },
+        {
+          "id": "c:55",
+          "translations": [
+            {
+              "category_id": 55,
+              "name": "Et dolore magna aliqua",
+              "slug": "et-dolore-magna-aliqua",
+              "locale": "en"
+            }
+          ],
+          "count": 7,
+          "sort": null,
+          "name": "Et dolore magna aliqua"
+        },
+        {
+          "id": "c:64",
+          "translations": [
+            {
+              "category_id": 64,
+              "name": "Et dolore magna aliqua",
+              "slug": "et-dolore-magna-aliqua",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Et dolore magna aliqua"
+        },
+        {
+          "id": "c:73",
+          "translations": [
+            {
+              "category_id": 73,
+              "name": "Et dolore magna aliqua",
+              "slug": "et-dolore-magna-aliqua",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Et dolore magna aliqua"
+        },
+        {
+          "id": "c:81",
+          "translations": [
+            {
+              "category_id": 81,
+              "name": "Et dolore magna aliqua",
+              "slug": "et-dolore-magna-aliqua",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Et dolore magna aliqua"
+        },
+        {
+          "id": "c:51",
+          "translations": [
+            {
+              "category_id": 51,
+              "name": "Lorem ipsum dolor sit",
+              "slug": "lorem-ipsum-dolor-sit",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Lorem ipsum dolor sit"
+        },
+        {
+          "id": "c:57",
+          "translations": [
+            {
+              "category_id": 57,
+              "name": "Quis nostrud",
+              "slug": "quis-nostrud",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Quis nostrud"
+        },
+        {
+          "id": "c:66",
+          "translations": [
+            {
+              "category_id": 66,
+              "name": "Quis nostrud",
+              "slug": "quis-nostrud",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Quis nostrud"
+        },
+        {
+          "id": "c:75",
+          "translations": [
+            {
+              "category_id": 75,
+              "name": "Quis nostrud",
+              "slug": "quis-nostrud",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Quis nostrud"
+        },
+        {
+          "id": "c:83",
+          "translations": [
+            {
+              "category_id": 83,
+              "name": "Quis nostrud",
+              "slug": "quis-nostrud",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Quis nostrud"
+        },
+        {
+          "id": "c:54",
+          "translations": [
+            {
+              "category_id": 54,
+              "name": "Tempor incididunt ut labore",
+              "slug": "tempor-incididunt-ut-labore",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Tempor incididunt ut labore"
+        },
+        {
+          "id": "c:63",
+          "translations": [
+            {
+              "category_id": 63,
+              "name": "Tempor incididunt ut labore",
+              "slug": "tempor-incididunt-ut-labore",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Tempor incididunt ut labore"
+        },
+        {
+          "id": "c:72",
+          "translations": [
+            {
+              "category_id": 72,
+              "name": "Tempor incididunt ut labore",
+              "slug": "tempor-incididunt-ut-labore",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Tempor incididunt ut labore"
+        },
+        {
+          "id": "c:86",
+          "translations": [
+            {
+              "category_id": 86,
+              "name": "Tempor incididunt ut labore",
+              "slug": "tempor-incididunt-ut-labore",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Tempor incididunt ut labore"
+        },
+        {
+          "id": "c:56",
+          "translations": [
+            {
+              "category_id": 56,
+              "name": "Ut enim ad minim veniam",
+              "slug": "ut-enim-ad-minim-veniam",
+              "locale": "en"
+            }
+          ],
+          "count": 8,
+          "sort": null,
+          "name": "Ut enim ad minim veniam"
+        },
+        {
+          "id": "c:65",
+          "translations": [
+            {
+              "category_id": 65,
+              "name": "Ut enim ad minim veniam",
+              "slug": "ut-enim-ad-minim-veniam",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Ut enim ad minim veniam"
+        },
+        {
+          "id": "c:74",
+          "translations": [
+            {
+              "category_id": 74,
+              "name": "Ut enim ad minim veniam",
+              "slug": "ut-enim-ad-minim-veniam",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Ut enim ad minim veniam"
+        },
+        {
+          "id": "c:82",
+          "translations": [
+            {
+              "category_id": 82,
+              "name": "Ut enim ad minim veniam",
+              "slug": "ut-enim-ad-minim-veniam",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": null,
+          "name": "Ut enim ad minim veniam"
+        },
+        {
+          "id": "c:2",
+          "translations": [
+            {
+              "category_id": 2,
+              "name": "Bakeware",
+              "slug": "bakeware",
+              "locale": "en"
+            }
+          ],
+          "count": 4,
+          "sort": 2,
+          "name": "Bakeware"
+        }
+      ],
+      "manufacturers": [
+        {
+          "id": "m:1",
+          "translations": [
+            {
+              "id": 1,
+              "manufacturer_id": 1,
+              "locale": "en",
+              "name": "Example 1",
+              "slug": "example-1",
+              "description": null,
+              "meta_title": "Example 1",
+              "meta_description": null,
+              "created_at": "2023-02-09 02:10:25",
+              "updated_at": "2023-02-09 02:10:25"
+            }
+          ],
+          "count": 9,
+          "sort": 0,
+          "name": "Example 1"
+        },
+        {
+          "id": "m:2",
+          "translations": [
+            {
+              "id": 2,
+              "manufacturer_id": 2,
+              "locale": "en",
+              "name": "Example 2",
+              "slug": "example-2",
+              "description": null,
+              "meta_title": "Example 2",
+              "meta_description": null,
+              "created_at": null,
+              "updated_at": null
+            }
+          ],
+          "count": 8,
+          "sort": 0,
+          "name": "Example 2"
+        },
+        {
+          "id": "m:3",
+          "translations": [
+            {
+              "id": 3,
+              "manufacturer_id": 3,
+              "locale": "en",
+              "name": "Example 3",
+              "slug": "example-3",
+              "description": null,
+              "meta_title": "Example 3",
+              "meta_description": null,
+              "created_at": null,
+              "updated_at": null
+            }
+          ],
+          "count": 11,
+          "sort": 0,
+          "name": "Example 3"
+        }
+      ]
+    },
+    "attribute": {
+      "1": {
+        "id": "a:1",
+        "translations": [
+          {
+            "id": 1,
+            "attribute_option_id": 1,
+            "locale": "en",
+            "name": "Color",
+            "created_at": null,
+            "updated_at": "2026-08-12 04:38:36"
+          }
+        ],
+        "sort": 0,
+        "values": [
+          {
+            "id": "a:1-62",
+            "translations": [
+              {
+                "id": 62,
+                "attribute_option_value_id": 62,
+                "locale": "en",
+                "name": "Aqua",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 7,
+            "sort": 0,
+            "name": "Aqua"
+          },
+          {
+            "id": "a:1-63",
+            "translations": [
+              {
+                "id": 63,
+                "attribute_option_value_id": 63,
+                "locale": "en",
+                "name": "Army",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 7,
+            "sort": 0,
+            "name": "Army"
+          },
+          {
+            "id": "a:1-64",
+            "translations": [
+              {
+                "id": 64,
+                "attribute_option_value_id": 64,
+                "locale": "en",
+                "name": "Ash",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 12,
+            "sort": 0,
+            "name": "Ash"
+          },
+          {
+            "id": "a:1-86",
+            "translations": [
+              {
+                "id": 86,
+                "attribute_option_value_id": 86,
+                "locale": "en",
+                "name": "Baby Pink",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Baby Pink"
+          },
+          {
+            "id": "a:1-5",
+            "translations": [
+              {
+                "id": 5,
+                "attribute_option_value_id": 5,
+                "locale": "en",
+                "name": "Black",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 36,
+            "sort": 0,
+            "name": "Black"
+          },
+          {
+            "id": "a:1-59",
+            "translations": [
+              {
+                "id": 59,
+                "attribute_option_value_id": 59,
+                "locale": "en",
+                "name": "Black green",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Black green"
+          },
+          {
+            "id": "a:1-58",
+            "translations": [
+              {
+                "id": 58,
+                "attribute_option_value_id": 58,
+                "locale": "en",
+                "name": "Black Magenta",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Black Magenta"
+          },
+          {
+            "id": "a:1-2",
+            "translations": [
+              {
+                "id": 2,
+                "attribute_option_value_id": 2,
+                "locale": "en",
+                "name": "Blue",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Blue"
+          },
+          {
+            "id": "a:1-75",
+            "translations": [
+              {
+                "id": 75,
+                "attribute_option_value_id": 75,
+                "locale": "en",
+                "name": "Charcoal",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 9,
+            "sort": 0,
+            "name": "Charcoal"
+          },
+          {
+            "id": "a:1-76",
+            "translations": [
+              {
+                "id": 76,
+                "attribute_option_value_id": 76,
+                "locale": "en",
+                "name": "Coral Silk",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Coral Silk"
+          },
+          {
+            "id": "a:1-77",
+            "translations": [
+              {
+                "id": 77,
+                "attribute_option_value_id": 77,
+                "locale": "en",
+                "name": "Cornsilk",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Cornsilk"
+          },
+          {
+            "id": "a:1-78",
+            "translations": [
+              {
+                "id": 78,
+                "attribute_option_value_id": 78,
+                "locale": "en",
+                "name": "Daisy",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Daisy"
+          },
+          {
+            "id": "a:1-79",
+            "translations": [
+              {
+                "id": 79,
+                "attribute_option_value_id": 79,
+                "locale": "en",
+                "name": "Dark Chocolate",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Dark Chocolate"
+          },
+          {
+            "id": "a:1-80",
+            "translations": [
+              {
+                "id": 80,
+                "attribute_option_value_id": 80,
+                "locale": "en",
+                "name": "Dark Heather",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Dark Heather"
+          },
+          {
+            "id": "a:1-81",
+            "translations": [
+              {
+                "id": 81,
+                "attribute_option_value_id": 81,
+                "locale": "en",
+                "name": "Dark Heather Grey",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Dark Heather Grey"
+          },
+          {
+            "id": "a:1-87",
+            "translations": [
+              {
+                "id": 87,
+                "attribute_option_value_id": 87,
+                "locale": "en",
+                "name": "Green Camo",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Green Camo"
+          },
+          {
+            "id": "a:1-84",
+            "translations": [
+              {
+                "id": 84,
+                "attribute_option_value_id": 84,
+                "locale": "en",
+                "name": "Green Tiger Camo",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Green Tiger Camo"
+          },
+          {
+            "id": "a:1-60",
+            "translations": [
+              {
+                "id": 60,
+                "attribute_option_value_id": 60,
+                "locale": "en",
+                "name": "Magenta Green",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "Magenta Green"
+          },
+          {
+            "id": "a:1-82",
+            "translations": [
+              {
+                "id": 82,
+                "attribute_option_value_id": 82,
+                "locale": "en",
+                "name": "Mustard Triblend",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 4,
+            "sort": 0,
+            "name": "Mustard Triblend"
+          },
+          {
+            "id": "a:1-83",
+            "translations": [
+              {
+                "id": 83,
+                "attribute_option_value_id": 83,
+                "locale": "en",
+                "name": "Olive Triblend",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 4,
+            "sort": 0,
+            "name": "Olive Triblend"
+          },
+          {
+            "id": "a:1-8",
+            "translations": [
+              {
+                "id": 8,
+                "attribute_option_value_id": 8,
+                "locale": "en",
+                "name": "Orange",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Orange"
+          },
+          {
+            "id": "a:1-10",
+            "translations": [
+              {
+                "id": 10,
+                "attribute_option_value_id": 10,
+                "locale": "en",
+                "name": "Pink",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Pink"
+          },
+          {
+            "id": "a:1-6",
+            "translations": [
+              {
+                "id": 6,
+                "attribute_option_value_id": 6,
+                "locale": "en",
+                "name": "White",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 18,
+            "sort": 0,
+            "name": "White"
+          }
+        ]
+      },
+      "2": {
+        "id": "a:2",
+        "translations": [
+          {
+            "id": 2,
+            "attribute_option_id": 2,
+            "locale": "en",
+            "name": "Size",
+            "created_at": null,
+            "updated_at": null
+          }
+        ],
+        "sort": 0,
+        "values": [
+          {
+            "id": "a:2-68",
+            "translations": [
+              {
+                "id": 68,
+                "attribute_option_value_id": 68,
+                "locale": "en",
+                "name": "10″×10″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "10″×10″"
+          },
+          {
+            "id": "a:2-65",
+            "translations": [
+              {
+                "id": 65,
+                "attribute_option_value_id": 65,
+                "locale": "en",
+                "name": "11 oz",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "11 oz"
+          },
+          {
+            "id": "a:2-69",
+            "translations": [
+              {
+                "id": 69,
+                "attribute_option_value_id": 69,
+                "locale": "en",
+                "name": "12″×12″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "12″×12″"
+          },
+          {
+            "id": "a:2-70",
+            "translations": [
+              {
+                "id": 70,
+                "attribute_option_value_id": 70,
+                "locale": "en",
+                "name": "14″×14″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "14″×14″"
+          },
+          {
+            "id": "a:2-66",
+            "translations": [
+              {
+                "id": 66,
+                "attribute_option_value_id": 66,
+                "locale": "en",
+                "name": "15 oz",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "15 oz"
+          },
+          {
+            "id": "a:2-74",
+            "translations": [
+              {
+                "id": 74,
+                "attribute_option_value_id": 74,
+                "locale": "en",
+                "name": "17 oz",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 3,
+            "sort": 0,
+            "name": "17 oz"
+          },
+          {
+            "id": "a:2-67",
+            "translations": [
+              {
+                "id": 67,
+                "attribute_option_value_id": 67,
+                "locale": "en",
+                "name": "20 oz",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 4,
+            "sort": 0,
+            "name": "20 oz"
+          },
+          {
+            "id": "a:2-88",
+            "translations": [
+              {
+                "id": 88,
+                "attribute_option_value_id": 88,
+                "locale": "en",
+                "name": "20″×30″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "20″×30″"
+          },
+          {
+            "id": "a:2-17",
+            "translations": [
+              {
+                "id": 17,
+                "attribute_option_value_id": 17,
+                "locale": "en",
+                "name": "2XL",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 21,
+            "sort": 0,
+            "name": "2XL"
+          },
+          {
+            "id": "a:2-18",
+            "translations": [
+              {
+                "id": 18,
+                "attribute_option_value_id": 18,
+                "locale": "en",
+                "name": "3XL",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 21,
+            "sort": 0,
+            "name": "3XL"
+          },
+          {
+            "id": "a:2-71",
+            "translations": [
+              {
+                "id": 71,
+                "attribute_option_value_id": 71,
+                "locale": "en",
+                "name": "3″×3″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "3″×3″"
+          },
+          {
+            "id": "a:2-19",
+            "translations": [
+              {
+                "id": 19,
+                "attribute_option_value_id": 19,
+                "locale": "en",
+                "name": "4XL",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 6,
+            "sort": 0,
+            "name": "4XL"
+          },
+          {
+            "id": "a:2-72",
+            "translations": [
+              {
+                "id": 72,
+                "attribute_option_value_id": 72,
+                "locale": "en",
+                "name": "4″×4″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "4″×4″"
+          },
+          {
+            "id": "a:2-73",
+            "translations": [
+              {
+                "id": 73,
+                "attribute_option_value_id": 73,
+                "locale": "en",
+                "name": "5.5″×5.5″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "5.5″×5.5″"
+          },
+          {
+            "id": "a:2-89",
+            "translations": [
+              {
+                "id": 89,
+                "attribute_option_value_id": 89,
+                "locale": "en",
+                "name": "5″×7″",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "5″×7″"
+          },
+          {
+            "id": "a:2-90",
+            "translations": [
+              {
+                "id": 90,
+                "attribute_option_value_id": 90,
+                "locale": "en",
+                "name": "A1 (23.3″×33.1″)",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "A1 (23.3″×33.1″)"
+          },
+          {
+            "id": "a:2-93",
+            "translations": [
+              {
+                "id": 93,
+                "attribute_option_value_id": 93,
+                "locale": "en",
+                "name": "iPhone 11",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "iPhone 11"
+          },
+          {
+            "id": "a:2-92",
+            "translations": [
+              {
+                "id": 92,
+                "attribute_option_value_id": 92,
+                "locale": "en",
+                "name": "iPhone 11 Pro",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "iPhone 11 Pro"
+          },
+          {
+            "id": "a:2-91",
+            "translations": [
+              {
+                "id": 91,
+                "attribute_option_value_id": 91,
+                "locale": "en",
+                "name": "iPhone 11 Pro Max",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "iPhone 11 Pro Max"
+          },
+          {
+            "id": "a:2-94",
+            "translations": [
+              {
+                "id": 94,
+                "attribute_option_value_id": 94,
+                "locale": "en",
+                "name": "iPhone 12 mini",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "iPhone 12 mini"
+          },
+          {
+            "id": "a:2-15",
+            "translations": [
+              {
+                "id": 15,
+                "attribute_option_value_id": 15,
+                "locale": "en",
+                "name": "L",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 25,
+            "sort": 0,
+            "name": "L"
+          },
+          {
+            "id": "a:2-14",
+            "translations": [
+              {
+                "id": 14,
+                "attribute_option_value_id": 14,
+                "locale": "en",
+                "name": "M",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 25,
+            "sort": 0,
+            "name": "M"
+          },
+          {
+            "id": "a:2-85",
+            "translations": [
+              {
+                "id": 85,
+                "attribute_option_value_id": 85,
+                "locale": "en",
+                "name": "One size",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 9,
+            "sort": 0,
+            "name": "One size"
+          },
+          {
+            "id": "a:2-13",
+            "translations": [
+              {
+                "id": 13,
+                "attribute_option_value_id": 13,
+                "locale": "en",
+                "name": "S",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 25,
+            "sort": 0,
+            "name": "S"
+          },
+          {
+            "id": "a:2-97",
+            "translations": [
+              {
+                "id": 97,
+                "attribute_option_value_id": 97,
+                "locale": "en",
+                "name": "Samsung Galaxy S20",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Samsung Galaxy S20"
+          },
+          {
+            "id": "a:2-95",
+            "translations": [
+              {
+                "id": 95,
+                "attribute_option_value_id": 95,
+                "locale": "en",
+                "name": "Samsung Galaxy S20 Plus",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Samsung Galaxy S20 Plus"
+          },
+          {
+            "id": "a:2-96",
+            "translations": [
+              {
+                "id": 96,
+                "attribute_option_value_id": 96,
+                "locale": "en",
+                "name": "Samsung Galaxy S20 Ultra",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 2,
+            "sort": 0,
+            "name": "Samsung Galaxy S20 Ultra"
+          },
+          {
+            "id": "a:2-16",
+            "translations": [
+              {
+                "id": 16,
+                "attribute_option_value_id": 16,
+                "locale": "en",
+                "name": "XL",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 4,
+            "sort": 0,
+            "name": "XL"
+          },
+          {
+            "id": "a:2-61",
+            "translations": [
+              {
+                "id": 61,
+                "attribute_option_value_id": 61,
+                "locale": "en",
+                "name": "XXL",
+                "created_at": null,
+                "updated_at": null
+              }
+            ],
+            "count": 4,
+            "sort": 0,
+            "name": "XXL"
+          }
+        ]
+      }
+    },
+    "price": {
+      "ranges": [
+        {
+          "id": "p:5-10",
+          "name": "5-10",
+          "count": 6
+        },
+        {
+          "id": "p:10-20",
+          "name": "10-20",
+          "count": 43
+        },
+        {
+          "id": "p:20-30",
+          "name": "20-30",
+          "count": 54
+        },
+        {
+          "id": "p:30-40",
+          "name": "30-40",
+          "count": 13
+        },
+        {
+          "id": "p:40-50",
+          "name": "40-50",
+          "count": 20
+        },
+        {
+          "id": "p:80-90",
+          "name": "80-90",
+          "count": 2
+        },
+        {
+          "id": "p:100-120",
+          "name": "100-120",
+          "count": 2
+        },
+        {
+          "id": "p:120-140",
+          "name": "120-140",
+          "count": 2
+        },
+        {
+          "id": "p:140-160",
+          "name": "140-160",
+          "count": 2
+        },
+        {
+          "id": "p:160-180",
+          "name": "160-180",
+          "count": 2
+        },
+        {
+          "id": "p:200-220",
+          "name": "200-220",
+          "count": 3
+        },
+        {
+          "id": "p:240-260",
+          "name": "240-260",
+          "count": 4
+        },
+        {
+          "id": "p:280-300",
+          "name": "280-300",
+          "count": 2
+        },
+        {
+          "id": "p:300-350",
+          "name": "300-350",
+          "count": 2
+        },
+        {
+          "id": "p:350-400",
+          "name": "350-400",
+          "count": 4
+        },
+        {
+          "id": "p:500-550",
+          "name": "500-550",
+          "count": 4
+        },
+        {
+          "id": "p:550-600",
+          "name": "550-600",
+          "count": 1
+        },
+        {
+          "id": "p:600-650",
+          "name": "600-650",
+          "count": 2
+        },
+        {
+          "id": "p:650-700",
+          "name": "650-700",
+          "count": 4
+        },
+        {
+          "id": "p:700-750",
+          "name": "700-750",
+          "count": 2
+        },
+        {
+          "id": "p:750-800",
+          "name": "750-800",
+          "count": 2
+        },
+        {
+          "id": "p:850-900",
+          "name": "850-900",
+          "count": 2
+        },
+        {
+          "id": "p:950-1000",
+          "name": "950-1000",
+          "count": 4
+        }
+      ]
+    },
+    "customize": [],
+    "features": {
+      "availability": [
+        {
+          "id": "q:instock",
+          "name": "In stock only",
+          "count": 168
+        }
+      ]
+    }
+  }
+}

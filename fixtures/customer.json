@@ -1,0 +1,51 @@
+{
+  "_note": "Dummy account data. The two street addresses came from an address generator, and the account name is a placeholder on purpose - nothing here belongs to a real person, which matters because this package is public.",
+  "_tax_note": "The San Jose address carries a tax rate; the Camp Hill one does not. That asymmetry is the point: a theme has to render a checkout WITH a tax line and one WITHOUT, and California is the default shipping address so the line shows by default. To preview the other state, set totals.tax to 0 in checkout.json.",
+  "customer": {
+    "id": 1,
+    "username": "tester@example.com",
+    "firstname": "Tester",
+    "lastname": "Tester",
+    "group_pricing_id": 0,
+    "default_shipping_address_id": 1,
+    "default_billing_address_id": 2,
+    "addresses": [
+      {
+        "id": 1,
+        "name": "Tester Tester",
+        "company": "Test Company",
+        "address_line_1": "7250 Bollinger Rd",
+        "address_line_2": "",
+        "city": "San Jose",
+        "postcode": "95129",
+        "zone_id": 12,
+        "zone_code": "CA",
+        "zone_name": "California",
+        "country_id": 223,
+        "country_name": "United States",
+        "phone": "(408) 873-7384",
+        "latitude": 37.311863,
+        "longitude": -122.031019,
+        "tax_rate": 9.375
+      },
+      {
+        "id": 2,
+        "name": "Tester Tester",
+        "company": "",
+        "address_line_1": "40 N. 36th St.",
+        "address_line_2": "",
+        "city": "Camp Hill",
+        "postcode": "17011",
+        "zone_id": 51,
+        "zone_code": "PA",
+        "zone_name": "Pennsylvania",
+        "country_id": 223,
+        "country_name": "United States",
+        "phone": "(717) 836-1224",
+        "latitude": 40.237748,
+        "longitude": -76.943505,
+        "tax_rate": 0
+      }
+    ]
+  }
+}

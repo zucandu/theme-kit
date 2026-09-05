@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.playwright-mcp/
+*.log
+
+# Screenshots taken while verifying the kit — not part of the package.
+/home*.png
+/product*.png
+/cart*.png
+/checkout*.png
+/account*.png

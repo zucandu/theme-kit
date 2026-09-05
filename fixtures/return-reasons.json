@@ -1,0 +1,36 @@
+{
+  "reasons": [
+    {
+      "id": 7,
+      "code": "changed_mind",
+      "name": "I ordered it by mistake or no longer need it",
+      "resolution_code": "refund",
+      "minimum_photo_count": 0,
+      "help_text": "Eligible items may be refunded after review and return-condition checks."
+    },
+    {
+      "id": 3,
+      "code": "wrong_item",
+      "name": "I received the wrong item",
+      "resolution_code": "replacement",
+      "minimum_photo_count": 1,
+      "help_text": "Upload a photo showing the received item, SKU, or packaging label."
+    },
+    {
+      "id": 8,
+      "code": "defective",
+      "name": "The product is defective or failed during normal use",
+      "resolution_code": "warranty_replacement",
+      "minimum_photo_count": 1,
+      "help_text": "Upload a clear photo of the product and the problem. We will advise whether it must be returned."
+    },
+    {
+      "id": 4,
+      "code": "arrived_damaged",
+      "name": "The item arrived damaged",
+      "resolution_code": "replacement",
+      "minimum_photo_count": 2,
+      "help_text": "Upload clear photos of the item and its packaging."
+    }
+  ]
+}

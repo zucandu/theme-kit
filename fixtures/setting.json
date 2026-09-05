@@ -1,0 +1,376 @@
+{
+  "languages": [
+    {
+      "id": 1,
+      "name": "English",
+      "iso_code": "en",
+      "language_code": "en-us",
+      "default_lang": 1
+    }
+  ],
+  "currencies": [
+    {
+      "id": 1,
+      "name": "US Dollar",
+      "code": "USD",
+      "symbol": "$",
+      "position": "l",
+      "decimal_digits": 2,
+      "rate": "1.0000",
+      "default_currency": 1
+    },
+    {
+      "id": 2,
+      "name": "Euro",
+      "code": "EUR",
+      "symbol": "€",
+      "position": "l",
+      "decimal_digits": 2,
+      "rate": "0.7730",
+      "default_currency": 0
+    },
+    {
+      "id": 3,
+      "name": "GB Pound",
+      "code": "GBP",
+      "symbol": "£",
+      "position": "l",
+      "decimal_digits": 2,
+      "rate": "0.6726",
+      "default_currency": 0
+    }
+  ],
+  "taxes": null,
+  "meta": [
+    {
+      "id": 5,
+      "pagename": "account",
+      "translations": [
+        {
+          "meta_title": "My Account Dashboard | Zucandu",
+          "meta_description": "Manage your orders, addresses, profile, and account settings all in one place. Your personal Zucandu dashboard.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "pagename": "account_address_book",
+      "translations": [
+        {
+          "meta_title": "Address Book | My Account — Zucandu",
+          "meta_description": "Manage your saved shipping and billing addresses for faster checkout. Add, edit, or remove addresses anytime.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "pagename": "account_address_book_add_new",
+      "translations": [
+        {
+          "meta_title": "Add New Address | My Account — Zucandu",
+          "meta_description": "Save a new shipping or billing address to your account for quicker checkout on your next order.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "pagename": "account_address_book_details",
+      "translations": [
+        {
+          "meta_title": "Update Address | My Account — Zucandu",
+          "meta_description": "Edit your shipping or billing address details to ensure accurate deliveries and invoicing on future orders.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "pagename": "account_address_book_edit",
+      "translations": [
+        {
+          "meta_title": "Edit Address | My Account — Zucandu",
+          "meta_description": "Update your saved address details including street, city, and postal code to keep your delivery information accurate.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "pagename": "account_back_in_stock",
+      "translations": [
+        {
+          "meta_title": "Back in Stock Notifications | My Account — Zucandu",
+          "meta_description": "Manage your back in stock alerts and get notified the moment your favorite out-of-stock items become available again.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "pagename": "account_order_details",
+      "translations": [
+        {
+          "meta_title": "Order Details | My Account — Zucandu",
+          "meta_description": "View the full details of your order including items, shipping status, tracking information, and payment summary.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "pagename": "account_order_list",
+      "translations": [
+        {
+          "meta_title": "Order History | My Account — Zucandu",
+          "meta_description": "Browse your complete order history, filter by date or status, and access details for any past purchase.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "pagename": "account_orders",
+      "translations": [
+        {
+          "meta_title": "Order History | My Account — Zucandu",
+          "meta_description": "View your past orders, check order status, download invoices, and quickly reorder your favorite products.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "pagename": "account_password",
+      "translations": [
+        {
+          "meta_title": "Change Your Password | My Account — Zucandu",
+          "meta_description": "Update your password regularly to keep your Zucandu account secure. Enter your current and new password to make the change.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "pagename": "account_profile",
+      "translations": [
+        {
+          "meta_title": "Edit Your Profile | My Account — Zucandu",
+          "meta_description": "Update your personal details, display name, and contact information to keep your Zucandu account up to date.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "pagename": "account_quick_reorder",
+      "translations": [
+        {
+          "meta_title": "Quick Reorder | My Account — Zucandu",
+          "meta_description": "Reorder your favorite products in one click. Browse your purchase history and add previously bought items back to your cart instantly.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "pagename": "account_wishlist",
+      "translations": [
+        {
+          "meta_title": "My Wishlist — Save Items for Later | Zucandu",
+          "meta_description": "Keep track of products you love. Save items to your wishlist and come back to purchase them whenever you're ready.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "pagename": "blog",
+      "translations": [
+        {
+          "meta_title": "Blog — Ecommerce Tips, News & Insights | Zucandu",
+          "meta_description": "Discover expert tips on growing your online business, ecommerce trends, marketing strategies, and the latest updates from the Zucandu community.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "pagename": "blog_posts",
+      "translations": [
+        {
+          "meta_title": "All Articles — Ecommerce Tips & Guides | Zucandu",
+          "meta_description": "Browse all blog posts covering ecommerce strategies, product marketing, store optimization, and industry news from the Zucandu team.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "pagename": "cart",
+      "translations": [
+        {
+          "meta_title": "Your Shopping Cart | Zucandu",
+          "meta_description": "Review the items in your cart, update quantities, and proceed to checkout when you're ready to complete your purchase.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "pagename": "checkout",
+      "translations": [
+        {
+          "meta_title": "Secure Checkout | Zucandu",
+          "meta_description": "Complete your order with our fast, secure checkout. Choose your shipping method, enter payment details, and confirm your purchase.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "pagename": "contact_us",
+      "translations": [
+        {
+          "meta_title": "Contact Us — We're Here to Help | Zucandu",
+          "meta_description": "Have a question or need support? Reach out to our friendly team via email, phone, or live chat. We're happy to assist you.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "pagename": "index",
+      "translations": [
+        {
+          "meta_title": "Zucandu — Build Your Online Store & Sell Anywhere",
+          "meta_description": "Launch and grow your ecommerce business with Zucandu. Powerful storefront tools, built-in payments, and everything you need to sell online — no coding required.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "pagename": "login",
+      "translations": [
+        {
+          "meta_title": "Sign In to Your Account | Zucandu",
+          "meta_description": "Sign in to your Zucandu account to manage your orders, wishlist, and profile. Secure login with email and password.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "pagename": "logout",
+      "translations": [
+        {
+          "meta_title": "You've Been Signed Out | Zucandu",
+          "meta_description": "You've successfully signed out of your Zucandu account. See you next time!",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "pagename": "page_not_found",
+      "translations": [
+        {
+          "meta_title": "Page Not Found | Zucandu",
+          "meta_description": "Sorry, the page you're looking for doesn't exist or has been moved. Try searching or head back to our homepage.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "pagename": "password_forgotten",
+      "translations": [
+        {
+          "meta_title": "Forgot Your Password? | Zucandu",
+          "meta_description": "Reset your Zucandu password in seconds. Enter your email address and we'll send you a secure link to create a new password.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "pagename": "register",
+      "translations": [
+        {
+          "meta_title": "Create Your Free Account | Zucandu",
+          "meta_description": "Sign up for a free Zucandu account to start shopping, track orders, save your wishlist, and enjoy a personalized experience.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "pagename": "return_exchange_form",
+      "translations": [
+        {
+          "meta_title": "Returns & Exchanges — Start a Return | Zucandu",
+          "meta_description": "Need to return or exchange an item? Submit a return request and we'll guide you through every step of the process.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "pagename": "return_exchange_process",
+      "translations": [
+        {
+          "meta_title": "Select Items to Return | Zucandu",
+          "meta_description": "Choose the items you'd like to return or exchange. Once submitted, we'll send a prepaid return label to your email.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "pagename": "track_order",
+      "translations": [
+        {
+          "meta_title": "Track Your Order | Zucandu",
+          "meta_description": "Enter your order number to get real-time shipping updates and delivery status for your Zucandu purchase.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "pagename": "track_order_form",
+      "translations": [
+        {
+          "meta_title": "Track Your Order | Zucandu",
+          "meta_description": "Enter your order reference number to view real-time tracking information and estimated delivery date.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "pagename": "unsubscribe",
+      "translations": [
+        {
+          "meta_title": "Unsubscribe from Emails | Zucandu",
+          "meta_description": "We're sad to see you go. Enter your email to unsubscribe from our mailing list. You can resubscribe anytime from your account settings.",
+          "locale": "en"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "pagename": "wishlist_shared",
+      "translations": [
+        {
+          "meta_title": "Shared Wishlist | Zucandu",
+          "meta_description": "Browse products saved in a shared wishlist and shop favorites directly from the public list.",
+          "locale": "en"
+        }
+      ]
+    }
+  ]
+}

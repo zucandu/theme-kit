@@ -1,0 +1,201 @@
+{
+  "_note": "A ready-made cart. Totals are frozen numbers, not a running sum - a live store recalculates them server-side with its own discount, shipping and tax rules.",
+  "items": [
+    {
+      "id": 204,
+      "type": "simple",
+      "sku": "pl-17-3461",
+      "gtin": null,
+      "mpn": null,
+      "price": 37.99,
+      "sale_price": 0,
+      "price_sorter": "37.9900",
+      "cost": "19.0900",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 199,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": {},
+      "deleted_at": null,
+      "created_at": "2026-08-31T03:20:58.000000Z",
+      "updated_at": "2026-09-02T14:04:46.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 204,
+          "name": "PressLane Bands Long Sleeve — Black / 3XL",
+          "slug": "presslane-bands-long-sleeve-black-3xl",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Long Sleeve — Black / 3XL",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 204,
+          "src": "remote-05e83ff41f81b8895962befe482fa5e51ac7119b.jpg?v=1788146448"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-3d289f7441eace2ebebc390e821db6b05df21b41.jpg?v=1788146448"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-d0ad8a672f6a4e5758a0528fe287e2c1163fb091.jpg?v=1788146449"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-9db3d8c6f2c42526b5f19f2e9112ae33e5b83190.jpg?v=1788146449"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-cf423dd782df18f116a245ae3cb35c04dd44f6a7.jpg?v=1788146450"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-5f0c99a60dfa60cd1a85a24e9d9b3963b12a2c8e.jpg?v=1788146450"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-58cf2bcf8feb13e905bee9da1e50d171305567fc.jpg?v=1788146451"
+        },
+        {
+          "product_id": 204,
+          "src": "remote-22018faf7ae5216ba6f1654f373567c66b43897d.jpg?v=1788146451"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": [],
+      "qty": 1,
+      "inventory": 999,
+      "max_qty": 0
+    },
+    {
+      "id": 133,
+      "type": "simple",
+      "sku": "pl-9-8440",
+      "gtin": null,
+      "mpn": null,
+      "price": 24.99,
+      "sale_price": 0,
+      "price_sorter": "23.9900",
+      "cost": "12.2500",
+      "quantity": 999,
+      "total_capacity": null,
+      "booking_granularity": null,
+      "booking_start_attribute_option_id": null,
+      "booking_end_attribute_option_id": null,
+      "booking_unit": "night",
+      "max_quantity": 0,
+      "weight": null,
+      "width": null,
+      "height": null,
+      "length": null,
+      "backorder": 0,
+      "restock_notify": 0,
+      "stock_on_request": 0,
+      "status": 1,
+      "is_digital": 0,
+      "popular": 0,
+      "featured": false,
+      "total_reviews": 0,
+      "rating": 0,
+      "parent_id": 129,
+      "visibility": 1,
+      "sort": 0,
+      "default_variant": 0,
+      "manufacturer_id": null,
+      "tax_class_id": 1,
+      "meta": {},
+      "deleted_at": null,
+      "created_at": "2026-08-31T02:27:22.000000Z",
+      "updated_at": "2026-09-02T14:02:53.000000Z",
+      "availability_date": null,
+      "image_attribute_option_id": null,
+      "nestable": 0,
+      "nestable_group_code": null,
+      "nestable_percentage": null,
+      "quantity_discount_status": 0,
+      "returnable": 1,
+      "formatted_categories": [],
+      "has_attributes": 2,
+      "translations": [
+        {
+          "product_id": 133,
+          "name": "PressLane Bands Tee — Army / S",
+          "slug": "presslane-bands-tee-army-s",
+          "locale": "en",
+          "description": null,
+          "meta_title": "PressLane Bands Tee — Army / S",
+          "meta_description": null
+        }
+      ],
+      "images": [
+        {
+          "product_id": 133,
+          "src": "remote-96f5c4ee322d10482ddbd9baac424ecff77f3b7d.jpg?v=1788143234"
+        },
+        {
+          "product_id": 133,
+          "src": "remote-f627a20c1dc55b0cb31e6716e8781bdbd9910123.jpg?v=1788143235"
+        },
+        {
+          "product_id": 133,
+          "src": "remote-802600764da7bfb34feb70dcdd3ab1b846b1d5c5.jpg?v=1788143235"
+        },
+        {
+          "product_id": 133,
+          "src": "remote-8e6c9557fd50668e9feb206b7b18b609ce0007f3.jpg?v=1788143236"
+        },
+        {
+          "product_id": 133,
+          "src": "remote-123150b4f7a0f5d4648d5ae4b6771ad3429c988a.jpg?v=1788143236"
+        },
+        {
+          "product_id": 133,
+          "src": "remote-aa0eb95430ae9b3e6c51eba78226963854273b50.jpg?v=1788143236"
+        }
+      ],
+      "categories": [],
+      "manufacturer": null,
+      "quantity_discounts": [],
+      "qty": 2,
+      "inventory": 999,
+      "max_qty": 0
+    }
+  ],
+  "subtotal": 87.97,
+  "item_count": 2
+}

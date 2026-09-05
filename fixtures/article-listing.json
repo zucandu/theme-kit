@@ -1,0 +1,863 @@
+{
+  "paginator": {
+    "current_page": 1,
+    "data": [
+      {
+        "id": 26,
+        "author": "Shopify",
+        "image": "Coffee-shop-sdfkasjflskf.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-28 13:37:18",
+        "updated_at": "2022-03-30 08:33:42",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "26 Best Small Business Ideas to Make Money in 2022",
+            "slug": "26-best-small-business-ideas-for-little-to-no-money",
+            "locale": "en",
+            "summary": "<p>Every small business idea can yield great success if it fills a need.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 95,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Need an Idea?",
+                "slug": "need-a-business-idea",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 28, 2022",
+        "images": [
+          "Coffee-shop-sdfkasjflskf.jpg"
+        ]
+      },
+      {
+        "id": 27,
+        "author": "Matt",
+        "image": "Build-an e-commerce-store-to-start-learning-an-online-business.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-28 15:01:03",
+        "updated_at": "2022-04-04 14:33:18",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "Build an e-commerce Store to Start Learning an Online Business",
+            "slug": "build-an-ecommerce-store-to-start-learning-an-online-business",
+            "locale": "en",
+            "summary": "<p>Get a beginner guide on what do you need to learn to build an ecommerce website.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 97,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Start Your Store",
+                "slug": "start-an-online-retail-business-today",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 28, 2022",
+        "images": [
+          "Build-an e-commerce-store-to-start-learning-an-online-business.jpg"
+        ]
+      },
+      {
+        "id": 28,
+        "author": "Maia",
+        "image": "what-is-the-dropshipping-72389432irje.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-28 15:44:40",
+        "updated_at": "2022-03-31 02:21:41",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "How to Start a Dropshipping Business Without Money and Make Money While You Sleep",
+            "slug": "how-to-start-a-dropshipping-business-without-money-and-make-money-while-you-sleep",
+            "locale": "en",
+            "summary": "<p>You have a good business idea, you may actually succeed with little to no money.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 28, 2022",
+        "images": [
+          "what-is-the-dropshipping-72389432irje.jpg"
+        ]
+      },
+      {
+        "id": 29,
+        "author": "Maia",
+        "image": "ecommerce-2022-1523589125758235.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 02:42:00",
+        "updated_at": "2022-03-30 06:48:23",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "35 Trending Products to Sell in 2022",
+            "slug": "35-trending-products-to-sell-in-2022",
+            "locale": "en",
+            "summary": "<p>All the essential information you need to start selling products online.&nbsp;</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "ecommerce-2022-1523589125758235.jpg"
+        ]
+      },
+      {
+        "id": 30,
+        "author": "Square",
+        "image": "What-is-Drop-Shippingu6htsrd.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 06:59:56",
+        "updated_at": "2022-03-30 08:32:48",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "What is Drop Shipping and How Does it Work?",
+            "slug": "what-is-drop-shipping-and-how-does-it-work",
+            "locale": "en",
+            "summary": "<p>A retail fulfillment method in which a business doesn't keep the products it sells in stock.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "What-is-Drop-Shippingu6htsrd.png"
+        ]
+      },
+      {
+        "id": 31,
+        "author": "Square",
+        "image": "Top-10-Email-Marketing-Service-Companies.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 07:25:59",
+        "updated_at": "2022-03-30 08:32:55",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "Best Email Marketing Templates for Small Business",
+            "slug": "best-email-marketing-templates-for-small-business",
+            "locale": "en",
+            "summary": "<p>Email marketing is a powerful tool that businesses of any size can use to build a customer base and keep them coming back</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 98,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Sales & Marketing",
+                "slug": "sales-and-marketing",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "Top-10-Email-Marketing-Service-Companies.png"
+        ]
+      },
+      {
+        "id": 32,
+        "author": "Mouseflow",
+        "image": "e-commerce-marketing-strategy-Webicules-Technology.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 08:28:00",
+        "updated_at": "2022-03-30 09:08:11",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "11 Essential Ecommerce Marketing Strategies for 2022",
+            "slug": "11-essential-ecommerce-marketing-strategies-for-2022",
+            "locale": "en",
+            "summary": "<p>It’s important to deliver relevant, interesting and valuable content and products that truly suite the needs of your target market.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 98,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Sales & Marketing",
+                "slug": "sales-and-marketing",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "e-commerce-marketing-strategy-Webicules-Technology.png"
+        ]
+      },
+      {
+        "id": 33,
+        "author": "Forbes",
+        "image": "2020-google-Ideas-to-Increase-Business-Sale-Through-Digital-Marketing.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 09:12:38",
+        "updated_at": "2022-03-30 09:24:25",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "4 eCommerce Digital Marketing Strategies For 2022",
+            "slug": "4-ecommerce-digital-marketing-strategies-for-2022",
+            "locale": "en",
+            "summary": "<p>These strategies can save you time and help grow your traffic, sales and your bottom line.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 98,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Sales & Marketing",
+                "slug": "sales-and-marketing",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "2020-google-Ideas-to-Increase-Business-Sale-Through-Digital-Marketing.jpg"
+        ]
+      },
+      {
+        "id": 34,
+        "author": "Arka",
+        "image": "Ecommerce-Store-Blueprint-How-to-Build-and-Grow-A-Profitable-Online-Store-3-1000x600.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 15:19:44",
+        "updated_at": "2022-03-30 15:20:39",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "How Much Money Can You Make with an eCommerce Store?",
+            "slug": "how-much-money-can-you-make-with-an-ecommerce-store",
+            "locale": "en",
+            "summary": "<p>There was a time when we had only a handful of eCommerce players that dominated the e-commerce industry.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "Ecommerce-Store-Blueprint-How-to-Build-and-Grow-A-Profitable-Online-Store-3-1000x600.jpg"
+        ]
+      },
+      {
+        "id": 35,
+        "author": "Nerdwallet",
+        "image": "Hero-Final-1920x11520124212111222.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-03-30 15:32:10",
+        "updated_at": "2022-03-30 16:14:02",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "25 Ways to Make Money Online, Offline and at Home",
+            "slug": "25-ways-to-make-money-online-offline-and-at-home",
+            "locale": "en",
+            "summary": "<p>Make money with a side gig and learn how long it will take to see the extra income, whether it’s freelancing online, driving passengers or selling your stuff.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "March 30, 2022",
+        "images": [
+          "Hero-Final-1920x11520124212111222.png"
+        ]
+      },
+      {
+        "id": 71,
+        "author": "Kim",
+        "image": "19-easy-things-to-make-and-sell-for-money.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": null,
+        "created_at": "2022-04-20 16:19:00",
+        "updated_at": "2022-04-21 03:51:09",
+        "author_id": null,
+        "translations": [
+          {
+            "title": "16 Easy Things To Make And Sell For Money",
+            "slug": "16-easy-things-to-make-and-sell-for-money",
+            "locale": "en",
+            "summary": "<p>As we all know, commerce has evolved over the centuries and up to this day. Since ancient times B.C., trade has been established. In the past, when we wanted to buy anything, from food to life-related items, handicrafts, we had to go to the store or supermarket to buy it.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 95,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Need an Idea?",
+                "slug": "need-a-business-idea",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "April 20, 2022",
+        "images": [
+          "19-easy-things-to-make-and-sell-for-money.jpg"
+        ]
+      },
+      {
+        "id": 124,
+        "author": "Admin",
+        "image": "zucandu-moms-store-banner-1200x630.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": "[]",
+        "created_at": "2026-08-14 14:11:20",
+        "updated_at": "2026-08-14 15:32:29",
+        "author_id": 1,
+        "translations": [
+          {
+            "title": "How Stay-at-Home Moms Are Starting Real Online Stores for $34 in Month One — No Inventory, No Warehouse, No Tech Skills",
+            "slug": "how-stayathome-moms-are-starting-real-online-stores-for-34-in-month-one-no-inventory-no-warehouse-no-tech-skills",
+            "locale": "en",
+            "summary": "<p>Think starting an online business takes thousands of dollars and a garage full of stock? Here's the honest math — and the honest work — behind opening a real store for about $34 in month one, then $26 a month.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 97,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Start Your Store",
+                "slug": "start-an-online-retail-business-today",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "August 14, 2026",
+        "images": [
+          "zucandu-moms-store-banner-1200x630.png"
+        ]
+      },
+      {
+        "id": 125,
+        "author": "Admin",
+        "image": "zucandu-start-cheap-fail-cheap1-1200x630.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": "[]",
+        "created_at": "2026-08-19 06:49:49",
+        "updated_at": "2026-08-19 07:25:36",
+        "author_id": 2,
+        "translations": [
+          {
+            "title": "Start Cheap, Fail Cheap: The Smartest Way to Launch Your First Online Store",
+            "slug": "start-cheap-fail-cheap-launch-your-first-online-store",
+            "locale": "en",
+            "summary": "<p>Most first online stores don't survive year one. Here's how to keep the cost of that experiment small — and why the free first-party apps on Zucandu are the difference between a $26 month and a $300 one.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 97,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Start Your Store",
+                "slug": "start-an-online-retail-business-today",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "August 19, 2026",
+        "images": [
+          "zucandu-start-cheap-fail-cheap1-1200x630.png"
+        ]
+      },
+      {
+        "id": 126,
+        "author": "Admin",
+        "image": "zucandu-ai-shopping-1200x630.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": "[]",
+        "created_at": "2026-08-19 07:38:13",
+        "updated_at": "2026-08-19 07:43:53",
+        "author_id": 2,
+        "translations": [
+          {
+            "title": "AI Is Now Shopping for Your Customers. Can It Find Your Store?",
+            "slug": "ai-is-now-shopping-for-your-customers-can-it-find-your-store",
+            "locale": "en",
+            "summary": "<p>Shoppers are handing the search over to AI — and the AI shortlists two or three stores before anyone sees a homepage. Here's what agentic commerce means for a small store, and the seven fixes that make yours readable to a machine.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 98,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Sales & Marketing",
+                "slug": "sales-and-marketing",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "August 19, 2026",
+        "images": [
+          "zucandu-ai-shopping-1200x630.png"
+        ]
+      },
+      {
+        "id": 127,
+        "author": "Admin",
+        "image": "hidden-price-of-free-banner-1200x630.png",
+        "block": 0,
+        "status": 1,
+        "sort": 0,
+        "meta": "[]",
+        "created_at": "2026-08-23 03:32:01",
+        "updated_at": "2026-08-23 03:37:59",
+        "author_id": 1,
+        "translations": [
+          {
+            "title": "The Hidden Price of \"Free\": What 2,000 Hacked Stores Taught Us About Platform Security in the AI Era",
+            "slug": "hidden-price-of-free-platform-security-in-the-ai-era",
+            "locale": "en",
+            "summary": "<p>Nearly 2,000 ordinary websites were quietly turned into malware infrastructure — and their owners never knew. Here's what a \"free\" self-hosted platform really costs in an era when attackers weaponize new flaws within hours, not months.</p>"
+          }
+        ],
+        "categories": [
+          {
+            "category_id": 92,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Guides",
+                "slug": "ecommerce-guides",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 94,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Latest Articles",
+                "slug": "latest-digital-marketing-articles-in-2022",
+                "locale": "en"
+              }
+            ]
+          },
+          {
+            "category_id": 97,
+            "category_image": null,
+            "translations": [
+              {
+                "name": "Start Your Store",
+                "slug": "start-an-online-retail-business-today",
+                "locale": "en"
+              }
+            ]
+          }
+        ],
+        "date_added": "August 23, 2026",
+        "images": [
+          "hidden-price-of-free-banner-1200x630.png"
+        ]
+      },
+      {
+        "id": 5,
+        "author": "Admin",
+        "image": "bg-privacy.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 999,
+        "meta": null,
+        "created_at": "2021-09-15 13:43:50",
+        "updated_at": null,
+        "author_id": null,
+        "translations": [
+          {
+            "title": "Privacy Notice",
+            "slug": "privacy-notice",
+            "locale": "en",
+            "summary": null
+          }
+        ],
+        "categories": [],
+        "date_added": "September 15, 2021",
+        "images": [
+          "bg-privacy.jpg"
+        ]
+      },
+      {
+        "id": 6,
+        "author": "Admin",
+        "image": "bg-conditions.jpg",
+        "block": 0,
+        "status": 1,
+        "sort": 999,
+        "meta": null,
+        "created_at": "2021-09-15 13:43:50",
+        "updated_at": null,
+        "author_id": null,
+        "translations": [
+          {
+            "title": "Conditions of Use",
+            "slug": "conditions-of-use",
+            "locale": "en",
+            "summary": null
+          }
+        ],
+        "categories": [],
+        "date_added": "September 15, 2021",
+        "images": [
+          "bg-conditions.jpg"
+        ]
+      }
+    ],
+    "first_page_url": "https://zucandu.com/api/v3/storefront/article/listing?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://zucandu.com/api/v3/storefront/article/listing?page=1",
+    "links": [
+      {
+        "url": null,
+        "label": "&laquo; Previous",
+        "page": null,
+        "active": false
+      },
+      {
+        "url": "https://zucandu.com/api/v3/storefront/article/listing?page=1",
+        "label": "1",
+        "page": 1,
+        "active": true
+      },
+      {
+        "url": null,
+        "label": "Next &raquo;",
+        "page": null,
+        "active": false
+      }
+    ],
+    "next_page_url": null,
+    "path": "https://zucandu.com/api/v3/storefront/article/listing",
+    "per_page": 20,
+    "prev_page_url": null,
+    "to": 17,
+    "total": 17
+  },
+  "object": null
+}
