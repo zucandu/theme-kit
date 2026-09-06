@@ -81,10 +81,26 @@ console.log(`[theme-kit] images: ${IMAGE_ORIGINS.join(', ') || 'placeholders onl
  * worked while testing against a theme that happened to sit inside a project
  * with its own node_modules.
  *
- * It also enforces the platform's rule as a side effect: a theme may import the
- * libraries the platform ships and nothing else. Reach for one that is not in
- * package.json and the build fails here — which is the point, because on a real
- * store it would fail on install.
+ * It also bounds a theme to the libraries the platform ships: reach for one that
+ * is not in package.json and the build fails here.
+ *
+ * 🚨 That failure is a WARNING, not a verdict — do not read it as "this theme
+ * would be rejected". Installing a theme does not check its imports against a
+ * package list; a bare specifier is simply resolved from the store's installed
+ * modules like any other. So a library that is not on the published list but
+ * happens to be installed there — including one pulled in only as some other
+ * package's dependency — builds and ships perfectly well today.
+ *
+ * Which is why this list tracks what a store can RESOLVE, not what the docs
+ * advertise. `@floating-ui/dom` is here for that reason alone: it is not on the
+ * published list, but it is installed on every store as a transitive dependency,
+ * and a theme that imports it works. Refusing it here would have failed a theme
+ * that a real store runs — the kit's one unforgivable error.
+ *
+ * The flip side is worth saying out loud to a theme developer: a library you
+ * reach only through someone else's dependency is not promised to you. The day
+ * the package that pulls it in is dropped, that import breaks on every store at
+ * once. Ask for it to be added properly rather than relying on the hoist.
  */
 function dependencyAliases() {
     const pkg = JSON.parse(readFileSync(fileURLToPath(new URL('./package.json', import.meta.url)), 'utf8'));

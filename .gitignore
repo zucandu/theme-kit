@@ -13,3 +13,7 @@ dist/
 # A theme dropped inside the kit for convenience. It is the developer's own
 # project — usually with its own git history — and does not belong in this repo.
 /theme/
+
+# Packages written by `zuc-theme export`. Build output, and a full copy of the
+# developer's own theme — neither belongs in the kit's repo.
+/packages/

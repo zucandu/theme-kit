@@ -216,7 +216,7 @@
           {
             "title": "Blog",
             "locale": "en",
-            "url": "blog/posts"
+            "url": "blog/listing"
           }
         ]
       },
@@ -300,7 +300,7 @@
           {
             "title": "My Account",
             "locale": "en",
-            "url": "account/orders/list"
+            "url": "account/order/list"
           }
         ]
       },

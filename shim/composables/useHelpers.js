@@ -19,27 +19,67 @@ const GRID_CLASSES = 'grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-4';
 export function useHelpers() {
     const firstTranslation = (item) => item?.translations?.[0];
 
+    /**
+     * Turn a menu row's `link` + slug into a path.
+     *
+     * 🚨 Both rules here are load-bearing, and the shortcut version had neither.
+     *
+     * Leading slashes come off the slug first. A menu row whose url is stored as
+     * `/` — which is how "Home" is stored — otherwise produced `//`, because the
+     * separator is added again below. `//` is a protocol-relative URL, so the
+     * nav's own Home link pointed off-origin.
+     *
+     * `_` in the link becomes `/`, so a `track_order` row addresses
+     * `/track/order/...` and not `/track_order/...`. Getting this wrong sends a
+     * theme's menu to a route that exists nowhere.
+     */
+    const buildPath = (link, slug) => {
+        const cleanSlug = slug?.replace(/^\/+/, '') || '';
+        if (['page', 'banner'].includes(link)) return `/${cleanSlug}`;
+
+        return `/${String(link).replace(/_/g, '/')}/${cleanSlug}`;
+    };
+
     return {
         basicCompare: (a, b) => (a < b ? -1 : a > b ? 1 : 0),
 
         // Intl does the symbol, so 'USD' renders as $ rather than the letters.
         // Not a rule of the platform's - it is the browser's own formatter.
-        formatCurrency: (price, decimal = 2, currency = null) => {
-            const n = Number(price);
-            if (Number.isNaN(n)) return '___';
-            return currency
-                ? n.toLocaleString('en-US', { style: 'currency', currency, minimumFractionDigits: decimal })
-                : n.toFixed(decimal);
+        /**
+         * Formats exactly as a live store does, and it has to.
+         *
+         * 🚨 The no-currency branch used to be `n.toFixed(decimal)`, which drops
+         * the thousands separator: `formatCurrency(1234.5)` printed `1234.50`
+         * here and `1,234.50` on a store. Prices are laid out to a width, so a
+         * theme checked against the short form has its column measured wrong for
+         * every four-figure total — and nothing in the console says so, because
+         * both strings are perfectly valid numbers.
+         *
+         * `maximumFractionDigits` is set alongside the minimum for the same
+         * reason: without it a value with more decimals than asked for keeps
+         * them, and `locale` is a real fourth parameter, not decoration.
+         */
+        formatCurrency: (price, decimal = 2, currency = null, locale = 'en-US') => {
+            if (isNaN(price)) return '___';
+
+            const options = {
+                minimumFractionDigits: decimal,
+                maximumFractionDigits: decimal,
+            };
+
+            if (currency) {
+                options.style = 'currency';
+                options.currency = currency;
+            }
+
+            return new Intl.NumberFormat(locale, options).format(price);
         },
 
         translateItemObj: (item) => firstTranslation(item),
         translateItemField: (item, field) => firstTranslation(item)?.[field],
 
-        buildPath: (link, slug) => `/${link}/${slug ?? ''}`.replace(/\/+/g, '/'),
-        parseMenuLink: (item, field) => {
-            const slug = firstTranslation(item)?.[field] ?? '';
-            return item.link === 'page' || item.link === 'banner' ? `/${slug}` : `/${item.link}/${slug}`;
-        },
+        buildPath,
+        parseMenuLink: (item, field) => buildPath(item?.link, firstTranslation(item)?.[field]),
 
         // Reads the real address bar, because listing filters and search put their
         // state there and a theme's filter chips have to reflect it.

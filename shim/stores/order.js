@@ -125,8 +125,48 @@ export const useOrderStore = defineStore('order', {
             return { order: ORDER, tracking: [], histories: ORDER.histories };
         },
 
+        /**
+         * A "pay this by link" request, in the shape the storefront API answers
+         * with: the payment request's own fields plus the order's `reference`.
+         *
+         * 🚨 Every field here is load-bearing, not padding. The three this used
+         * to return (order_id, reference, amount) left `payment_method`
+         * undefined, and PaymentRequest.vue does
+         * `orderPayment.value.toLowerCase()` on it before indexing the payment
+         * modules — so /pay/:token threw in `onMounted`, and the theme's own
+         * `catch` threw a second time reaching for `error.response.data` on a
+         * TypeError. The page then reported a failed request it never made,
+         * which sends a theme developer looking for a network problem.
+         *
+         * `payment_method` is the MODULE name, so `.toLowerCase()` lands on a
+         * key in `useAvailablePaymentMethods` — MoneyOrder, matching the enabled
+         * method in checkout.json. It is not the display label the order row
+         * carries ("Cash on Delivery"); those are two different fields and only
+         * one of them resolves to a module.
+         *
+         * `status` is 'pending' so the payable state renders. Set it to 'paid'
+         * to see the already-settled one — the theme swaps the whole panel.
+         */
         async getPaymentRequest() {
-            return { data: { payment_request: { order_id: ORDER.id, reference: ORDER.reference, amount: ORDER.order_total } } };
+            return {
+                data: {
+                    payment_request: {
+                        id: 1,
+                        order_id: ORDER.id,
+                        customer_id: 1,
+                        token: 'theme-kit-demo-token',
+                        reference: ORDER.reference,
+                        amount: ORDER.order_total,
+                        currency: ORDER.currency,
+                        status: 'pending',
+                        payment_method: 'MoneyOrder',
+                        note: 'Balance due on your order.',
+                        expires_at: null,
+                        paid_at: null,
+                        meta: null,
+                    },
+                },
+            };
         },
 
         async verify() { return { verified: true, ref: ORDER.reference, order: ORDER }; },

@@ -16,6 +16,7 @@
  */
 import { defineStore } from 'pinia';
 import cart from '../../fixtures/cart.json';
+import checkout from '../../fixtures/checkout.json';
 
 export const useCartStore = defineStore('cart', {
     state: () => ({
@@ -51,7 +52,23 @@ export const useCartStore = defineStore('cart', {
             this.items = this.items.filter((i) => i.id !== (item?.id ?? item));
         },
 
-        async calculateShippingEstimate() { return { methods: [] }; },
+        /**
+         * 🚨 Returns an ARRAY of shipping GROUPS, each with its own `methods[]` —
+         * not a single `{ methods }` object. That is the shape a live store
+         * quotes back, and a theme flattens it:
+         * `groups.flatMap((g) => g.methods)`. Returning the object form here threw
+         * `flatMap is not a function` inside a computed, which surfaces only as a
+         * caught console error and an estimator stuck on "calculating".
+         *
+         * Two groups, one of them free, because a rate list with a single row
+         * hides every layout decision the real one forces: which is selected,
+         * how a zero cost prints, how two groups stack.
+         *
+         * The quote ignores the address it is given. A live store prices against
+         * the merchant's own zones and rules; guessing at them here would produce
+         * a number that is wrong in a more convincing way.
+         */
+        async calculateShippingEstimate() { return checkout.shipping_methods; },
 
         reset() { this.items = []; },
     },
