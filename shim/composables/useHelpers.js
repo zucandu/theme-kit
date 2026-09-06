@@ -19,6 +19,27 @@ const GRID_CLASSES = 'grid grid-cols-2 gap-2 sm:gap-4 lg:grid-cols-4';
 export function useHelpers() {
     const firstTranslation = (item) => item?.translations?.[0];
 
+    /**
+     * Turn a menu row's `link` + slug into a path.
+     *
+     * 🚨 Both rules here are load-bearing, and the shortcut version had neither.
+     *
+     * Leading slashes come off the slug first. A menu row whose url is stored as
+     * `/` — which is how "Home" is stored — otherwise produced `//`, because the
+     * separator is added again below. `//` is a protocol-relative URL, so the
+     * nav's own Home link pointed off-origin.
+     *
+     * `_` in the link becomes `/`, so a `track_order` row addresses
+     * `/track/order/...` and not `/track_order/...`. Getting this wrong sends a
+     * theme's menu to a route that exists nowhere.
+     */
+    const buildPath = (link, slug) => {
+        const cleanSlug = slug?.replace(/^\/+/, '') || '';
+        if (['page', 'banner'].includes(link)) return `/${cleanSlug}`;
+
+        return `/${String(link).replace(/_/g, '/')}/${cleanSlug}`;
+    };
+
     return {
         basicCompare: (a, b) => (a < b ? -1 : a > b ? 1 : 0),
 
@@ -57,11 +78,8 @@ export function useHelpers() {
         translateItemObj: (item) => firstTranslation(item),
         translateItemField: (item, field) => firstTranslation(item)?.[field],
 
-        buildPath: (link, slug) => `/${link}/${slug ?? ''}`.replace(/\/+/g, '/'),
-        parseMenuLink: (item, field) => {
-            const slug = firstTranslation(item)?.[field] ?? '';
-            return item.link === 'page' || item.link === 'banner' ? `/${slug}` : `/${item.link}/${slug}`;
-        },
+        buildPath,
+        parseMenuLink: (item, field) => buildPath(item?.link, firstTranslation(item)?.[field]),
 
         // Reads the real address bar, because listing filters and search put their
         // state there and a theme's filter chips have to reflect it.
