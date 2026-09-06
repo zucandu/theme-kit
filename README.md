@@ -52,11 +52,16 @@ the kit is just a tool you run against it. Option B is simply less to type —
 > They are not in your package and the kit does not expect them — it supplies its
 > own copies.
 
-> **Windows:** `zuc-theme dev` needs the kit and the theme on the **same drive**.
-> Vite serves files outside its root through `/@fs/`, and that URL loses the
-> separator after a drive letter, so every page 404s. The CLI stops with an
-> explanation rather than letting you find out that way. `zuc-theme build` is
-> unaffected.
+> **Windows:** the kit and the theme must be on the **same drive** — for `dev`
+> *and* for `build`. `dev` breaks because Vite serves files outside its root
+> through `/@fs/`, and that URL loses the separator after a drive letter, so every
+> page 404s. `build` breaks more quietly: pages are reached through a globbed
+> dynamic import, that glob matches nothing across drives, and the build then
+> *succeeds* having compiled no page at all — measured at 77 chunks on one drive
+> against 5 and no pages on another, both printing `✓ built`. The CLI stops with an
+> explanation rather than letting either happen. If your theme lives on another
+> drive, copy it to `theme-kit/theme/` (gitignored) and run the commands with no
+> path.
 
 ---
 

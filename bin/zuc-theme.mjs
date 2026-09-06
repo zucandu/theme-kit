@@ -65,35 +65,52 @@ if (missing.length) {
 }
 
 /**
- * On Windows, refuse to start a DEV SERVER for a theme on a different drive from
- * the kit.
+ * On Windows, refuse to run against a theme on a different drive from the kit.
  *
- * Vite serves a file outside its root through /@fs/, and the served URL loses the
- * separator after the drive letter — the browser asks for "C:Users/..." and gets a
- * 404 on the page component, with nothing saying why. Allowing the path does not
- * help; the URL is already malformed by then.
+ * For `dev`: Vite serves a file outside its root through /@fs/, and the served URL
+ * loses the separator after the drive letter — the browser asks for "C:Users/..."
+ * and gets a 404 on the page component, with nothing saying why. Allowing the path
+ * does not help; the URL is already malformed by then.
  *
- * `build` is unaffected, so it is not blocked.
+ * 🚨 `build` was exempt here for a long time and should not have been. It does not
+ * error across drives — it QUIETLY COMPILES ALMOST NOTHING. The router reaches
+ * pages through `import(`@theme/storefront/${name}.vue`)`, which Vite resolves as
+ * a glob, and across drives that glob matches no files. Measured on one theme:
+ * 77 chunks with every page when the theme sat on the kit's drive, 5 chunks and
+ * not a single page component when the same theme sat on another. Both printed
+ * "✓ built" and exited 0.
+ *
+ * That is the worst possible outcome for this command. `build` exists to be the
+ * check you run before shipping — it is supposed to fail loudly on a typo'd import
+ * or a renamed component. A build that compiles none of your pages passes
+ * everything, including the broken theme it was run to catch. Refusing is the only
+ * honest answer until the glob itself resolves across drives.
  */
-if (process.platform === 'win32' && command === 'dev') {
+if (process.platform === 'win32' && ['dev', 'build'].includes(command)) {
     const driveOf = (p) => (p.match(/^([A-Za-z]):/) || [])[1]?.toUpperCase();
     const kitDrive = driveOf(KIT);
     const themeDrive = driveOf(themeDir);
 
     if (kitDrive && themeDrive && kitDrive !== themeDrive) {
         console.error();
-        console.error('  The dev server cannot serve a theme from another drive.');
+        console.error('  The kit cannot ' + command + ' a theme from another drive.');
         console.error();
         console.error('    kit:   ' + KIT);
         console.error('    theme: ' + themeDir);
         console.error();
-        console.error('  Vite serves files outside its root through /@fs/, and on Windows that URL');
-        console.error('  loses the separator after the drive letter, so every page 404s.');
+
+        if (command === 'dev') {
+            console.error('  Vite serves files outside its root through /@fs/, and on Windows that URL');
+            console.error('  loses the separator after the drive letter, so every page 404s.');
+        } else {
+            console.error('  Pages are reached through a globbed dynamic import, and across drives');
+            console.error('  that glob matches nothing. The build then SUCCEEDS having compiled no');
+            console.error('  page at all — so it would pass a theme it exists to catch.');
+        }
+
         console.error();
         console.error('  Move one of them so both sit on ' + kitDrive + ': — or copy the theme into');
-        console.error('  ' + KIT + String.fromCharCode(92) + 'theme and run: zuc-theme dev');
-        console.error();
-        console.error('  `zuc-theme build` works across drives and is not affected.');
+        console.error('  ' + KIT + String.fromCharCode(92) + 'theme and run: zuc-theme ' + command);
         console.error();
         process.exit(1);
     }

@@ -18,6 +18,7 @@
     "surface": "node tools/extract-surface.mjs"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.7.6",
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.2.0",
     "@panzoom/panzoom": "^4.6.2",
@@ -34,7 +35,7 @@
     "vue": "^3.5.29",
     "vue-chartjs": "^5.3.4",
     "vue-i18n": "^11.1.14",
-    "vue-router": "^4.5.1",
+    "vue-router": "^5.0.3",
     "vue-toastification": "^2.0.0-rc.5",
     "vuedraggable": "^4.1.0"
   },

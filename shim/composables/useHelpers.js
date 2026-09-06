@@ -24,12 +24,34 @@ export function useHelpers() {
 
         // Intl does the symbol, so 'USD' renders as $ rather than the letters.
         // Not a rule of the platform's - it is the browser's own formatter.
-        formatCurrency: (price, decimal = 2, currency = null) => {
-            const n = Number(price);
-            if (Number.isNaN(n)) return '___';
-            return currency
-                ? n.toLocaleString('en-US', { style: 'currency', currency, minimumFractionDigits: decimal })
-                : n.toFixed(decimal);
+        /**
+         * Formats exactly as a live store does, and it has to.
+         *
+         * 🚨 The no-currency branch used to be `n.toFixed(decimal)`, which drops
+         * the thousands separator: `formatCurrency(1234.5)` printed `1234.50`
+         * here and `1,234.50` on a store. Prices are laid out to a width, so a
+         * theme checked against the short form has its column measured wrong for
+         * every four-figure total — and nothing in the console says so, because
+         * both strings are perfectly valid numbers.
+         *
+         * `maximumFractionDigits` is set alongside the minimum for the same
+         * reason: without it a value with more decimals than asked for keeps
+         * them, and `locale` is a real fourth parameter, not decoration.
+         */
+        formatCurrency: (price, decimal = 2, currency = null, locale = 'en-US') => {
+            if (isNaN(price)) return '___';
+
+            const options = {
+                minimumFractionDigits: decimal,
+                maximumFractionDigits: decimal,
+            };
+
+            if (currency) {
+                options.style = 'currency';
+                options.currency = currency;
+            }
+
+            return new Intl.NumberFormat(locale, options).format(price);
         },
 
         translateItemObj: (item) => firstTranslation(item),
