@@ -78,8 +78,14 @@ the kit is just a tool you run against it. Option B is simply less to type —
    ```
    This is the cheapest way to catch a typo'd import or a renamed component. It
    fails loudly, by file and line, where the dev server only warns.
-4. **Upload the theme folder** to your store. You changed nothing to make it run
-   locally, so there is nothing to undo.
+4. **Export the package.**
+   ```bash
+   npx zuc-theme export ./path/to/your-theme --slug my-theme
+   ```
+   You changed nothing to make the theme run locally, so there is nothing to undo
+   — but the folder you work in is not the folder a store installs. `export`
+   arranges it, and generates `config/settings.json` from your settings. See
+   [Shipping it](#shipping-it).
 
 ### Commands
 
@@ -88,6 +94,104 @@ the kit is just a tool you run against it. Option B is simply less to type —
 | `zuc-theme dev <theme-dir>` | Dev server with hot reload, port 5180 |
 | `zuc-theme build <theme-dir>` | Production build — proves the theme compiles |
 | `zuc-theme check <theme-dir>` | Verifies the folder is a runnable theme |
+| `zuc-theme export <theme-dir>` | Assembles the uploadable package |
+
+---
+
+## Theme settings
+
+A theme can declare its own settings — colours, a tagline, how many products per
+row — and a store admin gets a form for them. Declare them once, in
+`theme-kit.config.json` beside your theme:
+
+```json
+{
+  "slug": "my-theme",
+  "theme_config": [
+    { "key": "accent", "type": "color", "label": "Accent colour", "default": "#2d2d2d", "group": "Colors" },
+    { "key": "show_map", "type": "boolean", "label": "Show map", "default": true, "group": "Contact" }
+  ]
+}
+```
+
+Your theme reads them the same way it will on a store:
+
+```vue
+<div :style="{ color: zucConfig.theme_my_theme.accent }" v-if="zucConfig.theme_my_theme.show_map">
+```
+
+The kit seeds those values from your `default`s, keeping their declared types — a
+boolean is a real boolean, a number a real number — so `v-if` behaves here the way
+it does live. Edit the file with the dev server running and the page reloads.
+
+**Types:** `boolean`, `number` (`min`/`max`), `select` (`options`), `text`
+(`maxlength`, default 500), `color` (`#rrggbb`). Up to 100 settings. There is no
+image type.
+
+> **`slug` matters more than it looks.** A store keys these values by the name it
+> installs your theme under, and your files name it too (`zucConfig.theme_my_theme`).
+> If the two disagree, every setting reads `undefined` — no error, no warning, the
+> theme just uses its fallbacks forever. `slug` defaults to your theme folder's
+> name; set it explicitly when that is not the name you will publish under.
+> `export` checks the two agree and tells you when they do not.
+
+---
+
+## Shipping it
+
+```bash
+npx zuc-theme export ../my-theme
+```
+
+**Where it goes:** `theme-kit/packages/<slug>/` — inside the kit, not on your
+Desktop and never inside your theme. `packages/` is gitignored here, so exports
+never land in the kit's repo. Send it somewhere else with `--out`:
+
+```bash
+# default — writes theme-kit/packages/aaa/
+npx zuc-theme export ../my-theme --slug aaa
+
+# anywhere you like
+npx zuc-theme export ../my-theme --slug aaa --out ~/Desktop/storefront-themes/theme_packages
+#   -> ~/Desktop/storefront-themes/theme_packages/aaa/
+
+# theme dropped in theme-kit/theme/ — no path needed
+npx zuc-theme export --slug aaa
+```
+
+`--slug` names the output folder. Leave it off and the kit uses your theme
+folder's name, or the `slug` in `theme-kit.config.json` if you set one.
+
+Either way you get the folder a store installs from:
+
+```
+packages/aaa/
+  files/
+    Storefront.vue
+    storefront/
+  screenshots/          ← put your listing images here
+  config/settings.json  ← generated from theme_config
+```
+
+Zip that folder and upload the zip.
+
+The shape you develop in is **not** the shape you ship: your two entries have to
+sit under `files/`, and an installer looks for `files/Storefront.vue` after
+stripping the archive's own top folder. Zip your theme folder directly and it
+unpacks one level too high and is refused — after upload. This command is here so
+that does not happen.
+
+Only `Storefront.vue` and `storefront/` are copied. Everything else beside them —
+`theme-kit.config.json`, `locales/`, a README, `.git` — is yours and local, and
+stays out.
+
+`files/` is rewritten on every export, so a file you deleted cannot survive in the
+package. `screenshots/` is not: those are put there by hand and there is nowhere
+else they live.
+
+Your `theme_config` becomes `config/settings.json` here, validated against the
+rules a store applies at install — a manifest a store would reject fails now,
+where fixing it is cheap, rather than after upload.
 
 ---
 

@@ -1,6 +1,53 @@
 {
+  "slug": "my-theme",
   "locale": "en",
   "fixtureOrigin": "https://demo-store.zucandu.com",
+
+  "theme_config": [
+    {
+      "key": "show_map",
+      "type": "boolean",
+      "label": "Show map on Contact Us",
+      "default": true,
+      "group": "Contact"
+    },
+    {
+      "key": "accent",
+      "type": "color",
+      "label": "Accent colour",
+      "default": "#2d2d2d",
+      "group": "Colors"
+    },
+    {
+      "key": "product_columns",
+      "type": "select",
+      "label": "Products per row",
+      "default": "4",
+      "options": [
+        { "value": "3", "label": "3 columns" },
+        { "value": "4", "label": "4 columns" }
+      ],
+      "group": "Listing"
+    },
+    {
+      "key": "small_image_size",
+      "type": "number",
+      "label": "Swatch width (px)",
+      "default": 60,
+      "min": 16,
+      "max": 512,
+      "group": "Images"
+    },
+    {
+      "key": "tagline",
+      "type": "text",
+      "label": "Header tagline",
+      "default": "PRO DRUM GEAR",
+      "maxlength": 60,
+      "group": "Header"
+    }
+  ],
+
   "zucConfig": {
     "store_name": "My Store",
     "default_currency": "USD",

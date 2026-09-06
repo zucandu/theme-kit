@@ -19,9 +19,10 @@
  * inside the kit is edited either way.
  */
 import { spawn } from 'node:child_process';
-import { existsSync } from 'node:fs';
-import { resolve, dirname } from 'node:path';
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { resolve, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseThemeConfig, manifestFrom } from '../tools/theme-settings.mjs';
 
 const KIT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 // A theme package is exactly these two. `cores/` is NOT one of them: it is
@@ -30,7 +31,21 @@ const KIT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 // it here rejected real theme packages. The kit supplies its own copies.
 const REQUIRED = ['Storefront.vue', 'storefront'];
 
-const [command = 'dev', themeArg] = process.argv.slice(2);
+const argv = process.argv.slice(2);
+
+/** Value of `--name <value>`, or null. */
+const flag = (name) => {
+    const i = argv.indexOf(`--${name}`);
+    return i === -1 ? null : argv[i + 1] ?? null;
+};
+
+// Positional arguments only: drop each `--flag` and the value that follows it.
+// 🚨 Help is matched against the RAW argv, before this filter — `--help` is a
+// flag by shape, so filtering first left `command` defaulting to 'dev' and the
+// kit answered `zuc-theme --help` by trying to boot a dev server.
+const HELP = ['-h', '--help', 'help'];
+const positional = argv.filter((a, i) => !a.startsWith('--') && !argv[i - 1]?.startsWith('--'));
+const [command = 'dev', themeArg] = positional;
 
 function usage(message) {
     if (message) console.error(`\n  ${message}`);
@@ -40,6 +55,7 @@ function usage(message) {
     dev      start a dev server against the theme (hot reload)
     build    production build, to check the theme compiles
     check    verify the folder looks like a theme
+    export   assemble the uploadable package  [--out <dir>] [--slug <name>]
 
   [theme-dir] is the folder containing ${REQUIRED.join(', ')}.
   Omit it to use ./theme inside the kit.
@@ -47,7 +63,7 @@ function usage(message) {
     process.exit(message ? 1 : 0);
 }
 
-if (['-h', '--help', 'help'].includes(command)) usage();
+if (argv.some((a) => HELP.includes(a))) usage();
 const themeDir = themeArg ? resolve(themeArg) : resolve(KIT, 'theme');
 
 if (!existsSync(themeDir)) {
@@ -116,8 +132,173 @@ if (process.platform === 'win32' && ['dev', 'build'].includes(command)) {
     }
 }
 
+const IMAGE = /\.(png|jpe?g|webp|gif)$/i;
+
+function countScreenshots(dir) {
+    try {
+        return readdirSync(dir).filter((f) => IMAGE.test(f)).length;
+    } catch {
+        return 0;
+    }
+}
+
+/** Every `zucConfig.theme_<name>` a theme's own files read. */
+function referencedSlugs() {
+    const found = new Set();
+
+    const walk = (dir) => {
+        for (const entry of readdirSync(dir, { withFileTypes: true })) {
+            const full = resolve(dir, entry.name);
+            if (entry.isDirectory()) {
+                walk(full);
+            } else if (/\.(vue|js|mjs|ts)$/.test(entry.name)) {
+                for (const m of readFileSync(full, 'utf8').matchAll(/zucConfig\.theme_([a-z0-9_]+)/g)) {
+                    found.add(m[1]);
+                }
+            }
+        }
+    };
+
+    try {
+        walk(themeDir);
+    } catch { /* an unreadable file is not worth failing an export over */ }
+
+    return found;
+}
+
+/**
+ * Things worth saying out loud, none of them fatal.
+ *
+ * 🚨 The slug check is the one that cannot be found any other way. A store names
+ * a theme from its marketplace listing, not from anything inside the package —
+ * the archive's own top folder is stripped and discarded. So a theme whose files
+ * read `zucConfig.theme_obsidian` only works on a store that installed it under
+ * exactly that name. Get it wrong and every setting reads `undefined`: no error,
+ * no warning, just a theme quietly using its own fallbacks forever.
+ */
+function exportWarnings(slug, declared, shotsDir) {
+    const out = [];
+
+    if (!declared) {
+        out.push('No theme_config in theme-kit.config.json, so this package declares no settings.');
+        out.push('  Add one and a store admin can configure the theme; leave it out and nothing is lost.');
+    }
+
+    if (countScreenshots(shotsDir) === 0) {
+        out.push(`No screenshots. Drop PNGs into ${shotsDir} — a listing with no image is a hard sell.`);
+    }
+
+    const referenced = [...referencedSlugs()].filter((name) => name !== slug);
+    if (referenced.length) {
+        out.push(`Theme files read zucConfig.theme_${referenced.join(', theme_')} but you are exporting as "${slug}".`);
+        out.push('  A store keys these by the name it installs the theme under. If they disagree,');
+        out.push('  every setting reads undefined and nothing reports it. Use --slug to match.');
+    }
+
+    return out;
+}
+
+/**
+ * Read the theme's `theme_config`, if it declares one.
+ *
+ * Returns null when there is no config file or no `theme_config` in it — a theme
+ * with no settings is the ordinary case, not a fault.
+ */
+function readThemeConfig() {
+    const configPath = resolve(themeDir, 'theme-kit.config.json');
+    if (!existsSync(configPath)) return null;
+
+    let raw;
+    try {
+        raw = JSON.parse(readFileSync(configPath, 'utf8'));
+    } catch (e) {
+        console.error();
+        console.error('  theme-kit.config.json is not valid JSON:');
+        console.error('  ' + e.message);
+        console.error();
+        process.exit(1);
+    }
+
+    if (raw.theme_config === undefined) return null;
+
+    try {
+        return { slug: raw.slug, settings: parseThemeConfig(raw.theme_config) };
+    } catch (e) {
+        console.error();
+        console.error('  theme_config is not valid, and a store would refuse this package:');
+        console.error('  ' + e.message);
+        console.error();
+        process.exit(1);
+    }
+}
+
 if (command === 'check') {
+    const declared = readThemeConfig();
     console.log(`OK  ${themeDir} looks like a runnable theme.`);
+    if (declared) console.log(`OK  theme_config declares ${declared.settings.length} setting(s).`);
+    process.exit(0);
+}
+
+/**
+ * Assemble the folder a store installs from.
+ *
+ * 🚨 The shape you develop in is NOT the shape you ship. You work in a folder
+ * whose root holds Storefront.vue and storefront/; a package nests exactly those
+ * two under `files/`, and an installer looks for `files/Storefront.vue` after
+ * stripping the archive's own top-level folder. Zipping the theme folder
+ * directly produces something that unpacks one level too high and is rejected
+ * after upload — which is the whole reason this command exists rather than a
+ * line in the README telling you to zip it yourself.
+ *
+ * Only those two entries are copied. Everything else beside them is yours and
+ * local: theme-kit.config.json, locales/, a README, a .git — none of it belongs
+ * in a package, and `files/` is not a dumping ground for the folder's contents.
+ */
+if (command === 'export') {
+    const slug = flag('slug') || readThemeConfig()?.slug || basename(themeDir);
+    const outRoot = resolve(flag('out') || resolve(KIT, 'packages'));
+    const dest = resolve(outRoot, slug);
+
+    const declared = readThemeConfig();
+
+    // `files/` is generated, so it is replaced outright — a file you deleted from
+    // the theme must not survive in the package. `screenshots/` is NOT: those are
+    // put there by hand and there is nowhere else they live, so wiping them on
+    // every export would quietly throw away the only copy.
+    mkdirSync(dest, { recursive: true });
+    rmSync(resolve(dest, 'files'), { recursive: true, force: true });
+    mkdirSync(resolve(dest, 'files'), { recursive: true });
+
+    for (const entry of REQUIRED) {
+        cpSync(resolve(themeDir, entry), resolve(dest, 'files', entry), { recursive: true });
+    }
+
+    const shots = resolve(dest, 'screenshots');
+    mkdirSync(shots, { recursive: true });
+    if (existsSync(resolve(themeDir, 'screenshots'))) {
+        cpSync(resolve(themeDir, 'screenshots'), shots, { recursive: true });
+    }
+
+    if (declared) {
+        mkdirSync(resolve(dest, 'config'), { recursive: true });
+        writeFileSync(
+            resolve(dest, 'config', 'settings.json'),
+            JSON.stringify(manifestFrom(declared.settings), null, 2) + String.fromCharCode(10),
+            'utf8'
+        );
+    }
+
+    console.log();
+    console.log(`  ${dest}`);
+    console.log(`    files/            ${REQUIRED.join(', ')}`);
+    console.log(`    screenshots/      ${countScreenshots(shots)} image(s)`);
+    console.log(declared
+        ? `    config/settings.json  ${declared.settings.length} setting(s)`
+        : '    config/           — not written, no theme_config declared');
+    console.log();
+
+    for (const warning of exportWarnings(slug, declared, shots)) console.log('  ! ' + warning);
+    console.log();
     process.exit(0);
 }
 

@@ -1,5 +1,6 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { resolve, join, basename } from 'node:path';
+import { parseThemeConfig, defaultsOf } from '../tools/theme-settings.mjs';
 
 const VIRTUAL_ID = 'virtual:zuc-theme-config';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
@@ -78,6 +79,30 @@ export function zucThemeKit({ themeDir, imageOrigins = [] }) {
             return id === VIRTUAL_ID ? RESOLVED_ID : null;
         },
 
+        /**
+         * Reload when theme-kit.config.json changes.
+         *
+         * Its contents are baked into a virtual module, which Vite has no reason
+         * to associate with a JSON file it never saw imported — so without this,
+         * editing a setting looked like it did nothing until the server was
+         * restarted, and the obvious conclusion to draw was that the setting
+         * itself was broken. Settings are exactly the thing you sit and tweak.
+         *
+         * A full reload rather than an HMR update: `zucConfig` is installed on
+         * `window` once, before the app mounts, so nothing downstream is prepared
+         * to see it change underneath.
+         */
+        handleHotUpdate({ file, server }) {
+            if (resolve(file) !== resolve(themeDir, 'theme-kit.config.json')) return;
+
+            const mod = server.moduleGraph.getModuleById(RESOLVED_ID);
+            if (mod) server.moduleGraph.invalidateModule(mod);
+
+            server.ws.send({ type: 'full-reload' });
+
+            return [];
+        },
+
         load(id) {
             if (id !== RESOLVED_ID) return null;
 
@@ -106,9 +131,36 @@ export function zucThemeKit({ themeDir, imageOrigins = [] }) {
                 }
             }
 
+            // The theme's own settings, seeded from their declared defaults.
+            //
+            // A store projects the ACTIVE theme's values under one namespaced key
+            // and a theme reads `zucConfig.theme_<slug>.x`. Namespacing by slug is
+            // what makes a component copied out of another theme fail visibly
+            // instead of quietly reading undefined, so the kit has to namespace it
+            // the same way or that safety net is missing exactly where it is being
+            // built. The slug defaults to the theme folder's name.
+            //
+            // 🚨 A bad declaration WARNS and is skipped rather than stopping the
+            // dev server. You are usually mid-edit when it is malformed, and taking
+            // the whole storefront down over one settings block would hide the page
+            // you are working on. `zuc-theme export` refuses instead — that is the
+            // point at which it has to be right.
+            const themeSlug = config.slug || basename(themeDir);
+            let themeSettings = {};
+
+            if (config.theme_config !== undefined) {
+                try {
+                    themeSettings = { [`theme_${themeSlug}`]: defaultsOf(parseThemeConfig(config.theme_config)) };
+                } catch (e) {
+                    this.warn(`theme_config is not valid, ignoring it: ${e.message}`);
+                }
+            }
+
             return `export default ${JSON.stringify({
                 locale: config.locale || 'en',
-                zucConfig: config.zucConfig || {},
+                // Theme settings first, so an explicit `zucConfig` override in the
+                // same file still wins — it is the more specific instruction.
+                zucConfig: { ...themeSettings, ...(config.zucConfig || {}) },
                 messages,
             })};`;
         },
