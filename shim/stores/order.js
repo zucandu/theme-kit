@@ -170,9 +170,39 @@ export const useOrderStore = defineStore('order', {
             return ORDER;
         },
 
+        /**
+         * Shipment tracking, in the shape GET /order/tracking/{ref} answers with.
+         *
+         * 🚨 This used to return `{ order, tracking: [], histories }` — three keys,
+         * none of which a theme reads. The real response is flat, and the tracking
+         * panel drives off `courier`, `tracking_number`, `tracking_url`,
+         * `tracking_events[]` and `delivered`. Against the old shape every one of
+         * them was undefined, so the whole timeline — dots, dates, locations, the
+         * carrier link — fell through to its "no events yet" fallback and could
+         * not be designed at all.
+         *
+         * Events are newest-first with `delivered` false, which is the state a
+         * shopper actually watches. Set `delivered: true` to see the timeline's
+         * completed marker; empty `tracking_events` to see the fallback.
+         */
         async fetchTrackingDetailsByRef() {
             this.retrieveOrder = ORDER;
-            return { order: ORDER, tracking: [], histories: ORDER.histories };
+
+            return {
+                order_id: ORDER.id,
+                step: 3,
+                delivered: false,
+                courier: 'USPS',
+                tracking_number: '9400100000000000000000',
+                tracking_url: 'https://tools.usps.com/go/TrackConfirmAction?tLabels=9400100000000000000000',
+                orderstatus: ORDER.orderstatus,
+                tracking_events: [
+                    { message: 'Out for delivery', date: '2026-09-03 07:41:00', location: 'San Jose, CA' },
+                    { message: 'Arrived at destination facility', date: '2026-09-02 22:10:00', location: 'San Jose, CA' },
+                    { message: 'In transit to next facility', date: '2026-09-02 11:05:00', location: 'Sacramento, CA' },
+                    { message: 'Shipping label created', date: '2026-09-02 09:12:00', location: 'Camp Hill, PA' },
+                ],
+            };
         },
 
         /**

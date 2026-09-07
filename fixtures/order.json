@@ -1,99 +1,204 @@
 {
-  "_note": "Synthetic. An order response is scoped to its owner, so none can be captured anonymously — and this package is public, so no real order may ship in it. The FIELD NAMES are not invented: they were read off the theme's own templates (AccountOrderList, AccountOrderDetails, CheckoutSuccess, Invoice), which is why they are order_total / order_tax / status_text rather than the shorter names one would guess.",
+  "_note": "Synthetic. An order response is scoped to its owner, so none of this can be captured from a public endpoint - but the SHAPE is not invented: it was read back from a live GET /api/v3/storefront/order/{ref} and from the tables the controller reads (order_discounts, rma_products). Only the values are made up.",
+  "_totals_note": "The lines add up on screen: 87.97 + 9.95 + 8.25 - 10.00 = 96.17. They did not before, because the ten was parked in a `discount_amount` key that no order surface reads, and the order total was ten dollars short of its own rows for no visible reason.",
   "order": {
     "id": 1001,
     "reference": "TK-1001-DEMO",
+    "order_kind": "standard",
+    "source_order_id": null,
+    "source_rma_product_id": null,
+    "customer_id": 1,
+    "firstname": "Tester",
+    "lastname": "Tester",
+    "email": "tester@example.com",
+    "payment_method": "Cash on Delivery",
+    "payment_code": "moneyorder",
+    "shipping_method": "Flat Rate",
+    "shipping_code": "flat",
+    "status": 2,
     "status_text": "Processing",
+    "orderstatus": { "name": "Processing" },
     "currency": "USD",
-    "purchased_at": "2026-09-01 10:24:00",
+    "language": "en",
     "subtotal": 87.97,
     "shipping_amount": 9.95,
+    "order_tax_name": "Sales Tax",
     "order_tax": 8.25,
     "order_total": 96.17,
-    "payment_method": "Cash on Delivery",
-    "shipping_method": "Flat Rate",
-    "comments": [],
-    "discounts": [],
-    "returns": [],
+    "is_guest": 0,
+    "recover_abandoned": 0,
+    "ip_address": "127.0.0.1",
+    "session_id": null,
+    "meta": [],
+    "created_at": "2026-09-01 10:24:00",
+    "updated_at": "2026-09-02 09:12:00",
+    "purchased_at": "2026-09-01 10:24:00",
+    "purchased_date": "September 01, 2026",
+    "payment_display": "Cash on Delivery",
+    "payment_gateway_event": null,
+    "payment_gateway_events": [],
+
+    "_discounts_note": "Rows of `order_discounts` (id, order_id, name, amount, module, module_track_id). The theme renders one line per row and reads `+discount.amount`, so a store with no promotion shows no line at all - empty this array to preview that.",
+    "discounts": [
+      {
+        "id": 1,
+        "order_id": 1001,
+        "name": "Coupon: WELCOME10",
+        "amount": "10.0000",
+        "module": "Coupon",
+        "module_track_id": 1,
+        "created_at": "2026-09-01 10:24:00",
+        "updated_at": "2026-09-01 10:24:00"
+      }
+    ],
+
+    "_comments_note": "The status timeline. It is `comments`, NOT `histories` - every order surface in a theme reads `order.comments`, and a fixture using another name renders the empty state forever. `admin` names who wrote the entry; a theme prints entries whose admin is not 'customer' on screen only, and 'customer' ones on the printed invoice too. Newest first, as the controller orders them.",
+    "comments": [
+      {
+        "id": 3,
+        "order_id": 1001,
+        "order_status_id": 2,
+        "hidden": 0,
+        "note": "Your recent order has shipped via USPS. The tracking number is 9400100000000000000000.",
+        "courier": "USPS",
+        "tracking_number": "9400100000000000000000",
+        "admin": "Store Manager",
+        "created_at": "September 02, 2026 9:12 AM EDT",
+        "updated_at": "2026-09-02 09:12:00",
+        "status_text": "Processing"
+      },
+      {
+        "id": 2,
+        "order_id": 1001,
+        "order_status_id": 2,
+        "hidden": 0,
+        "note": "Please leave the parcel with the building manager if nobody answers.",
+        "courier": null,
+        "tracking_number": null,
+        "admin": "customer",
+        "created_at": "September 01, 2026 11:02 AM EDT",
+        "updated_at": "2026-09-01 11:02:00",
+        "status_text": "Processing"
+      },
+      {
+        "id": 1,
+        "order_id": 1001,
+        "order_status_id": 1,
+        "hidden": 0,
+        "note": "Order placed.",
+        "courier": null,
+        "tracking_number": null,
+        "admin": "System",
+        "created_at": "September 01, 2026 10:24 AM EDT",
+        "updated_at": "2026-09-01 10:24:00",
+        "status_text": "Pending"
+      }
+    ],
+
+    "_returns_note": "Rows of `rma_products` for this order, each with the item name looked up by the controller. Left non-empty so a theme's 'a return is in progress' block can be laid out; empty it to see the ordinary order.",
+    "return_status": { "id": 1, "name": "Requested" },
+    "returns": [
+      {
+        "id": 1,
+        "product_id": 137,
+        "rma_request_id": 1,
+        "qty": 1,
+        "resolution": "refund",
+        "reason": "arrived_damaged",
+        "return_approved": 0,
+        "name": "PressLane Bands Tee — Army / S",
+        "created_at": "September 03, 2026 8:40 AM EDT",
+        "updated_at": "2026-09-03 08:40:00"
+      }
+    ],
+    "return_attachments": [],
+
+    "_items_note": "`customer_unit_price` and `customer_line_total` are what the theme prices a row from - it recomputes them for bundles, but the API sends them too. There is NO `stock` field on an order item, so a theme's 'cap the reorder quantity at what is in stock' branch correctly falls back to the quantity ordered.",
     "items": [
       {
         "id": 1,
-        "product_id": 136,
-        "name": "PressLane Bands Long Sleeve — Black / 3XL",
+        "order_id": 1001,
+        "product_id": "136",
         "sku": "pl-17-3481",
-        "qty": 1,
+        "name": "PressLane Bands Long Sleeve — Black / 3XL",
         "price": 37.99,
-        "total": 37.99,
-        "images": [
-          {
-            "src": "remote-57416e708c527d352665dae18124f97acb170675.jpg"
-          }
-        ],
-        "meta": {}
+        "original_price": "37.9900",
+        "customer_unit_price": 37.99,
+        "customer_line_total": 37.99,
+        "tax": "0.0000",
+        "tax_included": 0,
+        "qty": 1,
+        "qty_returned": 0,
+        "returnable": 1,
+        "returnable_at_purchase": 1,
+        "return_policy_code_at_purchase": "catalog_default",
+        "weight": 0.5,
+        "meta": [],
+        "images": [{ "src": "remote-57416e708c527d352665dae18124f97acb170675.jpg" }],
+        "created_at": "2026-09-01 10:24:00",
+        "updated_at": null
       },
       {
         "id": 2,
-        "product_id": 137,
-        "name": "PressLane Bands Tee — Army / S",
+        "order_id": 1001,
+        "product_id": "137",
         "sku": "pl-9-8440",
-        "qty": 2,
+        "name": "PressLane Bands Tee — Army / S",
         "price": 24.99,
-        "total": 49.98,
-        "images": [
-          {
-            "src": "remote-85ee18c1402a6320568044cff7d3799a607ea517.jpg"
-          }
-        ],
-        "meta": {}
+        "original_price": "24.9900",
+        "customer_unit_price": 24.99,
+        "customer_line_total": 49.98,
+        "tax": "0.0000",
+        "tax_included": 0,
+        "qty": 2,
+        "qty_returned": 0,
+        "returnable": 1,
+        "returnable_at_purchase": 1,
+        "return_policy_code_at_purchase": "catalog_default",
+        "weight": 0.3,
+        "meta": [],
+        "images": [{ "src": "remote-fa6fcfb244e678bede7bbc96b888ae1afdf41d34.jpg" }],
+        "created_at": "2026-09-01 10:24:00",
+        "updated_at": null
       }
     ],
-    "histories": [
-      {
-        "id": 1,
-        "status_text": "Pending",
-        "comment": "Order placed",
-        "date_added": "2026-09-01 10:24:00"
-      },
-      {
-        "id": 2,
-        "status_text": "Processing",
-        "comment": "Payment confirmed",
-        "date_added": "2026-09-01 11:02:00"
-      }
-    ],
-    "discount_amount": 10,
+
     "addresses": [
       {
         "id": 1,
-        "name": "Tester Tester",
+        "customer_id": 1,
+        "order_id": 1001,
         "company": "Test Company",
+        "name": "Tester Tester",
         "address_line_1": "7250 Bollinger Rd",
-        "address_line_2": "",
+        "address_line_2": null,
         "city": "San Jose",
         "postcode": "95129",
-        "zone_id": 12,
-        "zone_code": "CA",
         "zone_name": "California",
-        "country_id": 223,
         "country_name": "United States",
+        "country_code": "US",
         "phone": "(408) 873-7384",
-        "address_type": "shipping"
+        "address_type": "shipping",
+        "created_at": "2026-09-01 10:24:00",
+        "updated_at": null
       },
       {
         "id": 2,
+        "customer_id": 1,
+        "order_id": 1001,
+        "company": null,
         "name": "Tester Tester",
-        "company": "",
         "address_line_1": "40 N. 36th St.",
-        "address_line_2": "",
+        "address_line_2": null,
         "city": "Camp Hill",
         "postcode": "17011",
-        "zone_id": 51,
-        "zone_code": "PA",
         "zone_name": "Pennsylvania",
-        "country_id": 223,
         "country_name": "United States",
+        "country_code": "US",
         "phone": "(717) 836-1224",
-        "address_type": "billing"
+        "address_type": "billing",
+        "created_at": "2026-09-01 10:24:00",
+        "updated_at": null
       }
     ]
   }
