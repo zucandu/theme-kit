@@ -37,7 +37,34 @@ registerGlobalComponents(app);
 app.use(createPinia());
 app.use(router);
 app.use(createKitI18n({ locale: kitConfig.locale, messages: kitConfig.messages }));
-app.use(Toast, { timeout: 4000, position: 'top-right' });
+/**
+ * Toast, with the platform's own duplicate filter.
+ *
+ * 🚨 Without `filterBeforeCreate` the kit stacks toasts a store would collapse.
+ * Seen while testing the wishlist: removing an item produced TWO identical
+ * "Removed from wishlist" toasts here and one on a store, because more than one
+ * code path reports the same outcome and the platform suppresses a repeat of the
+ * same type+content within half a second.
+ *
+ * Toast stacking is a layout problem — height, spacing, how many fit — so a
+ * theme tuned against a doubled stack is tuned against something no shopper
+ * sees. Copied from app-storefront.js, timings included.
+ */
+const recentToasts = new Map();
+
+app.use(Toast, {
+    timeout: 4000,
+    position: 'top-right',
+    filterBeforeCreate: (toast) => {
+        const key = `${toast.type}:${String(toast.content)}`;
+        const now = Date.now();
+
+        if (now - (recentToasts.get(key) || 0) < 500) return false;
+
+        recentToasts.set(key, now);
+        return toast;
+    },
+});
 
 // Surface template errors instead of letting Vue swallow them into a blank page.
 // A theme developer's most common failure is a typo in a binding, and silence is
