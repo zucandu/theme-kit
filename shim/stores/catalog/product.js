@@ -19,6 +19,8 @@ import { defineStore } from 'pinia';
 
 import productDetails from '../../../fixtures/product-details.json';
 import simpleDetails from '../../../fixtures/product-details-simple.json';
+import bundleDetails from '../../../fixtures/product-details-bundle.json';
+import bookingDetails from '../../../fixtures/product-details-booking.json';
 import variantFixture from '../../../fixtures/product-variants.json';
 import spotlight from '../../../fixtures/product-spotlight.json';
 import reviews from '../../../fixtures/product-reviews.json';
@@ -29,7 +31,27 @@ import adjacent from '../../../fixtures/product-adjacent.json';
 const CHILDREN = productDetails.product.children ?? [];
 
 /** Read off the fixture rather than hardcoded, so a recapture cannot desync it. */
-const SIMPLE_SLUG = simpleDetails.product.translations?.find((t) => t?.slug)?.slug ?? null;
+const slugOf = (fixture) => fixture.product.translations?.find((t) => t?.slug)?.slug ?? null;
+
+/**
+ * Which captured product a slug answers with.
+ *
+ * Four products, because a theme lays each of them out differently and three of
+ * the four have a whole section of the page that the others do not:
+ *
+ *   simple       no picker, straight to add-to-cart
+ *   configurable the variant axes
+ *   bundle       `bundle_groups` — the accessory radios above add-to-cart
+ *   booking      the date/room/notes picker and no qty stepper
+ *
+ * Built from the fixtures rather than written out, so a recapture that lands on
+ * a different product cannot leave a dead slug behind.
+ */
+const BY_SLUG = new Map([
+    [slugOf(simpleDetails), simpleDetails.product],
+    [slugOf(bundleDetails), bundleDetails.product],
+    [slugOf(bookingDetails), bookingDetails.product],
+].filter(([slug]) => slug));
 
 /**
  * Size option value -> the child product it selects.
@@ -62,11 +84,36 @@ export const useProductStore = defineStore('product', {
 
         priceFormat: () => (price) => price,
 
-        getVariants: () => variantFixture.variants,
+        /**
+         * The variant axes, but ONLY for the product they were derived from.
+         *
+         * 🚨 This used to hand back the same map for whatever was loaded, and the
+         * result was a phantom picker: the simple product and the bundle product
+         * both offered "Size: Samsung Galaxy S20 / S20 Plus / S20 Ultra", three
+         * options belonging to a phone case two products away. Neither product
+         * has a single attribute — `attributes` is `[]` on both — so the simple
+         * layout the kit captured a fixture specifically to show could never
+         * actually be looked at, and picking an axis moved a price that was not
+         * the product's.
+         *
+         * The platform derives this per product (`getAttributes(productDetails,
+         * 'select')`), so an empty answer for a product with no select attributes
+         * is what a live store gives, not a shortcut.
+         */
+        getVariants: (state) => (
+            state.productDetails?.id === variantFixture._source_product_id
+                ? variantFixture.variants
+                : []
+        ),
 
         // The theme only ever asks for 'readonly' here (the spec table); the
-        // variant axes come through getVariants above.
-        getAttributes: () => () => variantFixture.readonly,
+        // variant axes come through getVariants above. Gated the same way, for
+        // the same reason — a spec table is as wrong on the wrong product.
+        getAttributes: (state) => () => (
+            state.productDetails?.id === variantFixture._source_product_id
+                ? variantFixture.readonly
+                : []
+        ),
 
         /**
          * Which child product a variant selection resolves to.
@@ -99,20 +146,26 @@ export const useProductStore = defineStore('product', {
 
     actions: {
         /**
-         * The slug DECIDES which of the two captured products answers.
+         * The slug DECIDES which of the four captured products answers.
          *
          * 🚨 This used to ignore its argument and always hand back the
          * configurable product, so a theme's SIMPLE-product layout — no variant
          * picker, no option axis, straight to add-to-cart — could not be reached
          * from any URL. That is not a small corner: it is the shape most of a
-         * real catalogue is in, and the two pages lay out very differently.
+         * real catalogue is in, and the pages lay out very differently.
+         *
+         * The bundle and booking fixtures are here for the same reason: their
+         * sections of the product page are unreachable without a product that
+         * carries them, and neither is something a theme can be trusted to have
+         * been designed for sight unseen. The nav's Product Types dropdown links
+         * straight to all four.
          *
          * Every other slug still resolves to the configurable product, as before:
-         * one captured page is what the kit has, and a catalogue of one product
-         * would make the listing pages useless.
+         * a catalogue whose every other row 404s would make the listing pages
+         * useless.
          */
         async retrieveProductDetails(slug) {
-            const product = slug === SIMPLE_SLUG ? simpleDetails.product : productDetails.product;
+            const product = BY_SLUG.get(slug) ?? productDetails.product;
 
             this.productDetails = product;
             return product;

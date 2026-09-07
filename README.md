@@ -87,6 +87,24 @@ the kit is just a tool you run against it. Option B is simply less to type —
    arranges it, and generates `config/settings.json` from your settings. See
    [Shipping it](#shipping-it).
 
+### The four product pages
+
+A catalogue is not one page repeated. The platform has four product shapes, three
+of them add a whole section the others do not have, and none of the three can be
+seen — let alone styled — without a product that carries it. So the kit ships one
+captured product of each, and the nav's **Product Types** dropdown links straight
+to all four:
+
+| Entry | What it puts on screen |
+|---|---|
+| Simple product | No picker at all. Straight to the qty stepper and add-to-cart. |
+| Configurable product | The variant axes. Selecting one moves price, SKU and stock. |
+| Bundle product | `bundle_groups` — accessory radios above add-to-cart: a required group that blocks the button until answered, optional ones, a "Not needed" opt-out, a `qty_multiplier` (one option is ×2, so a $83 accessory reads $166), a display-name override, and two options whose labels are identical so the SKU disambiguation shows. |
+| Booking product | Date/select/textarea fields instead of a qty stepper, a two-month availability calendar, and per-option surcharges that move the headline price. |
+
+The bundle and booking products are real rows on the demo store, captured like
+every other fixture — see [Refreshing the fixtures](#refreshing-the-fixtures).
+
 ### Commands
 
 | Command | What it does |
@@ -226,6 +244,10 @@ finished while being wrong.
   all captured from live stores, with real names, prices, images and translations.
 - **Add to cart / wishlist.** Adds the product you clicked, so a mis-wired button
   still shows up as a mis-wired button.
+- **Bundle and booking pickers.** Both compute their surcharge in the browser on a
+  live store too, so choosing an accessory or a room really does move the price
+  here. A saved bundle preference is held in memory — the remember/forget controls
+  work for the session, but sign in first: guests correctly see no control at all.
 - **Signing in and out.** You start signed out, so the guest header, the login form
   and every "sign in to continue" branch are reachable.
 - **The states your theme owns.** Modals, drawers, accordions, tabs, skeletons.
@@ -237,6 +259,7 @@ finished while being wrong.
 | cart totals never move | recalculated server-side on every change |
 | tax is one fixed figure from the shipping address | calculated per destination, and often **0** |
 | every variant resolves to the same child product | each combination is its own product |
+| a booking is always 1 night, and every day is bookable | priced by the real duration, against real capacity and existing bookings |
 | filters, sorting and pagination return the same page | a real query |
 | the coupon field starts applied and accepts anything | validated, and absent without a discount module |
 | payment is Check/Money Order only | whatever the merchant installed — possibly **none** |
@@ -397,6 +420,13 @@ Two things the capture protects, because both fail silently otherwise:
   `product-variants.json` is derived from ONE product. If they ever disagree the
   capture says so loudly; the picker would otherwise show another product's
   options with no error anywhere.
+- **The bundle and booking products are pinned by slug.** Neither is discoverable
+  from a listing: a bundle row looks like any other simple product until you fetch
+  it, and a booking product need not be in the spotlight at all. `_discovered.json`
+  holds `bundleSlug` and `bookingSlug`, and a pin is only honoured if the product
+  still answers with what it was pinned for. Capturing against your own store means
+  setting those two to a bundle and a booking product of your own — otherwise the
+  capture is skipped and the fixtures on disk are kept, which is reported.
 
 > Recapturing against your own store? Read the output before committing it.
 > Catalogue data is business data.

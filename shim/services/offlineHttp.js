@@ -17,9 +17,44 @@
  */
 import { fixtureFor } from './offlineFixtures.js';
 
+/**
+ * The one place the rule above is wrong: endpoints where an empty answer is a
+ * WRONG answer rather than a missing one.
+ *
+ * 🚨 `POST /booking/quote` is the whole list, and it earns its place. The picker
+ * reads `options_sum` off the response and, once it has one, that figure REPLACES
+ * the surcharge it worked out in the browser (`serverPriceDelta !== null` wins
+ * over `totalPriceDelta`). Answering `{}` therefore reads as "the server says
+ * these options cost nothing", and picking "Deluxe Room — $40.00" would move the
+ * displayed price by zero — a price the kit had, and threw away.
+ *
+ * Failing instead is what the component is already written for: it keeps the
+ * last-known-good delta, which offline is the correct client-side sum. The call
+ * sits inside a try/catch, so nothing else is aborted by this.
+ */
+const NO_HONEST_EMPTY_ANSWER = [
+    { method: 'POST', pattern: /\/booking\/quote$/, why: 'no pricing engine offline — the picker keeps its own option sum' },
+];
+
 const seen = new Set();
 
 function offline(method, url) {
+    const refused = NO_HONEST_EMPTY_ANSWER
+        .find((rule) => rule.method === method && rule.pattern.test(String(url).split('?')[0]));
+
+    if (refused) {
+        const key = `${method} ${url}`;
+        if (!seen.has(key)) {
+            seen.add(key);
+            console.info(
+                `%c[theme-kit] offline%c ${key} -> refused (${refused.why})`,
+                'color:#8a8274',
+                'color:inherit'
+            );
+        }
+        return Promise.reject(new Error(`[theme-kit] ${key}: ${refused.why}`));
+    }
+
     // Writes are never answered from a fixture: what a store does with a POST is
     // its decision, and inventing an outcome would show a save that did not
     // happen. Empty is the honest answer there.
@@ -61,5 +96,13 @@ export function createOfflineHttp() {
     };
 
     client.create = () => createOfflineHttp();
+
+    // A theme importing `axios` gets this object, so the module-level helpers it
+    // reaches for have to be here too. Nothing offline is ever cancelled, so a
+    // refusal is reported as the real failure it is rather than swallowed as one.
+    client.isCancel = () => false;
+    client.isAxiosError = (value) => value instanceof Error;
+    client.CancelToken = { source: () => ({ token: null, cancel: () => {} }) };
+
     return client;
 }

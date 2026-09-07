@@ -1,0 +1,330 @@
+{
+  "product": {
+    "id": 4,
+    "type": "simple",
+    "sku": "Model4",
+    "gtin": null,
+    "mpn": null,
+    "price": "651.0000",
+    "sale_price": "0.0000",
+    "price_sorter": "651.0000",
+    "cost": "0.0000",
+    "quantity": 995,
+    "total_capacity": null,
+    "booking_granularity": null,
+    "booking_start_attribute_option_id": null,
+    "booking_end_attribute_option_id": null,
+    "booking_unit": "night",
+    "max_quantity": 0,
+    "weight": 5,
+    "width": null,
+    "height": null,
+    "length": null,
+    "backorder": 0,
+    "restock_notify": 0,
+    "stock_on_request": 0,
+    "status": 1,
+    "is_digital": 0,
+    "popular": 7,
+    "featured": 0,
+    "total_reviews": 0,
+    "rating": 0,
+    "parent_id": 0,
+    "visibility": 1,
+    "sort": 0,
+    "default_variant": 0,
+    "manufacturer_id": 1,
+    "tax_class_id": 1,
+    "meta": [],
+    "deleted_at": null,
+    "created_at": "2023-02-09 09:17:34",
+    "updated_at": "2026-09-07 06:55:19",
+    "availability_date": null,
+    "image_attribute_option_id": null,
+    "nestable": 0,
+    "nestable_group_code": null,
+    "nestable_percentage": null,
+    "quantity_discount_status": 0,
+    "returnable": 1,
+    "translations": [
+      {
+        "id": 4,
+        "product_id": 4,
+        "locale": "en",
+        "name": "Coffee Machine Kalorik Aztec",
+        "slug": "coffee-machine-kalorik-aztec",
+        "description": "Duis tortor quam, lobortis eget, pharetra commodo, euismod sed, tellus. Praesent viverra cursus est. Praesent eu quam ut velit adipiscing interdum. Praesent dictum, metus id luctus vulputate, nisl eros hendrerit libero, sit amet venenatis pede ante id metus. Fusce quis lacus. Phasellus molestie libero quis tortor. Sed dignissim luctus quam. Quisque adipiscing consequat ante. Proin pede. Ut tristique nisi et orci. Nulla in purus quis lacus imperdiet laoreet. Sed quis eros. In volutpat augue non lectus. Nullam at mauris varius arcu condimentum scelerisque. Fusce et turpis vel tellus vestibulum sodales. Mauris dui. Nullam eros purus, scelerisque ac, commodo vitae, faucibus sed, nisl.\n\nSed leo velit, iaculis ut, sodales et, mollis vitae, felis. Morbi tortor dolor, pharetra ac, ultricies id, accumsan sed, diam. Vivamus lacus. Nulla metus eros, faucibus quis, vulputate in, fringilla ut, felis. Fusce a erat. Cras congue mollis dui. Nulla non nulla. Quisque massa. Duis velit magna, placerat sed, convallis non, condimentum eget, leo. Mauris sed nunc et nunc sodales lobortis. Nunc at dui ut felis nonummy aliquet.",
+        "meta_title": "Coffee Machine Kalorik Aztec",
+        "meta_description": "Duis tortor quam, lobortis eget, pharetra commodo, euismod sed, tellus. Praesent viverra cursus est. Praesent eu quam ut velit adipiscing interdum. Praesent dictum, metus id luctus vulputate, nisl eros hendrerit libero, sit amet venenatis pede ante id metus. Fusce quis lacus. Phasellus molestie libero quis tortor. Sed dignissim luctus quam. Quisque adipiscing consequat ante. Proin pede. Ut tristique nisi et orci. Nulla in purus quis lacus imperdiet laoreet. Sed quis eros. In volutpat augue non lectus. Nullam at mauris varius arcu condimentum scelerisque. Fusce et turpis vel tellus vestibulum sodales. Mauris dui. Nullam eros purus, scelerisque ac, commodo vitae, faucibus sed, nisl.\r\n\r\nSed leo velit, iaculis ut, sodales et, mollis vitae, felis. Morbi tortor dolor, pharetra ac, ultricies id, accumsan sed, diam. Vivamus lacus. Nulla metus eros, faucibus quis, vulputate in, fringilla ut, felis. Fusce a erat. Cras congue mollis dui. Nulla non nulla. Quisque massa. Duis velit magna, placerat sed, convallis non, condimentum eget, leo. Mauris sed nunc et nunc sodales lobortis. Nunc at dui ut felis nonummy aliquet.",
+        "created_at": null,
+        "updated_at": "2026-06-19 06:10:22"
+      }
+    ],
+    "quantity_discounts": [],
+    "images": [
+      {
+        "id": 952,
+        "product_id": 4,
+        "src": "04.jpg?v=1788513520",
+        "created_at": "2026-09-07 06:55:19",
+        "updated_at": "2026-09-07 06:55:19",
+        "sort": 0
+      }
+    ],
+    "embeds": [],
+    "attributes": [],
+    "bundle_groups": [
+      {
+        "id": 3,
+        "product_id": 4,
+        "label": "Filters",
+        "preference_key": "filters",
+        "is_required": true,
+        "sort": 0,
+        "created_at": "2026-09-07 06:55:19",
+        "updated_at": "2026-09-07 06:55:19",
+        "options": [
+          {
+            "id": 3,
+            "bundle_group_id": 3,
+            "option_product_id": 6,
+            "display_name": null,
+            "qty_multiplier": 2,
+            "sort": 0,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 6,
+              "sku": "Model6",
+              "price": "83.0000",
+              "sale_price": "0.0000",
+              "quantity": 999,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 6,
+                "name": "Coffee Maker Bosch Assimo",
+                "locale": "en"
+              }
+            ],
+            "name": "Coffee Maker Bosch Assimo"
+          },
+          {
+            "id": 4,
+            "bundle_group_id": 3,
+            "option_product_id": 8,
+            "display_name": "Standard Filter Pack",
+            "qty_multiplier": 1,
+            "sort": 1,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 8,
+              "sku": "Model8",
+              "price": "104.0000",
+              "sale_price": "0.0000",
+              "quantity": 999,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 8,
+                "name": "Hamilton Beach 72703 Ensemble 3 Cup Chopper",
+                "locale": "en"
+              }
+            ],
+            "name": "Standard Filter Pack"
+          },
+          {
+            "id": 5,
+            "bundle_group_id": 3,
+            "option_product_id": 17,
+            "display_name": "Standard Filter Pack",
+            "qty_multiplier": 1,
+            "sort": 2,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 17,
+              "sku": "Model17",
+              "price": "353.0000",
+              "sale_price": "0.0000",
+              "quantity": 999,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 17,
+                "name": "John Lewis Value Plastic Cutlery Drainer",
+                "locale": "en"
+              }
+            ],
+            "name": "Standard Filter Pack"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "product_id": 4,
+        "label": "Accessories",
+        "preference_key": "accessories",
+        "is_required": false,
+        "sort": 1,
+        "created_at": "2026-09-07 06:55:19",
+        "updated_at": "2026-09-07 06:55:19",
+        "options": [
+          {
+            "id": 6,
+            "bundle_group_id": 4,
+            "option_product_id": 2,
+            "display_name": null,
+            "qty_multiplier": 1,
+            "sort": 0,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 2,
+              "sku": "Model2",
+              "price": "160.0000",
+              "sale_price": "0.0000",
+              "quantity": 998,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 2,
+                "name": "Bugatti Uma Electronic Kitchen Scale and Timer",
+                "locale": "en"
+              }
+            ],
+            "name": "Bugatti Uma Electronic Kitchen Scale and Timer"
+          },
+          {
+            "id": 7,
+            "bundle_group_id": 4,
+            "option_product_id": 13,
+            "display_name": "Utensil Pot (matching finish)",
+            "qty_multiplier": 1,
+            "sort": 1,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 13,
+              "sku": "Model4",
+              "price": "605.0000",
+              "sale_price": "514.2500",
+              "quantity": 996,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 13,
+                "name": "John Lewis Ceramic Utensil Pot",
+                "locale": "en"
+              }
+            ],
+            "name": "Utensil Pot (matching finish)"
+          },
+          {
+            "id": 8,
+            "bundle_group_id": 4,
+            "option_product_id": 18,
+            "display_name": null,
+            "qty_multiplier": 2,
+            "sort": 2,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 18,
+              "sku": "Model9",
+              "price": "292.0000",
+              "sale_price": "0.0000",
+              "quantity": 999,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 18,
+                "name": "Joseph Joseph Nest Food Preparation Set",
+                "locale": "en"
+              }
+            ],
+            "name": "Joseph Joseph Nest Food Preparation Set"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "product_id": 4,
+        "label": "Installation Service",
+        "preference_key": null,
+        "is_required": false,
+        "sort": 2,
+        "created_at": "2026-09-07 06:55:19",
+        "updated_at": "2026-09-07 06:55:19",
+        "options": [
+          {
+            "id": 9,
+            "bundle_group_id": 5,
+            "option_product_id": 7,
+            "display_name": "On-site installation & first-run check",
+            "qty_multiplier": 1,
+            "sort": 0,
+            "created_at": "2026-09-07 06:55:19",
+            "updated_at": "2026-09-07 06:55:19",
+            "product": {
+              "id": 7,
+              "sku": "Model7",
+              "price": "503.0000",
+              "sale_price": "0.0000",
+              "quantity": 999,
+              "status": 1
+            },
+            "translations": [
+              {
+                "product_id": 7,
+                "name": "DEF 18W-804",
+                "locale": "en"
+              }
+            ],
+            "name": "On-site installation & first-run check"
+          }
+        ]
+      }
+    ],
+    "manufacturer": {
+      "id": 1,
+      "meta": null,
+      "translations": [
+        {
+          "id": 1,
+          "manufacturer_id": 1,
+          "locale": "en",
+          "name": "Example 1",
+          "slug": "example-1",
+          "description": null,
+          "meta_title": "Example 1",
+          "meta_description": null,
+          "created_at": "2023-02-09 02:10:25",
+          "updated_at": "2023-02-09 02:10:25"
+        }
+      ]
+    },
+    "categories": [
+      {
+        "id": 51,
+        "parent_id": 0,
+        "translations": [
+          {
+            "category_id": 51,
+            "name": "Lorem ipsum dolor sit",
+            "slug": "lorem-ipsum-dolor-sit",
+            "locale": "en"
+          }
+        ]
+      }
+    ],
+    "children": []
+  }
+}

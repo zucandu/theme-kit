@@ -126,6 +126,11 @@ export default defineConfig({
             { find: '@theme', replacement: themeDir },
             { find: '@storefront-plugins', replacement: fileURLToPath(new URL('./runtime/plugins-stub', import.meta.url)) },
             { find: '@', replacement: fileURLToPath(new URL('./shim', import.meta.url)) },
+            // Ahead of dependencyAliases(), which would otherwise resolve the bare
+            // 'axios' specifier to the real client in node_modules. A theme that
+            // imports axios directly — BookablePicker does — then reaches the
+            // network, on a kit that promises it has none.
+            { find: /^axios$/, replacement: fileURLToPath(new URL('./shim/services/axios.js', import.meta.url)) },
             ...dependencyAliases(),
         ],
     },
