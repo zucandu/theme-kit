@@ -157,22 +157,52 @@ const main = async () => {
     // product with zero attributes and zero children, and against that fixture the
     // variant picker renders nothing at all — a developer would have no way to design
     // the one part of the product page that is hardest to get right.
-    const pickSlugs = (payload) => {
+    /**
+     * 🚨 A listing row's `type` does NOT decide what /product/<slug> answers with.
+     *
+     * A row for a VARIANT carries the child's slug and the child's type — `simple`
+     * — but the detail endpoint resolves that slug to its PARENT and answers with
+     * the configurable product. Trusting the row is how this shipped a
+     * product-details-simple.json that was a byte-for-byte duplicate of the
+     * configurable one (both id 238, both `type: configurable`), which meant the
+     * simple-product layout — no variant picker, straight to add-to-cart — could
+     * never be looked at. Measured against the demo store:
+     *
+     *   spotlight row 'presslane-bands-cap-black-one-size'  type simple
+     *   GET /product/presslane-bands-cap-black-one-size     id 220, CONFIGURABLE
+     *   GET /product/umbra-saddle-sink-caddy                id 37,  simple
+     *
+     * So candidates are gathered from the rows and then CONFIRMED by fetching each
+     * one, taking the first whose answer really is the type we are after.
+     */
+    const candidateSlugs = (payload) => {
         const rows = Array.isArray(payload) ? payload : Object.values(payload).flat().filter(Boolean);
         const slugOf = (p) => p?.slug ?? p?.translations?.find((t) => t && t.slug)?.slug ?? null;
-        return {
-            simple: slugOf(rows.find((p) => p && p.type === 'simple')),
-            variable: slugOf(rows.find((p) => p && p.type && p.type !== 'simple')),
-        };
+        return [...new Set(rows.map(slugOf).filter(Boolean))];
+    };
+
+    /** First candidate whose DETAIL response matches, or null. */
+    const confirmSlug = async (candidates, wanted) => {
+        for (const slug of candidates) {
+            try {
+                const type = (await get('/product/' + slug))?.product?.type;
+                const isSimple = type === 'simple';
+                if (wanted === 'simple' ? isSimple : !isSimple && Boolean(type)) return slug;
+            } catch { /* gone or not addressable by that slug — try the next */ }
+        }
+        return null;
     };
 
     let slugs = { simple: null, variable: null };
     try {
-        slugs = pickSlugs(await get('/product/spotlight'));
-        if (!slugs.variable) {
-            const fromSearch = pickSlugs((await get('/search/result?keyword=a')).paginator?.data ?? []);
-            slugs.variable = fromSearch.variable;
-            slugs.simple = slugs.simple ?? fromSearch.simple;
+        let candidates = candidateSlugs(await get('/product/spotlight'));
+        slugs.simple = await confirmSlug(candidates, 'simple');
+        slugs.variable = await confirmSlug(candidates, 'variable');
+
+        if (!slugs.simple || !slugs.variable) {
+            candidates = candidateSlugs((await get('/search/result?keyword=a')).paginator?.data ?? []);
+            slugs.simple = slugs.simple ?? await confirmSlug(candidates, 'simple');
+            slugs.variable = slugs.variable ?? await confirmSlug(candidates, 'variable');
         }
     } catch (e) { results.failed.push('product slug discovery -> ' + e.message); }
 
@@ -184,13 +214,19 @@ const main = async () => {
     // renders options that belong to something else — with no error anywhere.
     // Pinning to the previous slug keeps recapture idempotent; the guard below
     // catches the case where the pin itself had to change.
+    // ⚠️ A pin is only honoured if it still ANSWERS with the type it was pinned for.
+    // The previous version took `simpleSlug` on trust and never fetched it, which is
+    // what let a stale, wrong pin survive every recapture: the slug had long resolved
+    // to a configurable parent, and re-running the tool faithfully reproduced the
+    // duplicate every time.
     try {
         const previous = JSON.parse(readFileSync(join(ROOT, 'fixtures', '_discovered.json'), 'utf8'));
         if (previous.variableSlug) {
-            await get('/product/' + previous.variableSlug);
-            slugs.variable = previous.variableSlug;
+            slugs.variable = await confirmSlug([previous.variableSlug], 'variable') ?? slugs.variable;
         }
-        if (previous.simpleSlug) slugs.simple = previous.simpleSlug;
+        if (previous.simpleSlug) {
+            slugs.simple = await confirmSlug([previous.simpleSlug], 'simple') ?? slugs.simple;
+        }
     } catch { /* no previous run, or that product is gone - use what was discovered */ }
 
     const productSlug = slugs.variable ?? slugs.simple;

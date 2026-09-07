@@ -18,6 +18,7 @@
 import { defineStore } from 'pinia';
 
 import productDetails from '../../../fixtures/product-details.json';
+import simpleDetails from '../../../fixtures/product-details-simple.json';
 import variantFixture from '../../../fixtures/product-variants.json';
 import spotlight from '../../../fixtures/product-spotlight.json';
 import reviews from '../../../fixtures/product-reviews.json';
@@ -26,6 +27,9 @@ import upSells from '../../../fixtures/product-up-sells.json';
 import adjacent from '../../../fixtures/product-adjacent.json';
 
 const CHILDREN = productDetails.product.children ?? [];
+
+/** Read off the fixture rather than hardcoded, so a recapture cannot desync it. */
+const SIMPLE_SLUG = simpleDetails.product.translations?.find((t) => t?.slug)?.slug ?? null;
 
 /**
  * Size option value -> the child product it selects.
@@ -94,9 +98,24 @@ export const useProductStore = defineStore('product', {
     },
 
     actions: {
-        async retrieveProductDetails() {
-            this.productDetails = productDetails.product;
-            return productDetails.product;
+        /**
+         * The slug DECIDES which of the two captured products answers.
+         *
+         * 🚨 This used to ignore its argument and always hand back the
+         * configurable product, so a theme's SIMPLE-product layout — no variant
+         * picker, no option axis, straight to add-to-cart — could not be reached
+         * from any URL. That is not a small corner: it is the shape most of a
+         * real catalogue is in, and the two pages lay out very differently.
+         *
+         * Every other slug still resolves to the configurable product, as before:
+         * one captured page is what the kit has, and a catalogue of one product
+         * would make the listing pages useless.
+         */
+        async retrieveProductDetails(slug) {
+            const product = slug === SIMPLE_SLUG ? simpleDetails.product : productDetails.product;
+
+            this.productDetails = product;
+            return product;
         },
 
         async fetchSpotlightProducts() { return spotlight; },

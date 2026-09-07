@@ -1,22 +1,22 @@
 {
   "product": {
-    "id": 238,
-    "type": "configurable",
-    "sku": "pl-27",
+    "id": 19,
+    "type": "simple",
+    "sku": "Model1",
     "gtin": null,
     "mpn": null,
-    "price": "0.0000",
+    "price": "785.3200",
     "sale_price": "0.0000",
-    "price_sorter": "0.0000",
+    "price_sorter": "785.3200",
     "cost": "0.0000",
-    "quantity": 0,
+    "quantity": 997,
     "total_capacity": null,
     "booking_granularity": null,
     "booking_start_attribute_option_id": null,
     "booking_end_attribute_option_id": null,
     "booking_unit": "night",
     "max_quantity": 0,
-    "weight": null,
+    "weight": 2,
     "width": null,
     "height": null,
     "length": null,
@@ -25,7 +25,7 @@
     "stock_on_request": 0,
     "status": 1,
     "is_digital": 0,
-    "popular": 0,
+    "popular": 2,
     "featured": 0,
     "total_reviews": 0,
     "rating": 0,
@@ -33,12 +33,12 @@
     "visibility": 1,
     "sort": 0,
     "default_variant": 0,
-    "manufacturer_id": null,
+    "manufacturer_id": 1,
     "tax_class_id": 1,
     "meta": null,
     "deleted_at": null,
-    "created_at": "2026-08-31 03:21:56",
-    "updated_at": null,
+    "created_at": "2023-02-09 09:17:34",
+    "updated_at": "2026-06-19 06:10:24",
     "availability_date": null,
     "image_attribute_option_id": null,
     "nestable": 0,
@@ -48,567 +48,64 @@
     "returnable": 1,
     "translations": [
       {
-        "id": 238,
-        "product_id": 238,
+        "id": 19,
+        "product_id": 19,
         "locale": "en",
-        "name": "PressLane Bands Samsung Case",
-        "slug": "presslane-bands-samsung-case",
-        "description": null,
-        "meta_title": "PressLane Bands Samsung Case",
-        "meta_description": null,
-        "created_at": "2026-08-31 03:21:56",
-        "updated_at": null
+        "name": "Kalorik Meat Grinder MGR25959 Stainless Steel Blade",
+        "slug": "kalorik-meat-grinder-mgr25959-stainless-steel-blade",
+        "description": "Ut iaculis lectus eget lectus. Nullam viverra, lacus sed semper aliquet, orci eros pharetra nulla, vel blandit nisi est non risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur egestas. Sed tortor enim, commodo id, interdum nec, porttitor vitae, diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas varius vulputate diam. Praesent id magna. Sed convallis. Pellentesque elit eros, ornare vitae, tempor vitae, volutpat id, nisi. Sed sagittis. Donec ac pede. Fusce vehicula. Praesent a diam. Donec mattis ante vel justo. Duis sit amet tortor. Proin mauris pede, luctus sed, sagittis in, hendrerit at, felis. Maecenas sodales, justo eu suscipit nonummy, elit augue aliquet urna, vitae pretium elit lorem ut justo. Mauris lacus nunc, tempor sit amet, molestie sit amet, gravida a, tortor.\n\nUt nisi libero, fringilla eu, fermentum ultricies, auctor non, urna. Nullam venenatis venenatis magna. Vestibulum ut enim. Vestibulum vitae erat vel pede euismod tempus. Ut suscipit malesuada mauris. Nullam ultrices leo et odio. Ut et nulla. Quisque elit justo, auctor ut, tempor sed, fermentum nec, sem. Curabitur auctor, pede ut condimentum adipiscing, enim metus porttitor lacus, ut interdum tellus lorem et neque. Vivamus adipiscing. Aenean vestibulum. Aliquam bibendum libero id erat. Fusce luctus, lectus a semper pellentesque, sem nibh luctus felis, in laoreet felis libero sed odio. Etiam et diam et quam ornare consequat. Morbi ac diam eget est dapibus fermentum. Suspendisse potenti. Cras sem.",
+        "meta_title": "Kalorik Meat Grinder MGR25959 Stainless Steel Blade",
+        "meta_description": "Ut iaculis lectus eget lectus. Nullam viverra, lacus sed semper aliquet, orci eros pharetra nulla, vel blandit nisi est non risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur egestas. Sed tortor enim, commodo id, interdum nec, porttitor vitae, diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas varius vulputate diam. Praesent id magna. Sed convallis. Pellentesque elit eros, ornare vitae, tempor vitae, volutpat id, nisi. Sed sagittis. Donec ac pede. Fusce vehicula. Praesent a diam. Donec mattis ante vel justo. Duis sit amet tortor. Proin mauris pede, luctus sed, sagittis in, hendrerit at, felis. Maecenas sodales, justo eu suscipit nonummy, elit augue aliquet urna, vitae pretium elit lorem ut justo. Mauris lacus nunc, tempor sit amet, molestie sit amet, gravida a, tortor.\r\n\r\nUt nisi libero, fringilla eu, fermentum ultricies, auctor non, urna. Nullam venenatis venenatis magna. Vestibulum ut enim. Vestibulum vitae erat vel pede euismod tempus. Ut suscipit malesuada mauris. Nullam ultrices leo et odio. Ut et nulla. Quisque elit justo, auctor ut, tempor sed, fermentum nec, sem. Curabitur auctor, pede ut condimentum adipiscing, enim metus porttitor lacus, ut interdum tellus lorem et neque. Vivamus adipiscing. Aenean vestibulum. Aliquam bibendum libero id erat. Fusce luctus, lectus a semper pellentesque, sem nibh luctus felis, in laoreet felis libero sed odio. Etiam et diam et quam ornare consequat. Morbi ac diam eget est dapibus fermentum. Suspendisse potenti. Cras sem.",
+        "created_at": null,
+        "updated_at": "2026-06-19 06:10:24"
       }
     ],
     "quantity_discounts": [],
     "images": [
       {
-        "id": 886,
-        "product_id": 238,
-        "src": "remote-8bd506aa1b308f8d169f1aecbc06e4e7f16d5cd5.jpg?v=1788146517",
-        "created_at": "2026-08-31 03:21:57",
-        "updated_at": "2026-08-31 03:21:57",
+        "id": 19,
+        "product_id": 19,
+        "src": "19.jpg?v=1788513520",
+        "created_at": null,
+        "updated_at": null,
         "sort": 0
-      },
-      {
-        "id": 887,
-        "product_id": 238,
-        "src": "remote-464359cc6aaaf801dc2fc3df7802faf44159abb6.jpg?v=1788146518",
-        "created_at": "2026-08-31 03:21:58",
-        "updated_at": "2026-08-31 03:21:58",
-        "sort": 1
-      },
-      {
-        "id": 888,
-        "product_id": 238,
-        "src": "remote-2ca1cd813328d95751fea03598f4d459fbdb75f8.jpg?v=1788146518",
-        "created_at": "2026-08-31 03:21:58",
-        "updated_at": "2026-08-31 03:21:58",
-        "sort": 2
-      },
-      {
-        "id": 889,
-        "product_id": 238,
-        "src": "remote-2413874d72c387ed8bd3ad0ab50cc5abf67fe28a.jpg?v=1788146519",
-        "created_at": "2026-08-31 03:21:59",
-        "updated_at": "2026-08-31 03:21:59",
-        "sort": 3
-      },
-      {
-        "id": 890,
-        "product_id": 238,
-        "src": "remote-ee076d9812b8e82ef7be5cf767fc67fef43be8fa.jpg?v=1788146519",
-        "created_at": "2026-08-31 03:21:59",
-        "updated_at": "2026-08-31 03:21:59",
-        "sort": 4
-      },
-      {
-        "id": 891,
-        "product_id": 238,
-        "src": "remote-226c89f4d50b45b116f82b969b0756946f890be3.jpg?v=1788146519",
-        "created_at": "2026-08-31 03:21:59",
-        "updated_at": "2026-08-31 03:21:59",
-        "sort": 5
       }
     ],
     "embeds": [],
-    "attributes": [
-      {
-        "product_id": 238,
-        "attribute_option_id": 2,
-        "attribute_option_value_id": 95,
-        "attribute_default": 0,
-        "attribute_price": "0.0000",
-        "attribute_option": {
-          "id": 2,
-          "type": "select",
-          "filterable": 1,
-          "sort": 0,
-          "display_ov_image": 0,
-          "filter_only": 0,
-          "is_required": 0,
-          "translations": [
-            {
-              "attribute_option_id": 2,
-              "name": "Size",
-              "locale": "en"
-            }
-          ]
-        },
-        "sort": 0,
-        "attribute_option_value": {
-          "id": 95,
-          "attribute_option_id": 2,
-          "filterable": 1,
-          "sort": 0,
-          "image": null,
-          "filter_only": 0,
-          "translations": [
-            {
-              "attribute_option_value_id": 95,
-              "name": "Samsung Galaxy S20 Plus",
-              "locale": "en"
-            }
-          ]
-        }
-      },
-      {
-        "product_id": 238,
-        "attribute_option_id": 2,
-        "attribute_option_value_id": 96,
-        "attribute_default": 0,
-        "attribute_price": "0.0000",
-        "attribute_option": {
-          "id": 2,
-          "type": "select",
-          "filterable": 1,
-          "sort": 0,
-          "display_ov_image": 0,
-          "filter_only": 0,
-          "is_required": 0,
-          "translations": [
-            {
-              "attribute_option_id": 2,
-              "name": "Size",
-              "locale": "en"
-            }
-          ]
-        },
-        "sort": 0,
-        "attribute_option_value": {
-          "id": 96,
-          "attribute_option_id": 2,
-          "filterable": 1,
-          "sort": 0,
-          "image": null,
-          "filter_only": 0,
-          "translations": [
-            {
-              "attribute_option_value_id": 96,
-              "name": "Samsung Galaxy S20 Ultra",
-              "locale": "en"
-            }
-          ]
-        }
-      },
-      {
-        "product_id": 238,
-        "attribute_option_id": 2,
-        "attribute_option_value_id": 97,
-        "attribute_default": 0,
-        "attribute_price": "0.0000",
-        "attribute_option": {
-          "id": 2,
-          "type": "select",
-          "filterable": 1,
-          "sort": 0,
-          "display_ov_image": 0,
-          "filter_only": 0,
-          "is_required": 0,
-          "translations": [
-            {
-              "attribute_option_id": 2,
-              "name": "Size",
-              "locale": "en"
-            }
-          ]
-        },
-        "sort": 0,
-        "attribute_option_value": {
-          "id": 97,
-          "attribute_option_id": 2,
-          "filterable": 1,
-          "sort": 0,
-          "image": null,
-          "filter_only": 0,
-          "translations": [
-            {
-              "attribute_option_value_id": 97,
-              "name": "Samsung Galaxy S20",
-              "locale": "en"
-            }
-          ]
-        }
-      }
-    ],
+    "attributes": [],
     "bundle_groups": [],
-    "categories": [],
-    "children": [
+    "manufacturer": {
+      "id": 1,
+      "meta": null,
+      "translations": [
+        {
+          "id": 1,
+          "manufacturer_id": 1,
+          "locale": "en",
+          "name": "Example 1",
+          "slug": "example-1",
+          "description": null,
+          "meta_title": "Example 1",
+          "meta_description": null,
+          "created_at": "2023-02-09 02:10:25",
+          "updated_at": "2023-02-09 02:10:25"
+        }
+      ]
+    },
+    "categories": [
       {
-        "id": 239,
-        "type": "simple",
-        "sku": "pl-27-11348",
-        "gtin": null,
-        "mpn": null,
-        "price": "29.9900",
-        "sale_price": "0.0000",
-        "price_sorter": "18.9900",
-        "cost": "14.7500",
-        "quantity": 999,
-        "total_capacity": null,
-        "booking_granularity": null,
-        "booking_start_attribute_option_id": null,
-        "booking_end_attribute_option_id": null,
-        "booking_unit": "night",
-        "max_quantity": 0,
-        "weight": null,
-        "width": null,
-        "height": null,
-        "length": null,
-        "backorder": 0,
-        "restock_notify": 0,
-        "stock_on_request": 0,
-        "status": 1,
-        "is_digital": 0,
-        "popular": 0,
-        "featured": 0,
-        "total_reviews": 0,
-        "rating": 0,
-        "parent_id": 238,
-        "visibility": 1,
-        "sort": 0,
-        "default_variant": 0,
-        "manufacturer_id": null,
-        "tax_class_id": 1,
-        "meta": null,
-        "deleted_at": null,
-        "created_at": "2026-08-31 03:22:00",
-        "updated_at": "2026-09-02 14:06:00",
-        "availability_date": null,
-        "image_attribute_option_id": null,
-        "nestable": 0,
-        "nestable_group_code": null,
-        "nestable_percentage": null,
-        "quantity_discount_status": 0,
-        "returnable": 1,
+        "id": 5,
+        "parent_id": 0,
         "translations": [
           {
-            "id": 239,
-            "product_id": 239,
-            "locale": "en",
-            "name": "PressLane Bands Samsung Case — Samsung Galaxy S20 Plus",
-            "slug": "presslane-bands-samsung-case-samsung-galaxy-s20-plus",
-            "description": null,
-            "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20 Plus",
-            "meta_description": null,
-            "created_at": "2026-08-31 03:22:00",
-            "updated_at": null
-          }
-        ],
-        "images": [
-          {
-            "id": 892,
-            "product_id": 239,
-            "src": "remote-8bd506aa1b308f8d169f1aecbc06e4e7f16d5cd5.jpg?v=1788146517",
-            "created_at": "2026-08-31 03:22:00",
-            "updated_at": "2026-08-31 03:22:00",
-            "sort": 0
-          },
-          {
-            "id": 893,
-            "product_id": 239,
-            "src": "remote-464359cc6aaaf801dc2fc3df7802faf44159abb6.jpg?v=1788146518",
-            "created_at": "2026-08-31 03:22:00",
-            "updated_at": "2026-08-31 03:22:00",
-            "sort": 1
-          }
-        ],
-        "quantity_discounts": [],
-        "embeds": [],
-        "bundle_groups": [],
-        "attributes": [
-          {
-            "product_id": 239,
-            "attribute_option_id": 2,
-            "attribute_option_value_id": 95,
-            "attribute_default": 0,
-            "attribute_price": "0.0000",
-            "attribute_option": {
-              "id": 2,
-              "type": "select",
-              "filterable": 1,
-              "sort": 0,
-              "display_ov_image": 0,
-              "filter_only": 0,
-              "is_required": 0,
-              "translations": [
-                {
-                  "attribute_option_id": 2,
-                  "name": "Size",
-                  "locale": "en"
-                }
-              ]
-            },
-            "sort": 0,
-            "attribute_option_value": {
-              "id": 95,
-              "attribute_option_id": 2,
-              "filterable": 1,
-              "sort": 0,
-              "image": null,
-              "filter_only": 0,
-              "translations": [
-                {
-                  "attribute_option_value_id": 95,
-                  "name": "Samsung Galaxy S20 Plus",
-                  "locale": "en"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "id": 240,
-        "type": "simple",
-        "sku": "pl-27-11349",
-        "gtin": null,
-        "mpn": null,
-        "price": "29.9900",
-        "sale_price": "0.0000",
-        "price_sorter": "18.9900",
-        "cost": "14.7500",
-        "quantity": 999,
-        "total_capacity": null,
-        "booking_granularity": null,
-        "booking_start_attribute_option_id": null,
-        "booking_end_attribute_option_id": null,
-        "booking_unit": "night",
-        "max_quantity": 0,
-        "weight": null,
-        "width": null,
-        "height": null,
-        "length": null,
-        "backorder": 0,
-        "restock_notify": 0,
-        "stock_on_request": 0,
-        "status": 1,
-        "is_digital": 0,
-        "popular": 0,
-        "featured": 0,
-        "total_reviews": 0,
-        "rating": 0,
-        "parent_id": 238,
-        "visibility": 1,
-        "sort": 0,
-        "default_variant": 0,
-        "manufacturer_id": null,
-        "tax_class_id": 1,
-        "meta": null,
-        "deleted_at": null,
-        "created_at": "2026-08-31 03:22:00",
-        "updated_at": "2026-09-02 14:06:00",
-        "availability_date": null,
-        "image_attribute_option_id": null,
-        "nestable": 0,
-        "nestable_group_code": null,
-        "nestable_percentage": null,
-        "quantity_discount_status": 0,
-        "returnable": 1,
-        "translations": [
-          {
-            "id": 240,
-            "product_id": 240,
-            "locale": "en",
-            "name": "PressLane Bands Samsung Case — Samsung Galaxy S20 Ultra",
-            "slug": "presslane-bands-samsung-case-samsung-galaxy-s20-ultra",
-            "description": null,
-            "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20 Ultra",
-            "meta_description": null,
-            "created_at": "2026-08-31 03:22:00",
-            "updated_at": null
-          }
-        ],
-        "images": [
-          {
-            "id": 894,
-            "product_id": 240,
-            "src": "remote-2ca1cd813328d95751fea03598f4d459fbdb75f8.jpg?v=1788146518",
-            "created_at": "2026-08-31 03:22:01",
-            "updated_at": "2026-08-31 03:22:01",
-            "sort": 0
-          },
-          {
-            "id": 895,
-            "product_id": 240,
-            "src": "remote-2413874d72c387ed8bd3ad0ab50cc5abf67fe28a.jpg?v=1788146519",
-            "created_at": "2026-08-31 03:22:01",
-            "updated_at": "2026-08-31 03:22:01",
-            "sort": 1
-          }
-        ],
-        "quantity_discounts": [],
-        "embeds": [],
-        "bundle_groups": [],
-        "attributes": [
-          {
-            "product_id": 240,
-            "attribute_option_id": 2,
-            "attribute_option_value_id": 96,
-            "attribute_default": 0,
-            "attribute_price": "0.0000",
-            "attribute_option": {
-              "id": 2,
-              "type": "select",
-              "filterable": 1,
-              "sort": 0,
-              "display_ov_image": 0,
-              "filter_only": 0,
-              "is_required": 0,
-              "translations": [
-                {
-                  "attribute_option_id": 2,
-                  "name": "Size",
-                  "locale": "en"
-                }
-              ]
-            },
-            "sort": 0,
-            "attribute_option_value": {
-              "id": 96,
-              "attribute_option_id": 2,
-              "filterable": 1,
-              "sort": 0,
-              "image": null,
-              "filter_only": 0,
-              "translations": [
-                {
-                  "attribute_option_value_id": 96,
-                  "name": "Samsung Galaxy S20 Ultra",
-                  "locale": "en"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      {
-        "id": 241,
-        "type": "simple",
-        "sku": "pl-27-11347",
-        "gtin": null,
-        "mpn": null,
-        "price": "29.9900",
-        "sale_price": "0.0000",
-        "price_sorter": "18.9900",
-        "cost": "14.7500",
-        "quantity": 999,
-        "total_capacity": null,
-        "booking_granularity": null,
-        "booking_start_attribute_option_id": null,
-        "booking_end_attribute_option_id": null,
-        "booking_unit": "night",
-        "max_quantity": 0,
-        "weight": null,
-        "width": null,
-        "height": null,
-        "length": null,
-        "backorder": 0,
-        "restock_notify": 0,
-        "stock_on_request": 0,
-        "status": 1,
-        "is_digital": 0,
-        "popular": 0,
-        "featured": 0,
-        "total_reviews": 0,
-        "rating": 0,
-        "parent_id": 238,
-        "visibility": 1,
-        "sort": 0,
-        "default_variant": 0,
-        "manufacturer_id": null,
-        "tax_class_id": 1,
-        "meta": null,
-        "deleted_at": null,
-        "created_at": "2026-08-31 03:22:01",
-        "updated_at": "2026-09-02 14:06:00",
-        "availability_date": null,
-        "image_attribute_option_id": null,
-        "nestable": 0,
-        "nestable_group_code": null,
-        "nestable_percentage": null,
-        "quantity_discount_status": 0,
-        "returnable": 1,
-        "translations": [
-          {
-            "id": 241,
-            "product_id": 241,
-            "locale": "en",
-            "name": "PressLane Bands Samsung Case — Samsung Galaxy S20",
-            "slug": "presslane-bands-samsung-case-samsung-galaxy-s20",
-            "description": null,
-            "meta_title": "PressLane Bands Samsung Case — Samsung Galaxy S20",
-            "meta_description": null,
-            "created_at": "2026-08-31 03:22:01",
-            "updated_at": null
-          }
-        ],
-        "images": [
-          {
-            "id": 896,
-            "product_id": 241,
-            "src": "remote-ee076d9812b8e82ef7be5cf767fc67fef43be8fa.jpg?v=1788146519",
-            "created_at": "2026-08-31 03:22:03",
-            "updated_at": "2026-08-31 03:22:03",
-            "sort": 0
-          },
-          {
-            "id": 897,
-            "product_id": 241,
-            "src": "remote-226c89f4d50b45b116f82b969b0756946f890be3.jpg?v=1788146519",
-            "created_at": "2026-08-31 03:22:03",
-            "updated_at": "2026-08-31 03:22:03",
-            "sort": 1
-          }
-        ],
-        "quantity_discounts": [],
-        "embeds": [],
-        "bundle_groups": [],
-        "attributes": [
-          {
-            "product_id": 241,
-            "attribute_option_id": 2,
-            "attribute_option_value_id": 97,
-            "attribute_default": 0,
-            "attribute_price": "0.0000",
-            "attribute_option": {
-              "id": 2,
-              "type": "select",
-              "filterable": 1,
-              "sort": 0,
-              "display_ov_image": 0,
-              "filter_only": 0,
-              "is_required": 0,
-              "translations": [
-                {
-                  "attribute_option_id": 2,
-                  "name": "Size",
-                  "locale": "en"
-                }
-              ]
-            },
-            "sort": 0,
-            "attribute_option_value": {
-              "id": 97,
-              "attribute_option_id": 2,
-              "filterable": 1,
-              "sort": 0,
-              "image": null,
-              "filter_only": 0,
-              "translations": [
-                {
-                  "attribute_option_value_id": 97,
-                  "name": "Samsung Galaxy S20",
-                  "locale": "en"
-                }
-              ]
-            }
+            "category_id": 5,
+            "name": "Coffee and Tea",
+            "slug": "coffee-and-tea",
+            "locale": "en"
           }
         ]
       }
     ],
-    "default_attributes": {
-      "2": 96
-    }
+    "children": []
   }
 }
