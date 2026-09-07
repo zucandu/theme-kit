@@ -18,10 +18,80 @@ import { defineStore } from 'pinia';
 import checkout from '../../fixtures/checkout.json';
 import orderFixture from '../../fixtures/order.json';
 import customer from '../../fixtures/customer.json';
+import reasonsFixture from '../../fixtures/return-reasons.json';
+import resolutionsFixture from '../../fixtures/return-resolutions.json';
 import { mountPayButton } from '../services/payButton.js';
 
 const ORDER = orderFixture.order;
 const ADDRESSES = customer.customer.addresses;
+
+/**
+ * What the shopper is told will happen next, per resolution.
+ *
+ * Copied from ReturnPolicyService, because the strings are the platform's, not
+ * a theme's: the form prints them under the chosen reason and a theme has to
+ * lay out sentences of this length rather than one-word labels.
+ */
+const NEXT_STEP = {
+    refund: 'We will review eligibility and send return instructions if the item must be returned.',
+    warranty_replacement: 'We will review the evidence and let you know whether the original item must be returned.',
+    replacement: 'We will review the evidence and arrange a no-charge replacement if approved.',
+};
+const nextStep = (code) => NEXT_STEP[code] || 'We will review your request and contact you with the next step.';
+
+const RESOLUTION_LABEL = {
+    refund: 'Refund after an eligible return',
+    warranty_replacement: 'No-charge warranty replacement after review',
+    replacement: 'No-charge replacement after review',
+};
+
+/**
+ * The reasons offered against one order item.
+ *
+ * 🚨 This is NOT the raw `/return-reasons` payload, and the difference is one
+ * key: a raw reason has `name`, while the per-item projection the return form
+ * reads has `label`. Handing the raw rows straight through renders a list of
+ * empty radio labels. Both fixtures had shipped unused since the kit was
+ * written — this is what they are for.
+ */
+const RETURN_REASONS = reasonsFixture.reasons.map((reason) => {
+    const resolution = resolutionsFixture.resolutions
+        .find((candidate) => candidate.slug === reason.resolution_code);
+
+    return {
+        code: reason.code,
+        label: reason.name,
+        resolution_code: reason.resolution_code,
+        resolution_label: RESOLUTION_LABEL[reason.resolution_code] || resolution?.name || 'Review required',
+        help_text: reason.help_text,
+        minimum_photo_count: Number(reason.minimum_photo_count || 0),
+        next_step: nextStep(reason.resolution_code),
+    };
+});
+
+/**
+ * A request the shopper already sent, so the "your existing requests" panel has
+ * something to render. Empty this to see the first-time state.
+ */
+const RMAS = [
+    {
+        reference: 'RMA-1001-DEMO',
+        status: { id: 1, name: 'Requested' },
+        created_at: '2026-09-03 08:40:00',
+        items: [
+            {
+                order_item_id: 2,
+                quantity: 1,
+                reason_code: 'arrived_damaged',
+                reason_label: 'The item arrived damaged',
+                resolution_code: 'replacement',
+                resolution_label: RESOLUTION_LABEL.replacement,
+                return_required: 1,
+                next_step: nextStep('replacement'),
+            },
+        ],
+    },
+];
 
 export const useOrderStore = defineStore('order', {
     state: () => ({
@@ -257,9 +327,63 @@ export const useOrderStore = defineStore('order', {
 
         async verify() { return { verified: true, ref: ORDER.reference, order: ORDER }; },
 
-        async fetchReturnContext() { return { order: ORDER, items: [], reasons: [], resolutions: [] }; },
-        async processReturn() { return { data: {} }; },
-        async uploadReturnEvidence() { return { data: { path: '' } }; },
+        /**
+         * The order, plus everything the return form needs to be filled in.
+         *
+         * 🚨 Four things were wrong here at once, and the return form — the
+         * largest form in a storefront theme — could not be laid out at all.
+         *
+         *   - It returned `{ order, items, reasons, resolutions }`. The real
+         *     action unwraps the response and hands back the ORDER ITSELF:
+         *     `return res.data.order`. So `order.reference` and `order.id` were
+         *     undefined and the page's heading read "Order #".
+         *   - `items` was empty, so there was nothing to return.
+         *   - `reasons` sat at the top level. They belong PER ITEM: the form
+         *     reads `item.reasons` and matches the shopper's pick by `code`.
+         *   - `resolutions` is not a key of this response at all. A reason
+         *     already carries its own `resolution_code` / `resolution_label`.
+         *
+         * The per-item extras are exactly the four the controller adds on top of
+         * the order-details payload: `order_item_id`, `eligible_quantity`,
+         * `returnable_at_purchase` and `reasons`.
+         */
+        async fetchReturnContext() {
+            const context = {
+                ...ORDER,
+                items: ORDER.items.map((item) => ({
+                    ...item,
+                    order_item_id: item.id,
+                    eligible_quantity: Math.max(0, item.qty - (item.qty_returned || 0)),
+                    returnable_at_purchase: Boolean(item.returnable),
+                    reasons: RETURN_REASONS,
+                })),
+                rmas: RMAS,
+            };
+
+            this.retrieveOrder = context;
+            return context;
+        },
+
+        async processReturn() {
+            return { reference: 'RMA-1001-DEMO', status: 'Requested' };
+        },
+
+        /**
+         * 🚨 `{ evidence_token, name }` — the two keys the theme destructures:
+         *
+         *     state.evidence.push({ token: result.evidence_token, name: result.name })
+         *
+         * The old `{ data: { path: '' } }` put `undefined` in both, so an
+         * uploaded photo appeared as a nameless chip that could not be removed,
+         * and the minimum-photo check never counted it.
+         */
+        async uploadReturnEvidence(orderRef, file) {
+            return {
+                evidence_token: `theme-kit-${Math.random().toString(36).slice(2, 10)}`,
+                name: file?.name || 'evidence.jpg',
+            };
+        },
+
         async deleteReturnEvidence() { return { data: {} }; },
 
         async applyAppDiscount() { return { data: {} }; },
