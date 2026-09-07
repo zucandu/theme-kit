@@ -1,5 +1,6 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { resolve, join, basename } from 'node:path';
+import { resolve, join, basename, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseThemeConfig, defaultsOf } from '../tools/theme-settings.mjs';
 
 const VIRTUAL_ID = 'virtual:zuc-theme-config';
@@ -49,6 +50,26 @@ const GLYPH = [
     '<circle cx="12" cy="12" r="3" fill="#000"/>',
     '</svg>',
 ].join('');
+
+/** Windows hands ids back with both separators; compare on one. */
+const slash = (p) => p.split('\\').join('/');
+
+/** Where the `@` alias points. Kept here so the resolver can check it by hand. */
+const SHIM = fileURLToPath(new URL('../shim', import.meta.url));
+
+/** Module names that DO exist beside the one that was asked for. */
+function neighbours(target) {
+    try {
+        return readdirSync(dirname(target))
+            .filter((name) => name.endsWith('.js'))
+            .map((name) => name.replace(/\.js$/, ''))
+            .sort();
+    } catch {
+        // The folder itself does not exist — the specifier is wrong at a level
+        // above the filename, and there is nothing useful to list.
+        return [];
+    }
+}
 
 export function zucThemeKit({ themeDir, imageOrigins = [] }) {
     return {
@@ -110,8 +131,50 @@ export function zucThemeKit({ themeDir, imageOrigins = [] }) {
             });
         },
 
-        resolveId(id) {
-            return id === VIRTUAL_ID ? RESOLVED_ID : null;
+        /**
+         * Answer the virtual config module, and explain a `@/` import the shim
+         * does not carry.
+         *
+         * 🚨 Without the second half, reaching for a platform module the kit has
+         * not mirrored fails like this:
+         *
+         *     × [plugin vite:import-analysis] .../Schematic.vue
+         *       The system cannot find the file specified. (os error 2)
+         *
+         * That names a file the developer did not write, does not say which
+         * import was at fault, and reads like a broken install of the kit. It is
+         * none of those: `@/` is the platform surface, `shim/` is the kit's copy
+         * of it, and the copy is incomplete. Saying so — and listing the names
+         * that DO exist in that folder, since the usual cause is a typo — turns a
+         * dead end into a one-line fix or a one-line bug report.
+         */
+        resolveId(id, importer) {
+            if (id === VIRTUAL_ID) return RESOLVED_ID;
+
+            // 🚨 Match on the ALIASED path, not on '@/'. Vite rewrites the alias
+            // before any plugin's resolveId sees the id, so a guard looking for
+            // the '@/' prefix never fires and the raw rolldown error stands.
+            const target = slash(id);
+            if (!target.startsWith(slash(SHIM) + '/')) return null;
+
+            const found = ['', '.js', '.mjs', '.json', '/index.js']
+                .some((suffix) => existsSync(target + suffix));
+
+            if (found) return null;
+
+            const specifier = '@/' + target.slice(slash(SHIM).length + 1);
+            const from = importer ? slash(importer).replace(slash(themeDir), '<theme>') : 'A theme file';
+            const siblings = neighbours(target);
+
+            throw new Error(
+                `\n  ${from}\n  imports ${specifier}, which this kit does not provide.\n\n`
+                + `  '@/' is the platform's own surface and shim/ is the kit's copy of it,\n`
+                + `  so either the name is wrong or the kit is missing a module the platform\n`
+                + `  ships. Both are worth reporting.\n`
+                + (siblings.length
+                    ? `\n  @/${dirname(target).slice(slash(SHIM).length + 1)}/ provides:\n    ${siblings.join('\n    ')}\n`
+                    : '')
+            );
         },
 
         /**
