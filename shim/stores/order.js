@@ -20,7 +20,13 @@ import orderFixture from '../../fixtures/order.json';
 import customer from '../../fixtures/customer.json';
 import reasonsFixture from '../../fixtures/return-reasons.json';
 import resolutionsFixture from '../../fixtures/return-resolutions.json';
-import { mountPayButton } from '../services/payButton.js';
+// ⚙️ order.js and useAvailablePaymentMethods import each other, exactly as they do
+// on the platform. Safe because both uses are deferred to call time: nothing at
+// module level in either file reaches into the other.
+import { useAvailablePaymentMethods } from '@/composables/useAvailablePaymentMethods';
+// The store navigates on its own, as the platform's does, so it needs the router
+// instance rather than a component's `useRouter()`.
+import router from '../../runtime/router.js';
 
 const ORDER = orderFixture.order;
 const ADDRESSES = customer.customer.addresses;
@@ -214,20 +220,77 @@ export const useOrderStore = defineStore('order', {
          * screen of the flow.
          */
         completeCheckout() {
-            this.orderRef = ORDER.reference;
+            this.setOrderRef(ORDER.reference);
         },
 
         /**
-         * Draw the payment widget into the theme's `#render-payment-gateway`.
+         * Record the placed order and go to its confirmation page.
          *
-         * On a store this is the payment module's job, and what it mounts differs
-         * per gateway. The kit mounts the one button that needs no gateway, no
-         * keys and no redirect — the Check/Money Order button, which is also the
-         * only method enabled in checkout.json.
+         * 🚨 The STORE navigates. It does not set a value and hope a theme is
+         * watching — `setOrderRef` pushes `/checkout-success/:ref` itself, and
+         * that is the only mechanism the default theme has: its checkout contains
+         * no `orderRef` watcher at all. The one in heads22v3's Form.vue is a
+         * second, theme-side belt on top of this, which is exactly how an earlier
+         * version of `completeCheckout` came to "work" — it was verified against
+         * the theme that happens to carry the belt, and did nothing on the theme
+         * that does not.
+         *
+         * Pushing to the page a shopper is already on throws NavigationDuplicated;
+         * the platform swallows that one and reports anything else, so this does
+         * too.
          */
-        connectPaymentGateway() {
-            mountPayButton(() => this.completeCheckout());
-            return { data: {} };
+        setOrderRef(reference) {
+            this.orderRef = reference;
+            if (!reference) return;
+
+            router.push({ path: `/checkout-success/${reference}` }).catch((error) => {
+                if (error?.name !== 'NavigationDuplicated') console.error(error);
+            });
+        },
+
+        /**
+         * Hand the chosen payment module the order, and let IT draw the widget.
+         *
+         * 🚨 This is the platform's own logic, not a shortcut to the same picture.
+         * The first version mounted a Pay button unconditionally, which was wrong
+         * in three ways a theme can see:
+         *
+         *   - A store shows NOTHING until both a payment and a shipping method are
+         *     selected. Mounting regardless meant the "choose a method first"
+         *     state could never be laid out.
+         *   - A store resolves the module by the selected method's own id and
+         *     gives up when there is none. Always drawing the MoneyOrder button
+         *     meant picking Stripe showed a working button here and nothing live.
+         *   - `mode: 'sync'` is not a remount. The theme sends it when only the
+         *     shipping changed, and a store asks the gateway to absorb the new
+         *     total in place; tearing the widget down and rebuilding it is what
+         *     happens when the gateway CANNOT, not what happens normally.
+         *
+         * `setParams` was never called either, so a module had no order to read.
+         */
+        connectPaymentGateway({ mode = 'mount', reason = 'unspecified' } = {}) {
+            const { availablePaymentMethods } = useAvailablePaymentMethods();
+
+            if (!this.checkoutSelections.payment?.id || !this.checkoutSelections.shipping?.id) return;
+
+            const payment = this.checkoutSelections.payment;
+            const gateway = availablePaymentMethods[String(payment.id).toLowerCase()];
+            if (!gateway) return;
+
+            gateway.jsPayment.setParams({ ...this.checkoutParams, init_data: payment.init_data });
+
+            if (mode === 'sync') {
+                // Only a literal `true` keeps the instance alive — the platform's
+                // rule, kept because a gateway that cannot prove the sync was safe
+                // must not be trusted to have absorbed the new total.
+                try {
+                    if (gateway.jsPayment.syncParams?.({ reason }) === true) return;
+                } catch (error) {
+                    console.error('Payment gateway sync failed, remounting', payment.id, reason, error?.name);
+                }
+            }
+
+            gateway.jsPayment.loadScript();
         },
 
         // Return shapes follow the theme's own call sites: the order list reads

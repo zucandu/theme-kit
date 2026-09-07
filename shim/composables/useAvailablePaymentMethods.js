@@ -23,7 +23,12 @@
  * would be the kit inventing a widget the store renders differently, and a
  * theme laid out against it would be laid out against fiction.
  */
-import { useOrderStore } from '../stores/order.js';
+// 🚨 Imported through the '@' alias, the SAME specifier the theme and the
+// platform's own payment modules use. A relative path here resolves to the
+// same file but a different module URL under Vite, which registers the store
+// twice: the click updated one copy while the checkout watched the other, so
+// paying set orderRef and nothing redirected.
+import { useOrderStore } from '@/stores/order';
 import { mountPayButton, clearPayButton } from '../services/payButton.js';
 
 /** Every module the bundle ships. Keys must exist even when nothing renders. */
