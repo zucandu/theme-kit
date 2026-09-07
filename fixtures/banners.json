@@ -30,8 +30,8 @@
           "content": "<p>Great for cutting aluminum tin steel and more. Die cast aluminum handle is lightweight, yet extremely strong..</p>",
           "btn_primary": "Buy now",
           "btn_secondary": null,
-          "url_primary": "coffee-machine-bugatti-diva",
-          "url_secondary": "/",
+          "url_primary": "/category/appliances",
+          "url_secondary": "/product/presslane-bands-samsung-case",
           "created_at": null,
           "updated_at": null
         }
@@ -67,8 +67,8 @@
           "content": null,
           "btn_primary": null,
           "btn_secondary": null,
-          "url_primary": "/",
-          "url_secondary": "/",
+          "url_primary": "/category/cookware",
+          "url_secondary": "/blog/listing",
           "created_at": null,
           "updated_at": null
         }
@@ -104,8 +104,8 @@
           "content": "<p>Milwaukee Aviation snips are built for long life and durability. Forged blades deliver up to 10X more cuts than cast blades.</p>",
           "btn_primary": "Buy now",
           "btn_secondary": null,
-          "url_primary": "/",
-          "url_secondary": "/",
+          "url_primary": "/category/electrics",
+          "url_secondary": "/contact-us",
           "created_at": null,
           "updated_at": null
         }
@@ -141,12 +141,13 @@
           "content": "<p>Heavy Duty Chrome Molybdenum Snips with Limited Lifetime Manufacturer lifetime</p>",
           "btn_primary": "Learn more",
           "btn_secondary": null,
-          "url_primary": "/",
-          "url_secondary": "/",
+          "url_primary": "/category/bakeware",
+          "url_secondary": "/blog/listing",
           "created_at": null,
           "updated_at": null
         }
       ]
     }
-  ]
+  ],
+  "_links_note": "url_primary/url_secondary are free text a merchant types, and the captured store had them wrong: one was the bare slug 'coffee-machine-bugatti-diva' with no leading slash and no /product/ prefix, which resolves to /page-not-found, and the rest were '/'. Every hero CTA in the kit therefore either dead-ended or went home, so a theme developer could not see one work. They now point at routes this kit actually serves."
 }
