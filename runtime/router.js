@@ -118,7 +118,6 @@ const storefrontChildRoutes = [
     },
     { path: 'forgot-password', name: 'forgot_password', component: page('PasswordForgotten') },
     { path: 'reset-password/:token', name: 'reset_password', component: page('PasswordReset') },
-    { path: 'invoice/:ref', name: 'invoice', component: page('Invoice') },
     { path: 'pay/:token', name: 'pay', component: page('PaymentRequest') },
     { path: 'unsubscribe', name: 'unsubscribe', component: page('Unsubscribe') },
     { path: 'page-not-found', name: 'page_not_found', component: page('PageNotFound') },
