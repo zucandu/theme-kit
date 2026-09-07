@@ -1,42 +1,57 @@
 <script setup>
-/**
- * A product's price, showing the original struck through when it is on sale.
- *
- * Reads the price straight off the product row — no tax, no rate conversion. A
- * live store's figure comes from its own pricing rules.
- */
-import { computed } from 'vue';
+import { defineProps, computed } from 'vue';
 import { useSettingsStore } from '@/stores/settings';
-import { useProductStore } from '@/stores/catalog/product';
 import { useHelpers } from '@/composables/useHelpers';
+import { useProductStore } from '@/stores/catalog/product';
 
 const settingsStore = useSettingsStore();
-const productStore = useProductStore();
 const { formatCurrency } = useHelpers();
 
+// Define props to accept `price` and `currency` from the parent component
 const props = defineProps({
-    product: { type: Object, required: true },
-    qty: { type: Number, default: 1 },
+    product: {
+        type: Object,
+        required: true
+    },
+    qty: {
+        type: Number,
+        default: 1
+    },
 });
 
+const productStore = useProductStore();
+
+// Compute price object every time product changes
+const price = computed(() => productStore.finalizeProductPrice(props.product));
+
+// Compute formatted prices
 const formattedPrice = computed(() => {
-    const currency = settingsStore.selectedCurrencyObject;
-    const price = productStore.finalizeProductPrice(props.product);
-    const money = (v) => formatCurrency(v * (props.qty || 1), currency.decimal_digits, currency.code);
+    const { decimal_digits, code, rate } = settingsStore.selectedCurrencyObject;
 
-    return {
-        original: money(+price.retail || 0),
-        discounted: +price.sale > 0 ? money(+price.sale) : null,
-    };
+    // Calculate original retail price
+    const retail = (price.value?.retail ?? 0) * rate * (props.qty || 1);
+    const original = formatCurrency(retail, decimal_digits, code);
+
+    // Calculate discounted price if sale price is valid
+    let discounted;
+    if (+((price.value?.sale) ?? 0) > 0) {
+        const sale = price.value.sale * rate * (props.qty || 1);
+        discounted = formatCurrency(sale, decimal_digits, code);
+    }
+
+    return { original, discounted };
 });
+
 </script>
 
 <template>
     <div class="inline">
         <template v-if="formattedPrice.discounted">
-            <span class="text-gray-500 line-through">{{ formattedPrice.original }}</span>
+            <span class="line-through text-gray-500">{{ formattedPrice.original }}</span>
             <span class="ml-2 text-red-600">{{ formattedPrice.discounted }}</span>
         </template>
-        <span v-else>{{ formattedPrice.original }}</span>
+        <template v-else>
+            <span>{{ formattedPrice.original }}</span>
+        </template>
     </div>
 </template>
