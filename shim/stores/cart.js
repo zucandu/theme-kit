@@ -17,6 +17,33 @@
 import { defineStore } from 'pinia';
 import cart from '../../fixtures/cart.json';
 import checkout from '../../fixtures/checkout.json';
+import spotlight from '../../fixtures/product-spotlight.json';
+import search from '../../fixtures/search-result.json';
+import productDetails from '../../fixtures/product-details.json';
+import simpleDetails from '../../fixtures/product-details-simple.json';
+
+/**
+ * Every product the fixtures know about, by id.
+ *
+ * 🚨 A theme posts only `{ id, cart_quantity }` when it adds to the cart — the
+ * name, price, image and slug come back from the SERVER, in the cart summary the
+ * response carries. The kit has no server, so a row pushed from the payload alone
+ * rendered as "$0.00", no title, no image and a link to `/product/undefined`.
+ * Add-to-cart could not be laid out at all, which is the one behaviour this
+ * store's own notes promise to keep honest.
+ *
+ * Looking the product up here is the kit's stand-in for that summary.
+ */
+const CATALOGUE = new Map();
+for (const row of [
+    ...Object.values(spotlight).flat(),
+    ...(search.paginator?.data ?? []),
+    productDetails.product,
+    ...(productDetails.product.children ?? []),
+    simpleDetails.product,
+]) {
+    if (row && row.id != null && !CATALOGUE.has(row.id)) CATALOGUE.set(row.id, row);
+}
 
 export const useCartStore = defineStore('cart', {
     state: () => ({
@@ -35,17 +62,62 @@ export const useCartStore = defineStore('cart', {
     actions: {
         async init() {},
 
-        async addProduct(product) {
-            this.items.push({ ...product, qty: 1, inventory: 99, max_qty: 0, meta: {} });
+        /**
+         * 🚨 Every cart action takes ONE object, the payload the theme posts, and
+         * the quantity inside it is called `cart_quantity`. Reading it as a second
+         * argument — `updateQuantity(item, qty)` — left `qty` undefined on every
+         * call, so the stepper blanked the quantity input instead of changing it
+         * and the line never moved. `addProduct` had the same fault in a quieter
+         * form: it hardcoded `qty: 1`, so asking for three added one.
+         *
+         * A live store answers these with a whole new cart summary; the kit edits
+         * the line in place, which is the same visible outcome for a theme.
+         */
+        async addProduct(payload) {
+            this.addLine(payload);
         },
 
-        async addBookingProduct(product) {
-            this.items.push({ ...product, qty: 1, inventory: 99, max_qty: 0, meta: {} });
+        async addBookingProduct(payload) {
+            this.addLine(payload);
         },
 
-        async updateQuantity(item, qty) {
-            const line = this.items.find((i) => i.id === (item?.id ?? item));
-            if (line) line.qty = qty;
+        /**
+         * Adding a product already in the cart RAISES that line rather than
+         * adding a second one. A store returns a merged summary, so a theme that
+         * duplicated a row would be laying out against something it never sees.
+         */
+        addLine(payload) {
+            const id = payload?.id;
+            const qty = Math.max(1, +payload?.cart_quantity || 1);
+            const existing = this.items.find((line) => line.id === id);
+
+            if (existing) {
+                existing.qty = +existing.qty + qty;
+                return;
+            }
+
+            // The catalogue row first, so a real product brings its name, price,
+            // images and slug; the payload last, so anything the theme sent
+            // deliberately (bundle selections, booking fields) still wins.
+            const product = CATALOGUE.get(id) ?? {};
+
+            this.items.push({
+                ...product,
+                ...payload,
+                id,
+                qty,
+                inventory: +product.quantity || 99,
+                max_qty: +product.max_quantity || 0,
+                meta: payload?.meta ?? product.meta ?? {},
+            });
+        },
+
+        async updateQuantity(formdata) {
+            const line = this.items.find((i) => i.id === formdata?.id);
+            if (!line) return;
+
+            const qty = +formdata?.cart_quantity;
+            if (Number.isFinite(qty) && qty > 0) line.qty = qty;
         },
 
         async removeProduct(item) {
