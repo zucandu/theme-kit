@@ -69,6 +69,133 @@ function demoteLegalPages(listing) {
 
 const MENU_TYPES = ['primary', 'tertiary', 'home-top', 'footer-middle', 'footer-bottom', 'account'];
 
+/**
+ * Paths this kit's router actually serves, as patterns.
+ *
+ * 🚨 Menu and banner destinations are FREE TEXT a merchant types into an admin
+ * form, so a captured store's are only as good as whoever typed them — and the
+ * demo store's are not good. Its nav points at `blog/posts` and
+ * `account/orders/list`; the real route table (v3 routes/storefront.js, mirrored
+ * in runtime/router.js) has `blog/listing` and `account/order/list`. Its hero
+ * button points at the bare slug `coffee-machine-bugatti-diva`, with no leading
+ * slash and no /product/ prefix, which the catch-all sends to /page-not-found.
+ *
+ * Those were fixed by hand in the fixtures, and RE-CAPTURING PUT THEM BACK —
+ * silently, every time. That is the worst shape for this: the tool exists to
+ * refresh demo content, and it was quietly reintroducing dead links into the
+ * one thing a theme developer clicks first.
+ *
+ * So a captured destination is now checked, and a dead one loses to the value
+ * already on disk. A destination that resolves is taken as captured, which is
+ * the whole point of running the tool.
+ */
+const ROUTES = [
+    /^\/?$/,
+    /^\/?(cart|checkout|contact-us|login|register|logout|unsubscribe|page-not-found)$/,
+    /^\/?(category|manufacturer|product|article|product-review-write)\/[^/]+$/,
+    /^\/?search\/result$/,
+    /^\/?blog(\/(listing|search))?$/,
+    /^\/?blog\/(category|author)\/[^/]+$/,
+    /^\/?(track-order|return-exchange)\/[^/]+$/,
+    /^\/?account(\/(profile|password|wishlist|quick-reorder|back-in-stock|address-book))?$/,
+    /^\/?account\/order\/[^/]+$/,
+    /^\/?(invoice|pay)\/[^/]+$/,
+    /^\/?wishlist\/shared\/[^/]+$/,
+    /^\/?forgot-password$/,
+    /^\/?reset-password\/[^/]+$/,
+];
+
+/**
+ * Compose the path a theme will actually navigate to.
+ *
+ * 🚨 A menu url is NOT a path. It is a slug, and the item's `link` decides the
+ * prefix — this is useHelpers' `buildPath`, and getting it wrong here would
+ * condemn every category entry in the nav: `appliances` is correct data that
+ * becomes `/category/appliances`, not a dead link. Banners carry no `link` and
+ * their CTA really is a path, so they fall through unchanged.
+ */
+const buildPath = (link, slug) => {
+    const clean = String(slug ?? '').replace(/^\/+/, '');
+    if (!link) return String(slug ?? '');
+    if (['page', 'banner'].includes(link)) return `/${clean}`;
+    return `/${link.replace(/_/g, '/')}/${clean}`;
+};
+
+/** Does this kit serve that destination? Empty means "not a link", which is fine. */
+const resolves = (url) => {
+    if (url === undefined || url === null || url === '') return true;
+    const path = String(url).split('?')[0].split('#')[0];
+    return ROUTES.some((pattern) => pattern.test(path));
+};
+
+/**
+ * Walk a captured tree and put back any destination that would dead-end.
+ *
+ * Matched positionally against the previous capture is NOT possible — menus get
+ * reordered — so it matches on the sibling text instead: a menu entry keeps its
+ * old url when its title still matches, which is the only stable handle a
+ * merchant-edited row has.
+ */
+function keepWorkingLinks(fetched, previous, fields, kept, unset = []) {
+    const index = new Map();
+
+    // ⚠️ A destination can resolve and still be worth replacing. A hero button
+    // pointing at "/" is not a destination — it is the page the shopper is
+    // already on, which is what an unfilled admin field looks like once rendered.
+    // Three of the four captured CTAs are exactly that. Menus are NOT given this
+    // rule: their "Home" entry legitimately points at "/".
+    const isUnset = (value) => unset.includes(String(value ?? ''));
+
+    // `link` lives on the menu ITEM while the url lives on its translation, so it
+    // is carried down rather than read off the node holding the field.
+    const walk = (node, link, visit) => {
+        if (Array.isArray(node)) return node.forEach((child) => walk(child, link, visit));
+        if (!node || typeof node !== 'object') return;
+
+        const scope = node.link ?? link;
+        visit(node, scope);
+        Object.values(node).forEach((child) => walk(child, scope, visit));
+    };
+
+    walk(previous, null, (node) => {
+        if (node.title) index.set(String(node.title), node);
+    });
+
+    walk(fetched, null, (node, link) => {
+        const older = index.get(String(node.title));
+
+        for (const field of fields) {
+            if (!(field in node)) continue;
+
+            const captured = node[field];
+            const dead = !resolves(buildPath(link, captured));
+            if (!dead && !isUnset(captured)) continue;
+
+            const replacement = older?.[field];
+            const label = node.title ?? '(untitled)';
+
+            if (replacement === undefined || isUnset(replacement) || !resolves(buildPath(link, replacement))) {
+                if (dead) kept.push(`${label}: ${captured} does not resolve, and nothing on disk to keep`);
+                continue;
+            }
+
+            kept.push(`${label}: ${dead ? captured : `${captured} (unset)`} -> kept ${replacement}`);
+            node[field] = replacement;
+        }
+    });
+
+    return fetched;
+}
+
+/** Read a fixture already on disk, or null. */
+function onDisk(name) {
+    try {
+        return JSON.parse(readFileSync(join(ROOT, 'fixtures', `${name}.json`), 'utf8'));
+    } catch {
+        return null;
+    }
+}
+
 const results = { ok: [], failed: [] };
 
 async function get(path) {
@@ -79,9 +206,27 @@ async function get(path) {
 
 async function save(name, data) {
     const file = join(ROOT, 'fixtures', `${name}.json`);
+
+    // 🚨 A key beginning with `_` is a NOTE somebody wrote by hand — why a value
+    // is what it is, what to change to preview another state. No endpoint returns
+    // one, so overwriting the file with the captured payload deleted every one of
+    // them, silently, on every run. They are carried across instead. Captured data
+    // still wins for every real key.
+    const notes = {};
+    const existing = onDisk(name);
+    if (existing && !Array.isArray(existing)) {
+        for (const [key, value] of Object.entries(existing)) {
+            if (key.startsWith('_')) notes[key] = value;
+        }
+    }
+
+    const payload = (data && !Array.isArray(data) && typeof data === 'object')
+        ? { ...notes, ...data }
+        : data;
+
     await mkdir(dirname(file), { recursive: true });
-    await writeFile(file, JSON.stringify(data, null, 2) + '\n', 'utf8');
-    results.ok.push(`${name}.json  (${(Buffer.byteLength(JSON.stringify(data)) / 1024).toFixed(1)} KB)`);
+    await writeFile(file, JSON.stringify(payload, null, 2) + '\n', 'utf8');
+    results.ok.push(`${name}.json  (${(Buffer.byteLength(JSON.stringify(payload)) / 1024).toFixed(1)} KB)`);
 }
 
 async function capture(name, path) {
@@ -114,7 +259,20 @@ const main = async () => {
 
     // Settings & chrome
     await capture('setting', '/setting');
-    await capture('banners', '/banner-all');
+    // Banner CTAs are merchant free text; a dead one loses to what is on disk.
+    const keptBannerLinks = [];
+    try {
+        const banners = keepWorkingLinks(
+            await get('/banner-all'),
+            onDisk('banners') ?? {},
+            ['url_primary', 'url_secondary'],
+            keptBannerLinks,
+            ['/', '']
+        );
+        await save('banners', banners);
+    } catch (e) {
+        results.failed.push(`banners  /banner-all  -> ${e.message}`);
+    }
     await capture('countries', '/country/list');
     await capture('manufacturers', '/manufacturer/all');
     await capture('filterable-attributes', '/attribute/filterable-attributes');
@@ -135,11 +293,22 @@ const main = async () => {
     } catch { /* first run, nothing to keep */ }
 
     const menus = { ...existingMenus };
+    const keptMenuLinks = [];
     for (const type of MENU_TYPES) {
         try {
             const fetched = (await get(`/menu/${type}`)).menu ?? null;
-            if (fetched) menus[type] = fetched;
-            else if (!menus[type]) menus[type] = null;
+            // A menu entry's `url` is merchant free text too, and the demo store's
+            // points at routes that do not exist. Same rule as the banners.
+            if (fetched) {
+                menus[type] = keepWorkingLinks(
+                    fetched,
+                    existingMenus[type] ?? {},
+                    ['url'],
+                    keptMenuLinks
+                );
+            } else if (!menus[type]) {
+                menus[type] = null;
+            }
         } catch (e) {
             results.failed.push(`menu/${type} -> ${e.message}`);
             menus[type] ??= null;
@@ -301,6 +470,15 @@ const main = async () => {
     if (results.failed.length) {
         console.log(`\n!! ${results.failed.length} failed:`);
         results.failed.forEach(l => console.log(`   ${l}`));
+    }
+
+    // Said out loud, because a link this tool silently reverted is a link the
+    // developer will otherwise assume it refreshed.
+    const kept = [...keptBannerLinks, ...keptMenuLinks];
+    if (kept.length) {
+        console.log(`\n:: ${kept.length} captured destination(s) do not resolve in this kit:`);
+        kept.forEach(l => console.log(`   ${l}`));
+        console.log('   These are free text a merchant typed. The store has them wrong, not the kit.');
     }
 };
 
