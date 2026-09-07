@@ -5,6 +5,26 @@ import { parseThemeConfig, defaultsOf } from '../tools/theme-settings.mjs';
 const VIRTUAL_ID = 'virtual:zuc-theme-config';
 const RESOLVED_ID = '\0' + VIRTUAL_ID;
 
+/**
+ * What the placeholder is allowed to stand in for.
+ *
+ * 🚨 Only images. `/storage/` is the whole public disk, not an image folder —
+ * fonts, PDFs, videos and CSV exports live there too, and answering one of those
+ * with an SVG under `200 OK` is worse than a 404 in every case, because nothing
+ * downstream can tell it went wrong.
+ *
+ * A theme's `@font-face` was the case that showed it. The browser fetched
+ * `/storage/fonts/lato/lato-v25-latin-700.woff2`, got 373 bytes of SVG with a
+ * 200, and reported it as a corrupt font:
+ *
+ *     Failed to decode downloaded font: .../lato-v25-latin-700.woff2
+ *     OTS parsing error: invalid sfntVersion: 1014199911
+ *
+ * The page then rendered in a fallback face on every route. A developer reading
+ * that message looks for a bad font file; the file was never the problem.
+ */
+const IMAGE = /\.(avif|gif|jpe?g|png|svg|webp)$/i;
+
 /** The "no image" card, for photos. */
 const PHOTO = [
     '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">',
@@ -67,6 +87,21 @@ export function zucThemeKit({ themeDir, imageOrigins = [] }) {
                     } catch {
                         // Origin unreachable — try the next, then the placeholder.
                     }
+                }
+
+                // Anything that is not an image gets the honest answer. A theme
+                // asking for a font or a download it did not ship should see it
+                // missing, not receive a picture pretending to be one.
+                if (!IMAGE.test(path)) {
+                    res.statusCode = 404;
+                    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+                    res.setHeader('Cache-Control', 'no-cache');
+                    res.end(
+                        `[theme-kit] ${path} is not on the fixture store, and the kit only`
+                        + ' substitutes images. Ship this file with your theme, or point'
+                        + ' fixtureOrigin at a store that serves it.\n'
+                    );
+                    return;
                 }
 
                 res.setHeader('Content-Type', 'image/svg+xml');
