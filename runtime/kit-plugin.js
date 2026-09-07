@@ -54,6 +54,36 @@ const GLYPH = [
 /** Windows hands ids back with both separators; compare on one. */
 const slash = (p) => p.split('\\').join('/');
 
+/**
+ * Say — once per file — that an image fell back to the placeholder.
+ *
+ * 🚨 This used to be silent, and silence is what let the fixtures rot. Measured
+ * on 2026-09-07: 32 of the 147 images the fixtures reference no longer exist on
+ * either origin, so nearly a quarter of the catalogue was laying out against a
+ * grey "no image" card. Nothing said so — the placeholder answers 200, the
+ * console stays clean, and the page looks finished.
+ *
+ * A theme developer needs to know which it is. A card designed around a real
+ * photograph and a card designed around a 600x600 grey square are not the same
+ * card, and finding out after upload is too late.
+ *
+ * Deduped by path: 147 images produce at most one line each, and a page that
+ * re-requests the same missing file stays quiet after the first time.
+ */
+const reportedFallbacks = new Set();
+
+function reportFallback(path, origins) {
+    if (reportedFallbacks.has(path)) return;
+    reportedFallbacks.add(path);
+
+    const where = origins.length ? origins.join(', ') : 'no origin configured';
+    console.log(`  [theme-kit] no image  ${path}  (not on ${where}) — showing the placeholder`);
+
+    if (reportedFallbacks.size === 1) {
+        console.log('  [theme-kit] a fixture pointing at a file the store no longer has is a fixture to refresh.');
+    }
+}
+
 /** Where the `@` alias points. Kept here so the resolver can check it by hand. */
 const SHIM = fileURLToPath(new URL('../shim', import.meta.url));
 
@@ -125,8 +155,16 @@ export function zucThemeKit({ themeDir, imageOrigins = [] }) {
                     return;
                 }
 
+                reportFallback(path, imageOrigins);
+
                 res.setHeader('Content-Type', 'image/svg+xml');
                 res.setHeader('Cache-Control', 'no-cache');
+                // 🚨 So a machine can tell the difference. The placeholder answers
+                // 200 with a real SVG, which means `img.naturalWidth` is non-zero
+                // and every "count the broken images" check passes it. There is no
+                // other signal: a screenshot looks fine, the console is clean, and
+                // a fixture that has quietly rotted reads as a working page.
+                res.setHeader('X-Theme-Kit-Placeholder', '1');
                 res.end(path.endsWith('.svg') ? GLYPH : PHOTO);
             });
         },
