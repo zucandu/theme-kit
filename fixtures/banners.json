@@ -1,4 +1,5 @@
 {
+  "_links_note": "url_primary/url_secondary are free text a merchant types, and the captured store had them wrong: one was the bare slug 'coffee-machine-bugatti-diva' with no leading slash and no /product/ prefix, which resolves to /page-not-found, and the rest were '/'. Every hero CTA in the kit therefore either dead-ended or went home, so a theme developer could not see one work. They now point at routes this kit actually serves.",
   "banners": [
     {
       "id": 1,
@@ -148,6 +149,5 @@
         }
       ]
     }
-  ],
-  "_links_note": "url_primary/url_secondary are free text a merchant types, and the captured store had them wrong: one was the bare slug 'coffee-machine-bugatti-diva' with no leading slash and no /product/ prefix, which resolves to /page-not-found, and the rest were '/'. Every hero CTA in the kit therefore either dead-ended or went home, so a theme developer could not see one work. They now point at routes this kit actually serves."
+  ]
 }

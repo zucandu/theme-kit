@@ -350,28 +350,55 @@ const main = async () => {
         return [...new Set(rows.map(slugOf).filter(Boolean))];
     };
 
+    /**
+     * What each captured product has to BE, as a test on the detail response.
+     *
+     * Four shapes, because a theme lays each of them out differently and three of
+     * the four are invisible from a listing row:
+     *
+     *   simple      no picker at all, straight to add-to-cart
+     *   variable    the variant axes — the hardest part of a product page
+     *   bundle      `bundle_groups`, the accessory radios above add-to-cart. NOT a
+     *               product TYPE: a bundle is a simple or configurable product that
+     *               happens to carry groups, so this tests the field, not `type`.
+     *   booking     `type: 'booking'` — a date/select/text picker instead of a qty
+     *               stepper, and its own add-to-cart endpoint
+     *
+     * ⚠️ `variable` excludes booking explicitly. It used to mean "anything that is
+     * not simple", which was true of every store that had no booking product — and
+     * the moment one exists, discovery can hand the booking product to
+     * product-details.json and the variant picker captures nothing.
+     */
+    const WANTED = {
+        simple: (p) => p.type === 'simple',
+        variable: (p) => Boolean(p.type) && p.type !== 'simple' && p.type !== 'booking',
+        bundle: (p) => Array.isArray(p.bundle_groups) && p.bundle_groups.length > 0,
+        booking: (p) => p.type === 'booking',
+    };
+
     /** First candidate whose DETAIL response matches, or null. */
     const confirmSlug = async (candidates, wanted) => {
         for (const slug of candidates) {
             try {
-                const type = (await get('/product/' + slug))?.product?.type;
-                const isSimple = type === 'simple';
-                if (wanted === 'simple' ? isSimple : !isSimple && Boolean(type)) return slug;
+                const product = (await get('/product/' + slug))?.product;
+                if (product && WANTED[wanted](product)) return slug;
             } catch { /* gone or not addressable by that slug — try the next */ }
         }
         return null;
     };
 
-    let slugs = { simple: null, variable: null };
+    let slugs = { simple: null, variable: null, bundle: null, booking: null };
     try {
         let candidates = candidateSlugs(await get('/product/spotlight'));
-        slugs.simple = await confirmSlug(candidates, 'simple');
-        slugs.variable = await confirmSlug(candidates, 'variable');
+        for (const wanted of Object.keys(slugs)) {
+            slugs[wanted] = await confirmSlug(candidates, wanted);
+        }
 
-        if (!slugs.simple || !slugs.variable) {
+        if (Object.values(slugs).some((slug) => !slug)) {
             candidates = candidateSlugs((await get('/search/result?keyword=a')).paginator?.data ?? []);
-            slugs.simple = slugs.simple ?? await confirmSlug(candidates, 'simple');
-            slugs.variable = slugs.variable ?? await confirmSlug(candidates, 'variable');
+            for (const wanted of Object.keys(slugs)) {
+                slugs[wanted] = slugs[wanted] ?? await confirmSlug(candidates, wanted);
+            }
         }
     } catch (e) { results.failed.push('product slug discovery -> ' + e.message); }
 
@@ -388,13 +415,25 @@ const main = async () => {
     // what let a stale, wrong pin survive every recapture: the slug had long resolved
     // to a configurable parent, and re-running the tool faithfully reproduced the
     // duplicate every time.
+    //
+    // 🚨 The BUNDLE and BOOKING pins are not a nicety, they are the only thing that
+    // finds those two at all. Neither is discoverable from a listing: a bundle row
+    // looks exactly like any other simple product until you fetch it, and the demo
+    // store's one booking product is not in the spotlight. Lose the pin and the
+    // scan above quietly falls through, the capture is skipped, and the fixture on
+    // disk is silently kept — which reads as "nothing changed" rather than
+    // "the tool no longer knows where these live".
     try {
         const previous = JSON.parse(readFileSync(join(ROOT, 'fixtures', '_discovered.json'), 'utf8'));
-        if (previous.variableSlug) {
-            slugs.variable = await confirmSlug([previous.variableSlug], 'variable') ?? slugs.variable;
-        }
-        if (previous.simpleSlug) {
-            slugs.simple = await confirmSlug([previous.simpleSlug], 'simple') ?? slugs.simple;
+        const pins = {
+            simple: previous.simpleSlug,
+            variable: previous.variableSlug,
+            bundle: previous.bundleSlug,
+            booking: previous.bookingSlug,
+        };
+        for (const [wanted, pinned] of Object.entries(pins)) {
+            if (!pinned) continue;
+            slugs[wanted] = await confirmSlug([pinned], wanted) ?? slugs[wanted];
         }
     } catch { /* no previous run, or that product is gone - use what was discovered */ }
 
@@ -405,6 +444,12 @@ const main = async () => {
 
     if (slugs.variable) await capture('product-details', '/product/' + slugs.variable);
     else results.failed.push('no configurable product found — the variant picker will render empty');
+
+    if (slugs.bundle) await capture('product-details-bundle', '/product/' + slugs.bundle);
+    else results.failed.push('no product with bundle_groups found — BundleGroupSelector will render empty');
+
+    if (slugs.booking) await capture('product-details-booking', '/product/' + slugs.booking);
+    else results.failed.push('no booking product found — the booking picker will never render');
 
     if (productSlug) {
         try {
@@ -446,7 +491,17 @@ const main = async () => {
     if (categorySlug) await capture('category-listing', `/category/listing/${categorySlug}`);
     else results.failed.push('no category slug discoverable from any captured menu');
 
-    await save('_discovered', { base: BASE, articleBase: ARTICLE_BASE, productSlug, simpleSlug: slugs.simple, variableSlug: slugs.variable, categorySlug, capturedAt: new Date().toISOString() });
+    await save('_discovered', {
+        base: BASE,
+        articleBase: ARTICLE_BASE,
+        productSlug,
+        simpleSlug: slugs.simple,
+        variableSlug: slugs.variable,
+        bundleSlug: slugs.bundle,
+        bookingSlug: slugs.booking,
+        categorySlug,
+        capturedAt: new Date().toISOString(),
+    });
 
     // product-variants.json is precomputed from ONE product. If capture landed on a
     // different one, the picker would silently show another product's options.

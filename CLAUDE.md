@@ -83,6 +83,13 @@ bundle proves nothing about the platform.
   public ones. Authenticated shapes (profile, orders) are not public — capture them
   by hand with a token and **scrub the identity values** before committing; this
   repo is public MIT.
+- **Four product fixtures, one per shape.** simple, configurable, bundle, booking.
+  Three of the four add a section the others do not have, and a section with no
+  product to carry it is a section nobody can style. `_discovered.json` pins the
+  bundle and booking slugs — neither is discoverable from a listing, so losing the
+  pin silently skips the capture. The nav's Product Types dropdown links to all
+  four; it lives in `fixtures/menus.json` because it was authored in the demo
+  store's admin and captured, not typed here.
 - **The kit must render the page.** This package exists so a theme developer can
   see and style every screen. A shim action that refuses to pretend — leaving a
   page unreachable or a branch permanently empty — has failed at its job. Return a

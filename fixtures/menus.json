@@ -206,6 +206,146 @@
         ]
       },
       {
+        "id": 17,
+        "link": "page",
+        "resource_id": null,
+        "icon": null,
+        "submenu": "dropdown",
+        "sort": 33,
+        "translations": [
+          {
+            "title": "Product Types",
+            "locale": "en",
+            "url": "/"
+          }
+        ],
+        "blocks": [
+          {
+            "id": 8,
+            "block_width": "12",
+            "sort": 0,
+            "elements": [
+              {
+                "id": 17,
+                "menu_block_id": 8,
+                "block_type": "link",
+                "link": "page",
+                "resource_id": null,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 10,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "id": 1,
+                    "menu_block_element_id": 17,
+                    "title": "Simple product",
+                    "content": null,
+                    "locale": "en",
+                    "url": "product/kalorik-meat-grinder-mgr25959-stainless-steel-blade",
+                    "created_at": null,
+                    "updated_at": null
+                  }
+                ],
+                "extra_data": [],
+                "children": []
+              },
+              {
+                "id": 18,
+                "menu_block_id": 8,
+                "block_type": "link",
+                "link": "page",
+                "resource_id": null,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 20,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "id": 2,
+                    "menu_block_element_id": 18,
+                    "title": "Configurable product",
+                    "content": null,
+                    "locale": "en",
+                    "url": "product/presslane-bands-samsung-case",
+                    "created_at": null,
+                    "updated_at": null
+                  }
+                ],
+                "extra_data": [],
+                "children": []
+              },
+              {
+                "id": 19,
+                "menu_block_id": 8,
+                "block_type": "link",
+                "link": "page",
+                "resource_id": null,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 30,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "id": 3,
+                    "menu_block_element_id": 19,
+                    "title": "Bundle product",
+                    "content": null,
+                    "locale": "en",
+                    "url": "product/coffee-machine-kalorik-aztec",
+                    "created_at": null,
+                    "updated_at": null
+                  }
+                ],
+                "extra_data": [],
+                "children": []
+              },
+              {
+                "id": 20,
+                "menu_block_id": 8,
+                "block_type": "link",
+                "link": "page",
+                "resource_id": null,
+                "image": null,
+                "icon": null,
+                "heading": 0,
+                "parent_id": 0,
+                "sort": 40,
+                "created_at": null,
+                "updated_at": null,
+                "status": 1,
+                "translations": [
+                  {
+                    "id": 4,
+                    "menu_block_element_id": 20,
+                    "title": "Booking product",
+                    "content": null,
+                    "locale": "en",
+                    "url": "product/barista-studio-rental",
+                    "created_at": null,
+                    "updated_at": null
+                  }
+                ],
+                "extra_data": [],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": 4,
         "link": "page",
         "resource_id": null,
