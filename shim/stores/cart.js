@@ -15,6 +15,7 @@
  * file's placeholder.
  */
 import { defineStore } from 'pinia';
+import { announce } from '../services/announce.js';
 import cart from '../../fixtures/cart.json';
 import checkout from '../../fixtures/checkout.json';
 import spotlight from '../../fixtures/product-spotlight.json';
@@ -75,10 +76,12 @@ export const useCartStore = defineStore('cart', {
          */
         async addProduct(payload) {
             this.addLine(payload);
+            announce('Add to cart');
         },
 
         async addBookingProduct(payload) {
             this.addLine(payload);
+            announce('Add booking to cart');
         },
 
         /**
@@ -122,6 +125,7 @@ export const useCartStore = defineStore('cart', {
 
         async removeProduct(item) {
             this.items = this.items.filter((i) => i.id !== (item?.id ?? item));
+            announce('Remove from cart');
         },
 
         /**

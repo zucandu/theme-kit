@@ -15,6 +15,7 @@
  *   - a coupon actually changes the total
  */
 import { defineStore } from 'pinia';
+import { announce } from '../services/announce.js';
 import checkout from '../../fixtures/checkout.json';
 import orderFixture from '../../fixtures/order.json';
 import customer from '../../fixtures/customer.json';
@@ -220,6 +221,7 @@ export const useOrderStore = defineStore('order', {
          * screen of the flow.
          */
         completeCheckout() {
+            announce('Place order');
             this.setOrderRef(ORDER.reference);
         },
 

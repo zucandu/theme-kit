@@ -4,10 +4,12 @@
  * and its success state exercised without mail leaving the machine.
  */
 import { defineStore } from 'pinia';
+import { announce } from '../../services/announce.js';
 
 export const useContactStore = defineStore('contact', {
     actions: {
         async sendMail() {
+            announce('Send contact message');
             return { data: { message: 'Message sent (theme-kit offline)' } };
         },
     },

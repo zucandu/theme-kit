@@ -18,6 +18,7 @@
  * always there.
  */
 import { ref } from 'vue';
+import { announce } from '../services/announce.js';
 import checkout from '../../fixtures/checkout.json';
 import { useOrderStore } from '@/stores/order';
 
@@ -39,12 +40,14 @@ export function useCheckoutCoupon() {
 
         appliedCoupon.value = coupon;
         orderStore.checkoutSelections.discounts = [coupon];
+        announce('Apply coupon');
     };
 
     const removeCoupon = async () => {
         appliedCoupon.value = null;
         couponCode.value = '';
         orderStore.checkoutSelections.discounts = [];
+        announce('Remove coupon');
     };
 
     return {

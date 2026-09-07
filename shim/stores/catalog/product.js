@@ -16,6 +16,7 @@
  *    cart total, not the product
  */
 import { defineStore } from 'pinia';
+import { announce } from '../../services/announce.js';
 
 import productDetails from '../../../fixtures/product-details.json';
 import simpleDetails from '../../../fixtures/product-details-simple.json';
@@ -47,6 +48,9 @@ const slugOf = (fixture) => fixture.product.translations?.find((t) => t?.slug)?.
  * Built from the fixtures rather than written out, so a recapture that lands on
  * a different product cannot leave a dead slug behind.
  */
+/** Values a broken template produces, never a real slug. */
+const BAD_SLUGS = ['undefined', 'null', '', 'NaN'];
+
 const BY_SLUG = new Map([
     [slugOf(simpleDetails), simpleDetails.product],
     [slugOf(bundleDetails), bundleDetails.product],
@@ -165,6 +169,14 @@ export const useProductStore = defineStore('product', {
          * useless.
          */
         async retrieveProductDetails(slug) {
+            // 🚨 `undefined` is not a slug a merchant typed, it is a template that
+            // read a computed without `.value`. The fallback below would render a
+            // product for it and the broken link would never be noticed — on a
+            // live store the same URL is a 404. Said out loud instead.
+            if (BAD_SLUGS.includes(String(slug))) {
+                console.warn(`[theme-kit] /product/${slug} — that is not a slug. A link in the theme is building its URL from an empty value.`);
+            }
+
             const product = BY_SLUG.get(slug) ?? productDetails.product;
 
             this.productDetails = product;
@@ -176,6 +188,9 @@ export const useProductStore = defineStore('product', {
         async fetchCrossSells() { return crossSells; },
         async fetchUpSells() { return upSells; },
         async fetchAdjacentProducts() { return adjacent; },
-        async addReview() { return { data: {} }; },
+        async addReview() {
+            announce('Submit product review');
+            return { data: {} };
+        },
     },
 });
