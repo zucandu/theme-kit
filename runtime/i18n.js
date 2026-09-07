@@ -16,6 +16,21 @@
  */
 import { createI18n } from 'vue-i18n';
 
+/**
+ * 🚨 The three keys that are NOT an English phrase.
+ *
+ * Everything else falls back to the key and reads correctly. These take
+ * placeholders, so falling back printed the key itself on screen —
+ * `listing.paginationProduct` in place of the result count on every category,
+ * search, manufacturer and blog page, and `cart.itemAdded` in the toast after
+ * add to cart. Wrong text where a shopper reads a number.
+ */
+const KEYED_MESSAGES = {
+    'cart.itemAdded': '{name} added to cart',
+    'listing.paginationProduct': 'Showing {from}-{to} of {total} products',
+    'listing.paginationArticle': 'Showing {from}-{to} of {total} articles',
+};
+
 export function createKitI18n({ locale = 'en', messages = {} } = {}) {
     return createI18n({
         legacy: false,
@@ -25,6 +40,6 @@ export function createKitI18n({ locale = 'en', messages = {} } = {}) {
         missingWarn: false,
         fallbackWarn: false,
         silentTranslationWarn: true,
-        messages: { en: {}, ...messages },
+        messages: { en: KEYED_MESSAGES, ...messages },
     });
 }

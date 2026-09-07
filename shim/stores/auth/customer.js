@@ -15,6 +15,7 @@
  * out. Both states stay one click apart.
  */
 import { defineStore } from 'pinia';
+import { announce } from '../../services/announce.js';
 import fixture from '../../../fixtures/customer.json';
 
 const TOKEN_KEY = 'jwt_customer';
@@ -81,15 +82,17 @@ export const useAuthCustomerStore = defineStore('authCustomer', {
             return this.customerInfo;
         },
 
-        async resetCustomerPassword() { return { data: {} }; },
-        async updateCustomerPassword() { return { data: {} }; },
-        async updateAccountPassword() { return { data: {} }; },
-        async updateCustomerProfile() { return { data: {} }; },
-        async subscribeNewsletter() { return { data: {} }; },
-        async unsubscribeNewsletter() { return { data: {} }; },
+        // Nothing is saved, so each of these says so — the form's own success
+        // state alone cannot tell a wired submit from a dead one.
+        async resetCustomerPassword() { announce('Reset password'); return { data: {} }; },
+        async updateCustomerPassword() { announce('Change password'); return { data: {} }; },
+        async updateAccountPassword() { announce('Change password'); return { data: {} }; },
+        async updateCustomerProfile() { announce('Save profile'); return { data: {} }; },
+        async subscribeNewsletter() { announce('Subscribe to newsletter'); return { data: {} }; },
+        async unsubscribeNewsletter() { announce('Unsubscribe'); return { data: {} }; },
 
-        async createCustomerAddress() { return { data: {} }; },
-        async updateCustomerAddress() { return { data: {} }; },
-        async deleteCustomerAddress() { return { data: {} }; },
+        async createCustomerAddress() { announce('Add address'); return { data: {} }; },
+        async updateCustomerAddress() { announce('Save address'); return { data: {} }; },
+        async deleteCustomerAddress() { announce('Delete address'); return { data: {} }; },
     },
 });

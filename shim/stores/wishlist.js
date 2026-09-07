@@ -24,6 +24,7 @@
  * set — a theme hides its "generate a new link" control until there is one.
  */
 import { defineStore } from 'pinia';
+import { announce } from '../services/announce.js';
 import spotlight from '../../fixtures/product-spotlight.json';
 
 const SHARE_TOKEN = 'theme-kit-demo-token';
@@ -113,11 +114,13 @@ export const useWishlistStore = defineStore('wishlist', {
                 const row = ROWS.find((candidate) => candidate.product_id === id);
                 if (row) this.items.push(row);
                 this.productIds.push(id);
+                announce('Add to wishlist');
                 return 'added';
             }
 
             this.productIds.splice(at, 1);
             this.items = this.items.filter((item) => item.product_id !== id);
+            announce('Remove from wishlist');
             return 'removed';
         },
 
