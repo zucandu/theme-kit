@@ -23,6 +23,8 @@
  * would be the kit inventing a widget the store renders differently, and a
  * theme laid out against it would be laid out against fiction.
  */
+import { useOrderStore } from '../stores/order.js';
+import { mountPayButton, clearPayButton } from '../services/payButton.js';
 
 /** Every module the bundle ships. Keys must exist even when nothing renders. */
 const MODULES = ['braintree', 'moneyorder', 'paypal', 'square', 'stripe'];
@@ -43,9 +45,7 @@ function makeModule(name) {
 
         setParams: (order) => (jsPayment.params = order),
 
-        reset: () => {
-            document.getElementById('render-payment-gateway')?.replaceChildren();
-        },
+        reset: clearPayButton,
 
         loadScript: () => {
             jsPayment.reset();
@@ -57,25 +57,29 @@ function makeModule(name) {
 
             // The theme owns this element. A theme that never renders it gets
             // silence, exactly as on a live store — not an exception.
-            const mount = document.getElementById('render-payment-gateway');
-            if (!mount) return;
-
-            // Same element, classes and label the live MoneyOrder button has.
-            const button = document.createElement('button');
-            button.type = 'button';
-            button.className = 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full cursor-pointer';
-            button.textContent = 'Pay Now';
-            button.addEventListener('click', () => jsPayment.checkoutProcess());
-            mount.appendChild(button);
+            mountPayButton(() => jsPayment.checkoutProcess());
         },
 
         currencyDecimalDigits: (currency) => (['JPY', 'TWD', 'VND'].includes(currency) ? 0 : 2),
 
-        // Placing an order is the one thing the kit must not pretend to do: a
-        // fake success would send the theme to a confirmation page for an order
-        // that does not exist, which is worse than an obvious no-op.
+        /**
+         * Complete the order — against the fixture order, not a real one.
+         *
+         * 🚨 This used to be a deliberate no-op, on the reasoning that a fake
+         * success sends the theme to a confirmation page for an order that does
+         * not exist. That reasoning was wrong for this kit. The confirmation page
+         * IS one of the theme developer's pages, and refusing to place the order
+         * left it — and the settled state of /pay/:token — with no route into it
+         * at all: the last screen of the flow could not be seen, let alone
+         * styled. Every other surface here renders against a fixture order; this
+         * one now does too.
+         *
+         * It writes nothing anywhere. `completeCheckout()` sets `orderRef`, the
+         * theme's own watcher does the redirect.
+         */
         checkoutProcess: async () => {
-            offline(name, 'checkout submitted, no order placed');
+            offline(name, 'checkout submitted, completing against the fixture order');
+            useOrderStore().completeCheckout();
         },
 
         overlay: () => {},

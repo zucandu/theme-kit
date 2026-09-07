@@ -18,13 +18,25 @@ import { defineStore } from 'pinia';
 import checkout from '../../fixtures/checkout.json';
 import orderFixture from '../../fixtures/order.json';
 import customer from '../../fixtures/customer.json';
+import { mountPayButton } from '../services/payButton.js';
 
 const ORDER = orderFixture.order;
 const ADDRESSES = customer.customer.addresses;
 
 export const useOrderStore = defineStore('order', {
     state: () => ({
-        orderRef: ORDER.reference,
+        /**
+         * The reference of the order the shopper JUST placed — empty until they
+         * place one, exactly as on a live store.
+         *
+         * 🚨 It must start empty, and that is the whole mechanism behind the Pay
+         * button. Both checkout and /pay/:token learn that an order went through
+         * by WATCHING this value change; a watcher does not fire for a value that
+         * was already set at mount. Seeding it with the fixture's reference — as
+         * this did — left `completeCheckout()` writing the same string it already
+         * held, so nothing changed, nothing fired, and paying did nothing.
+         */
+        orderRef: '',
 
         // State, not an action: the theme calls fetchOrderDetailsByRef() and then
         // reads `orderStore.retrieveOrder`.
@@ -108,7 +120,45 @@ export const useOrderStore = defineStore('order', {
             this.prefilledAddress = address ?? null;
         },
 
-        async initializeCheckout() { return { draft_id: this.checkoutDraftId }; },
+        /**
+         * Opening the checkout clears the last placed order.
+         *
+         * Without this, a second run through the flow in the same session cannot
+         * redirect: `orderRef` still holds the reference from the first one, so
+         * `completeCheckout()` writes an unchanged value and the theme's watcher
+         * stays quiet. A live store hands out a fresh draft here for the same
+         * reason — the previous order is finished business.
+         */
+        async initializeCheckout() {
+            this.orderRef = '';
+            return { draft_id: this.checkoutDraftId };
+        },
+
+        /**
+         * Place the order. The kit's one pretend write, and a deliberate one.
+         *
+         * Setting `orderRef` is all it does, because that is all a theme watches:
+         * Checkout's form redirects to /checkout-success/:ref on the change, and
+         * /pay/:token flips to its settled state. Nothing is submitted anywhere —
+         * the point is only that a theme developer can reach, and style, the last
+         * screen of the flow.
+         */
+        completeCheckout() {
+            this.orderRef = ORDER.reference;
+        },
+
+        /**
+         * Draw the payment widget into the theme's `#render-payment-gateway`.
+         *
+         * On a store this is the payment module's job, and what it mounts differs
+         * per gateway. The kit mounts the one button that needs no gateway, no
+         * keys and no redirect — the Check/Money Order button, which is also the
+         * only method enabled in checkout.json.
+         */
+        connectPaymentGateway() {
+            mountPayButton(() => this.completeCheckout());
+            return { data: {} };
+        },
 
         // Return shapes follow the theme's own call sites: the order list reads
         // `res.orders`, PaymentRequest reads `res.data.payment_request`, and the
@@ -148,6 +198,12 @@ export const useOrderStore = defineStore('order', {
          * to see the already-settled one — the theme swaps the whole panel.
          */
         async getPaymentRequest() {
+            // Opening a payment link clears the last placed order, for the same
+            // reason initializeCheckout() does: PaymentRequest.vue flips to its
+            // settled state by WATCHING orderRef change, and a value left over
+            // from an earlier checkout would make the Pay button inert.
+            this.orderRef = '';
+
             return {
                 data: {
                     payment_request: {
@@ -178,6 +234,5 @@ export const useOrderStore = defineStore('order', {
 
         async applyAppDiscount() { return { data: {} }; },
         async removeAppDiscount() { return { data: {} }; },
-        async connectPaymentGateway() { return { data: {} }; },
     },
 });
