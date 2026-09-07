@@ -8,19 +8,35 @@
  * is trying to look at. Resolving empty keeps the page up and puts the missing
  * endpoint in the console, where it can be read and acted on.
  *
- * Each distinct URL is logged once. A theme that polls would otherwise flood the
- * console and bury the developer's own logging.
+ * A GET the kit HAS a fixture for is answered with it rather than with `{}` —
+ * see offlineFixtures.js. Not every page reaches the platform through a store,
+ * and the two that do not were rendering their empty state forever.
+ *
+ * Each distinct URL is logged once, saying which of the two it got. A theme that
+ * polls would otherwise flood the console and bury the developer's own logging.
  */
+import { fixtureFor } from './offlineFixtures.js';
+
 const seen = new Set();
 
 function offline(method, url) {
+    // Writes are never answered from a fixture: what a store does with a POST is
+    // its decision, and inventing an outcome would show a save that did not
+    // happen. Empty is the honest answer there.
+    const fixture = method === 'GET' ? fixtureFor(url) : null;
+
     const key = `${method} ${url}`;
     if (!seen.has(key)) {
         seen.add(key);
-        console.info(`%c[theme-kit] offline%c ${key} -> {}`, 'color:#8a8274', 'color:inherit');
+        console.info(
+            `%c[theme-kit] offline%c ${key} -> ${fixture ? 'fixture' : '{}'}`,
+            'color:#8a8274',
+            'color:inherit'
+        );
     }
+
     return Promise.resolve({
-        data: {},
+        data: fixture ?? {},
         status: 200,
         statusText: 'OK (theme-kit offline)',
         headers: {},
