@@ -99,7 +99,7 @@ const ROUTES = [
     /^\/?(track-order|return-exchange)\/[^/]+$/,
     /^\/?account(\/(profile|password|wishlist|quick-reorder|back-in-stock|address-book))?$/,
     /^\/?account\/order\/[^/]+$/,
-    /^\/?(invoice|pay)\/[^/]+$/,
+    /^\/?pay\/[^/]+$/,
     /^\/?wishlist\/shared\/[^/]+$/,
     /^\/?forgot-password$/,
     /^\/?reset-password\/[^/]+$/,
